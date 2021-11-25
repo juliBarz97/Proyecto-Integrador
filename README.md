@@ -8,7 +8,12 @@
   
   Cualquier persona que necesite maquetas, accesorios, bocetos de productos o cualquier otro producto que el cliente desee. El tamaño de los productos se verán limitados por el tamaño de las impresoras
 
-- Listado de 5 páginas referentes en las que se basa su proyecto
+- Listado de 5 páginas referentes en las que se basa su proyecto:
+    <ul>
+  <li>https://rgbestudio.com.ar/servicios/impresiones3d/</li>
+      
+  
+    </ul>
 
 - Listado del grupo con una breve descripción de cada uno
   
@@ -18,7 +23,7 @@
   
   Wal : 
   
-  Jesus :
+  
 
 - Link del tablero de trabajo en donde se encuentran trabajando: 
   
