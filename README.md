@@ -13,8 +13,8 @@
   <li>https://rgbestudio.com.ar/servicios/impresiones3d/</li>
   <li>https://www.mercadolibre.com.ar/gz/cart</li>
   <li>https://www.amazon.com/-/es/Streaming-Dispositivo-transmisi%C3%B3n-control-controles/dp/B09BKCDXZC/ref=lp_16225007011_1_2</li>
-  <li></li>
-  <li></li>
+  <li></li>https://fus3d.com.ar/servicios/impresion-3d/
+  <li></li>https://www.solidos3d.com.ar/
     </ul>
 
 - Listado del grupo con una breve descripción de cada uno
@@ -23,7 +23,7 @@
   
   <li>Julian : 24 años, estudiante de Ciencias de la Atmosfera en la UBA, apasionante del futbol y de la música. Me meti en Digital House para adquirir más conocimientos y entrar en el rubro de IT.</li>
   
-  <li>Wal : De Cba, laburando en el rubro inmobiliario. Hincha del Rojo de avellaneda. ...</li>
+  <li>Wal : De Cba, laburando en el rubro inmobiliario. Hincha del Rojo de avellaneda. Decidi meterme en este lindo mundo de programacion, para abrirme nuevas puertas y por un desafio personal</li>
   
   <li>Arbaces : De Medellín, Colombia. Soy analista y programador de software, trabajo en ek desarrollo de aplicaciones de escritorio y quiero actualizarme en el mundo de aplicaciones web </li>
   
