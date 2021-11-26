@@ -13,8 +13,8 @@
   <li>https://rgbestudio.com.ar/servicios/impresiones3d/</li>
   <li>https://www.mercadolibre.com.ar/gz/cart</li>
   <li>https://www.amazon.com/-/es/Streaming-Dispositivo-transmisi%C3%B3n-control-controles/dp/B09BKCDXZC/ref=lp_16225007011_1_2</li>
-  <li></li>https://fus3d.com.ar/servicios/impresion-3d/
-  <li></li>https://www.solidos3d.com.ar/
+  <li>https://fus3d.com.ar/servicios/impresion-3d/</li>
+  <li>https://www.solidos3d.com.ar/</li>
     </ul>
 
 - Listado del grupo con una breve descripción de cada uno
