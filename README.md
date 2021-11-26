@@ -25,7 +25,7 @@
   
   <li>Wal : De Cba, laburando en el rubro inmobiliario. Hincha del Rojo de avellaneda. ...</li>
   
-  <li>Arbaces : </li>
+  <li>Arbaces : De Medellín, Colombia. Soy analista y programador de software, trabajo en ek desarrollo de aplicaciones de escritorio y quiero actualizarme en el mundo de aplicaciones web </li>
   
   </ul>
 
