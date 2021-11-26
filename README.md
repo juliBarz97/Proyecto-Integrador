@@ -25,6 +25,8 @@
   
   <li>Wal : De Cba, laburando en el rubro inmobiliario. Hincha del Rojo de avellaneda. ...</li>
   
+  <li>Arbaces : </li>
+  
   </ul>
 
 - Link del tablero de trabajo en donde se encuentran trabajando: 
