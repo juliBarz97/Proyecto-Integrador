@@ -1,0 +1,35 @@
+
+html{
+    font-family: sans-serif, Arial, Helvetica;
+}
+
+#cabecera{
+    background-color: #0C6291;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#cuerpo{
+    background-color: #0C6291;
+    display: flex;
+    justify-content: space-around;
+}
+
+#pie{
+    background-color: black;
+}
+
+.textoC{
+    background-color: burlywood;
+}
+
+#boton {
+    background-color: white;
+
+}
+
+#descripcion{
+    background-image:url(https://s1.eestatic.com/2018/07/10/actualidad/actualidad_321483875_130252244_1706x960.jpg); 
+    text-align: left;
+    margin-left: 20%;
+}
