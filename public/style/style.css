@@ -1,0 +1,74 @@
+
+html{
+    font-family: sans-serif, Arial, Helvetica;
+}
+
+#logo {
+    display: flex;
+    background-color: #0C6291;
+    justify-content: center;
+    
+}
+
+#logo2{
+    width: 15%;
+    height: 15%;
+    margin-bottom: 9%;
+    margin-top: 12%;
+}
+
+#cabecera{
+    background-color: #0C6291;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 10%;
+}
+#descripcion{
+    display: flex;
+    width: 80%;
+    
+}
+
+#productos{
+    display: flex; 
+    justify-content: space-evenly;
+    
+}
+
+#cuerpo .boton {
+    width: 35%;
+    height: 30%;
+}
+
+#servicios{
+    display: flex;
+    justify-content: space-evenly;
+}
+#cuerpo{
+    background-color: #0C6291;
+    padding-bottom: 10%;
+}
+
+#pie{
+    display: flex;
+    background-color: black;
+    align-items: center;
+    justify-content:flex-end;
+    justify-content: space-between;
+}
+
+.textoC{
+    background-color: burlywood;
+}
+
+#boton {
+    background-color: white;
+
+}
+
+#descripcion{
+    background-image:url(https://s1.eestatic.com/2018/07/10/actualidad/actualidad_321483875_130252244_1706x960.jpg); 
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
+}
