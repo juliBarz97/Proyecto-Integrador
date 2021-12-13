@@ -33,9 +33,9 @@ html{
     
 }
 
-#descripcion{
-    display: flex;
-    
+
+#descripcion{     
+    display: flex;   
     width: 80%;
     color: white;
     margin-top: 5%;
@@ -60,7 +60,6 @@ html{
     justify-content: space-evenly;
     
 }
-
 
 
 #servicios{
