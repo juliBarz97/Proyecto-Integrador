@@ -1,6 +1,11 @@
 
 html{
     font-family: sans-serif, Arial, Helvetica;
+    background-color:#0C6291
+}
+
+#cabeza{
+    background-color: #0C6291 ;
 }
 
 #logo {
@@ -13,36 +18,82 @@ html{
 #logo2{
     width: 15%;
     height: 15%;
-    margin-bottom: 9%;
-    margin-top: 12%;
-}
-
-#cabecera{
-    background-color: #0C6291;
-    display: flex;
-    justify-content: space-evenly;
-    padding-bottom: 10%;
-}
-#descripcion{
-    display: flex;
-    width: 80%;
+    margin-bottom: 4%;
+    margin-top: 5%;
     
 }
 
+#cabecera{
+    background-color: #526e7e;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-style: double;
+    
+}
+
+#descripcion{
+    display: flex;
+    
+    width: 80%;
+    color: white;
+    margin-top: 5%;
+    background-image:url('../imagenes/empresa.png'); 
+    background-position: center;
+    background-size: cover;
+    font-size: 20px;
+    text-align-last: left;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+}
+
+#descripcion p{
+    display: flex;
+    margin-top: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
 #productos{
     display: flex; 
     justify-content: space-evenly;
     
 }
 
-#cuerpo .boton {
-    width: 35%;
-    height: 30%;
-}
+
 
 #servicios{
     display: flex;
     justify-content: space-evenly;
+}
+#P1{
+    display: flex;
+    background-color: white;
+    width: 10%;
+    height: 10%;
+}
+
+#P2{
+    display: flex;
+    background-color: white;
+    width: 30%;
+    height: 35%;
+}
+
+
+#S1{
+    display: flex;
+    background-color: white;
+    width: 30%;
+    height: 18%;
+}
+
+#S2{
+    display: flex;
+    background-color: white;
+    width: 30%;
+    height: 18%;
 }
 #cuerpo{
     background-color: #0C6291;
@@ -52,9 +103,9 @@ html{
 #pie{
     display: flex;
     background-color: black;
-    align-items: center;
-    justify-content:flex-end;
+    align-items: flex-end;
     justify-content: space-between;
+    width: 100%;
 }
 
 .textoC{
@@ -66,9 +117,3 @@ html{
 
 }
 
-#descripcion{
-    background-image:url(https://s1.eestatic.com/2018/07/10/actualidad/actualidad_321483875_130252244_1706x960.jpg); 
-    text-align: left;
-    margin-left: 10%;
-    margin-right: 10%;
-}
