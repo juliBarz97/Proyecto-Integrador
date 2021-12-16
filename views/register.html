@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/public/style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/> 
+  </head>
+
+  <body >
+    <header id="cabeza">
+      <div id="logo">
+      <button id="logo2"> </button>
+      </div>
+      <div id="cabecera">
+        <br>
+        <a class="boton">Productos </a> <a class="boton"> Servicios </a> <a class="boton"> Carrito de Compras </a> <a class="boton"> Login/Registro </a>
+      </div>
+    </header>
+
+
+    <main id="formulario">
+      <form action="/registro" method="post">
+        <div>
+          <label for="nombre completo"> Nombre completo: </label>
+          <input type="text" name="nombre completa" id="nombre completo" class="llenar">
+        </div>
+        <br>
+        <div>
+          <label for="usuario"> Nombre de Usuario: </label>
+          <input type="text" name="usuario" id="usuario" class="llenar">
+        </div>
+        <br>
+        <div>
+          <p> Fecha de Nacimiento: 
+          <input type="date" min="1940-01-01" name="fecha" value="2000-01-01" class="llenar"></p>
+        </div>
+        <br>
+        <div>
+          <label for="domicilio"> Domicilio: </label>
+          <input type="text" name="domicilio" id="domicilio" class="llenar">
+        </div>
+        <br>
+        <div>
+          <p>Tipo de Perfil: 
+          <select name="perfil"> 
+            <option value="Comprador">Comprador</option>
+            <option value="Vendedor">Vendedor</option>
+          </select></p>
+        </div>
+        <br>
+        <div>
+          <label for="interes"> Categorías de Interes: 
+              <input type="checkbox" name="Electro"> Electro
+              <input type="checkbox" name="Moda"> Moda
+              <input type="checkbox" name="Electro"> Hogar
+              <input type="checkbox" name="Moda"> Juguetería
+              <input type="checkbox" name="Electro"> Vida sana            
+          </label>
+        </div>
+        <br>
+        <div>
+          <label for="contraseña"> Ingrese Contraseña: </label>
+          <input type="password" name="contraseña" id="contraseña" class="llenar">
+        </div>
+        <br>
+        <div>
+          <label for="confirmacion"> Confirme su Contraseña: </label>
+          <input type="password" name="confirmacion" id= "confirmacion" class="llenar">
+        </div>
+        <br>
+        <div>
+          <input type="file" name="avatar" accept=".jpg">
+        </div>
+        <br>
+        <div id="limpieza">
+          <button type="reset" > Limpiar datos </button>
+          <button><a href="./views/codigo.html" > Home </a></button>
+        </div> 
+      </form>
+       
+    </main>
+
+    <footer id="pie">                     
+      <p> 
+        <ul class="textoC">  
+          <li>Facebook </li> 
+          <li>Twitter </li>   
+          <li>Instagram</li>
+        </ul></p>
+      <p> 
+        <ul class="textoC">
+         <li>Numero Telefono</li>
+         <li>Mail</li> 
+         <li>Direccion</li>
+        </ul></p>
+      <p> 
+        <ul class="textoC"> 
+            <li>Preguntas (FAQ) </li>
+            <li>Politicas de Reembolso</li>
+        </ul>
+      </p>        
+    </footer>
+  </body>
+</html>
