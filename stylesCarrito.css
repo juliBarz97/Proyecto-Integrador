@@ -1,0 +1,78 @@
+#Logo {
+    height: 90%;
+    width: 90%;
+}
+
+body{
+    background-color: #0C6291;
+}
+
+header .SeccionEncabezado{
+    display: flex;
+    background-color: rgb(241, 222, 145);
+    text-align: center;
+    margin: 20px 20px 20px 20px;
+    border-radius: 5px;
+    width: 90%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content: space-evenly;
+}
+
+footer{
+    background-color: black;
+}
+
+.SeccionEncabezado button{
+    background-color: cornsilk;
+    border: 0 cornsilk;
+    border-radius: 5px;
+    width: 20%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.SeccionEncabezado button:hover{
+    background-color: darkgreen;
+    color: darkcyan;
+}
+
+.Seccion{
+    width: 90%;
+    background-color: cornsilk;
+    margin: 20px 20px 20px; 
+    border-radius: 20px;
+}
+
+.Seccion table{
+    border: crimson ;
+    text-align: center;
+    background-color: rgb(223, 199, 105);
+    border-radius: 10px;
+    width: 70%;
+}
+
+.Seccion table .PrimeraColumna .ImgProducto{
+    width: 50%;
+}
+
+.Seccion table .PrimeraColumna .DescripcionProducto{
+    font-size: 12px;
+}
+
+.Seccion2{
+    text-align: right;
+    padding-right: 10%;
+}
+
+.PrimeraColumna{
+    width: 30%;
+}
+
+.Seccion3{
+    width: 25%;
+    background-color: cornsilk;
+    margin: 20px 20px 20px; 
+    border-radius: 20px;
+    display: inline-block;
+}
