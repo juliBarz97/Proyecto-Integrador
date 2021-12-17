@@ -4,18 +4,18 @@ html{
     background-color:#0C6291
 }
 
-#cabeza{
+#cabezaJ{
     background-color: #0C6291 ;
 }
 
-#logo {
+#logoJ{
     display: flex;
     background-color: #0C6291;
     justify-content: center;
     
 }
 
-#logo2{
+#logo2J{
     width: 15%;
     height: 15%;
     margin-bottom: 4%;
@@ -27,7 +27,7 @@ html{
     
 }
 
-#cabecera{
+#cabeceraJ{
     background-color: burlywood;
     display: flex;
     justify-content: space-evenly;
@@ -38,7 +38,7 @@ html{
     
 }
 
-#casa {
+#casaJ{
     display: flex;
     position: fixed;
     width: 6%;
@@ -51,7 +51,7 @@ html{
     right: 4%;
 }
 
-#descripcion{     
+#descripcionJ{     
     display: flex;   
     width: 80%;
     color: white;
@@ -66,27 +66,27 @@ html{
     height: 500px;
 }
 
-#descripcion p{
+#descripcionJ p {
     display: flex;
     margin-top: 20%;
     margin-left: 10%;
     margin-right: 10%;
 }
-#productos{
+#productosJ{
     display: flex; 
     justify-content: space-evenly;
     
 }
 
 
-#servicios{
+#serviciosJ{
     display: flex;
     justify-content: space-evenly;
     
 }
 
 
-#P1{
+#P1J{
     display: flex;
     background-color: white;
     width: 30%;
@@ -96,7 +96,7 @@ html{
     border-color: black;
 }
 
-#P2{
+#P2J{
     display: flex;
     background-color: white;
     width: 30%;
@@ -108,7 +108,7 @@ html{
 }
 
 
-#S1{
+#S1J{
     display: flex;
     background-color: white;
     width: 30%;
@@ -118,7 +118,7 @@ html{
     border-color: black;
 }
 
-#S2{
+#S2J{
     display: flex;
     background-color: white;
     width: 30%;
@@ -127,12 +127,12 @@ html{
     border-style: solid;
     border-color: black;
 }
-#cuerpo{
+#cuerpoJ{
     background-color: #0C6291;
     padding-bottom: 10%;
 }
 
-#pie{
+#pieJ{
     display: flex;
     background-color: black;
     align-items: flex-end;
@@ -140,13 +140,13 @@ html{
     width: 100%;
 }
 
-.textoC{
+.textoCJ{
     border-radius: 8%;
     background-color: burlywood;
     padding-right: 1%;
 }
 
-#boton {
+#botonJ {
     display: flex;
     justify-content: center;
 
