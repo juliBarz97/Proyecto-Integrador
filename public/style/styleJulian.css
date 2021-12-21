@@ -27,15 +27,19 @@ html{
     
 }
 
+
+
+
 #cabeceraJ{
     background-color: burlywood;
     display: flex;
     justify-content: space-evenly;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 25%;
     border-style:solid;
-    border-radius: 8%;
-    
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    width: 50%;
 }
 
 #casaJ{
@@ -64,6 +68,7 @@ html{
     align-items: center;
     width: 100%;
     height: 500px;
+    
 }
 
 #descripcionJ p {
@@ -84,6 +89,49 @@ html{
     justify-content: space-evenly;
     
 }
+
+
+.llenar{
+    transition: 200ms;
+    width: 100%;
+    background-color: white;
+}
+.llenar:hover{
+    background-color: #d6c881;
+    transition: 200ms;
+}
+
+
+#formulario-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% 27% 5% 27%;
+    background-color: lightgrey;
+    border-radius: 7%;
+    padding: 6% 8% 5% 8%;
+}
+.ingresar:hover{
+    background-color:  #0022AA;
+}
+#formulario{
+    display: flex;
+    margin: 5% 10% 5% 10%;
+    background-color: lightgrey;
+    border-radius: 7%;
+    padding: 6% 8% 5% 8%;
+    width: 50%;
+    justify-content: center;
+    margin-left: 17%;  
+}
+
+#limpieza {    
+   display: flex;
+   
+   justify-content: space-between;
+}
+
+
 
 
 #P1J{
@@ -107,6 +155,10 @@ html{
     border-color: black;
 }
 
+.fotos{
+    width: 100%;
+    height: 90%;
+}
 
 #S1J{
     display: flex;
@@ -120,6 +172,7 @@ html{
 
 #S2J{
     display: flex;
+    justify-content: center;
     background-color: white;
     width: 30%;
     height: 18%;
@@ -145,10 +198,10 @@ html{
     background-color: burlywood;
     padding-right: 1%;
 }
-
-#botonJ {
-    display: flex;
-    justify-content: center;
+/*
+.botonJ {
+   
 
 }
 
+*/
