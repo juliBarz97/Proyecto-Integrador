@@ -3,6 +3,62 @@
     width: 90%;
 }
 
+/*
+html{
+    font-family: sans-serif, Arial, Helvetica;
+    background-color:#0C6291
+}
+
+
+#cabezaJ{
+    background-color: #0C6291 ;
+}
+
+#logoJ{
+    display: flex;
+    background-color: #0C6291;
+    justify-content: center;
+    
+}
+
+#logo2J{
+    width: 15%;
+    height: 15%;
+    margin-bottom: 4%;
+    margin-top: 5%;
+    background-color: burlywood;
+    border-radius: 8%;
+    border-style: solid;
+    border-color: black;
+    
+}
+
+#cabeceraJ{
+    background-color: burlywood;
+    color: black;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 25%;
+    border-style:solid;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    width: 50%;
+}
+
+#casaJ{
+    display: flex;
+    position: fixed;
+    width: 6%;
+    height: 6%;
+    background-color: burlywood;
+    border-style: solid;
+    border-color: black;
+    border-radius: 28%;
+    bottom: 4%;
+    right: 4%;
+}
+*/
 body{
     background-color: #0C6291;
 }
