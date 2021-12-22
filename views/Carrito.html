@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/stylesCarrito.css" />        
+    <link rel="stylesheet" href="/public/style/stylesCarrito.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 </head>
 <body>
     <header id="cabezaJ">
@@ -12,26 +13,27 @@
         </div>
         <div id="cabeceraJ">
           <br>
-          <a href="./index.html">Productos </a> <a href="./index.html" > Servicios </a> <a href="./Carrito.html"> Carrito de Compras </a> <a href= "./login.html" > Login </a> <a href="./register.html"> Registro </a>
+          <a href="./index.html">Productos <i class="bi bi-badge-3d" class="icon"></i> </a> <a href="./index.html" > Servicios <i class="bi bi-list" class="icon"></i></a> <a href="./Carrito.html"> Carrito de Compras  <i class="bi bi-bag" class="icon"></i></a> 
+          <a href= "./login.html" > Login <i class="bi bi-person-circle" class="icon"></i> </a> <a href="./register.html"> Registro  <i class="bi bi-person-plus-fill" class="icon"></i></a>
         </div>
         <div>
-          <a href="./home.html" id="casaJ"><img src="../public/imagenes/D3.png" > </a>
+          <a href="./home.html" id="casaJ"><img src="../public/imagenes/D3.png" id="fotoJ"> </a> 
         </div> 
-    </header>
+      </header>
 
     <main>
         <section class="Seccion">
             <table align="center">
                 <tr>
                     <td class="PrimeraColumna">
-                        <img src="./img/web4-e1578666864760.png" class="ImgProducto">
+                        <img src="../public/imagenes/web4-e1578666864760.png" class="ImgProducto">
                         <label>Producto 1</label>
                         <p class="DescripcionProducto">
                             acá va la descripción del primer producto
                         </p>
                     </td>
                     <td>
-                        <button>Cambiar el producto</button>
+                        <button class="BotonA">Cambiar el producto</button>
                     </td>
                     <td>
                         <label>$ 500.000</label>
@@ -44,14 +46,14 @@
             <table align="center">
                 <tr>
                     <td class="PrimeraColumna">
-                        <img src="./img/impresora-3d-resina.png" class="ImgProducto">
+                        <img src="../public/imagenes/producto2.png" class="ImgProducto">
                         <label>Producto 2</label>
                         <p class="DescripcionProducto">
                             acá va la descripción del segundo producto
                         </p>
                     </td>
                     <td>
-                        <button>Cambiar el producto</button>
+                        <button class="BotonA">Cambiar el producto</button>
                     </td>
                     <td>
                         <label>$ 600.000</label>
@@ -64,7 +66,7 @@
             <table align="center">
                 <tr>
                     <td class="PrimeraColumna">
-                        <img src="./img/1366_2000.png" class="ImgProducto">
+                        <img src="../public/imagenes/producto1.png" class="ImgProducto">
                         <label>Producto 3</label>
                         <p class="DescripcionProducto">
                             acá va la descripción del tercer producto
@@ -79,29 +81,31 @@
         </section>
     
         <section class="Seccion2">
-            <button>Comprar</button>
+            <button class="BotonA">Comprar</button>
         </section>    
     </main>
 
-    <footer>
+    <footer id="pieAr">
         <section class="Seccion3">
             <ul>
-                <li>Quienes somos</li>
-                <li>Redes</li>
+                <li>Facebook  <i class="bi bi-facebook" class="icon"></i></li> 
+                <li>Twitter  <i class="bi bi-twitter" class="icon"></i></li>   
+                <li>Instagram  <i class="bi bi-instagram" class="icon"></i></li>
             </ul>
         </section>
     
         <section class="Seccion3">
             <ul>
-                <li>Números</li>
-                <li>email</li>
+                <li>Telefono <i class="bi bi-telephone-outbound" class="icon"></i></li>
+                <li>Mail  <i class="bi bi-envelope" class="icon"></i></li> 
+                <li>Direccion  <i class="bi bi-card-text" class="icon"></i></li>
             </ul>
         </section>
     
         <section class="Seccion3">
             <ul>
-                <li>FAQ</li>
-                <li>Politicas de reembolso</li>
+                <li>Preguntas (FAQ)  <i class="bi bi-question-circle" class="icon"></i></li>
+                <li>Politicas <i class="bi bi-currency-dollar" class="icon"></i></li>
             </ul>
         </section>    
     </footer>
