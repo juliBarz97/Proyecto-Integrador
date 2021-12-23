@@ -1,1 +1,1 @@
-web : node Proyectocodigo.js
+web: node Proyectocodigo.js
