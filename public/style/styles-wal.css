@@ -1,11 +1,9 @@
 
 
-
-
-
 #cabezaJ{
     background-color: #0C6291 ;
 }
+
 
 #logoJ{
     display: flex;
@@ -20,15 +18,19 @@
     margin-bottom: 4%;
     margin-top: 5%;
     background-color: burlywood;
-    border-radius: 8%;
+    border-radius: 20px;
     border-style: solid;
     border-color: black;
     
 }
 
+
+
+
 #cabeceraJ{
     background-color: burlywood;
     color: black;
+    font-size: 18px;
     display: flex;
     justify-content: space-evenly;
     margin-left: 25%;
@@ -37,9 +39,33 @@
     padding-right: 10px;
     padding-bottom: 10px;
     width: 50%;
+    border-radius: 20px;
 }
 
-#casaJ{
+@media (max-width: 400px){ 
+    #cabeceraJ{
+        font-size: 12px;
+    }
+}
+
+#cabeceraJ ::before{
+    color: black;
+}
+
+
+#cabeceraJ ::after{
+    color: black;
+}
+
+@media (max-width: 970px){
+    #cabeceraJ{
+        width: 100%;
+        margin-left: 0%;
+    }
+}
+
+
+#fotoJ{
     display: flex;
     position: fixed;
     width: 6%;
@@ -47,11 +73,10 @@
     background-color: burlywood;
     border-style: solid;
     border-color: black;
-    border-radius: 28%;
+    border-radius: 20px;
     bottom: 4%;
-    right: 4%;
+    right: 7%;
 }
-
 
 
 
@@ -197,18 +222,22 @@ html{
     border-style: double;
     
 }
+
 #pieJ{
     display: flex;
-    background-color: black;
-    align-items: flex-end;
-    justify-content: space-between;
+    justify-content: center;
+    background-color: black;   
     width: 100%;
+    display: flex;
+    
 }
 
 .textoCJ{
-    border-radius: 8%;
+    width: 25%;
     background-color: burlywood;
-    padding-right: 1%;
+    margin: 20px 20px 20px; 
+    border-radius: 20px;
+    display: inline-block;
 }
 
 @media (max-width: 600px){
@@ -228,7 +257,6 @@ html{
 .icon{
     width: 1em;
 }
-
 @media only screen and (max-width: 600px) and (min-width: 400px) {
 
     #imagen1{
