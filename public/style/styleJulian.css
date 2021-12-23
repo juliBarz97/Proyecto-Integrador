@@ -108,7 +108,18 @@ html{
     margin-left: 10%;
     margin-right: 10%;
 }
+
+.textosPS{
+    display: flex;
+    justify-content: center;
+    top: 7px;
+    
+}
+
 @media (max-width: 600px){
+    .textosPS{
+        display: none;
+    }
     #fotoJ{
         width: 12%;
     }
@@ -149,7 +160,7 @@ html{
     flex-direction: column;
     align-items: center;
     margin: 5% 27% 5% 27%;
-    background-color: lightgrey;
+    background-color: cornsilk;
     border-radius: 20px;
     padding: 6% 8% 5% 8%;
 }
@@ -159,7 +170,7 @@ html{
 #formulario{
     display: flex;
     margin: 5% 10% 5% 10%;
-    background-color: lightgrey;
+    background-color: cornsilk;
     border-radius: 20px;
     padding: 6% 8% 5% 8%;
     width: 50%;
@@ -235,9 +246,9 @@ html{
 #pieJ{
     display: flex;
     justify-content: center;
+    align-content: flex-end;
     background-color: black;   
     width: 100%;
-    display: flex;
     
 }
 
@@ -265,4 +276,25 @@ html{
 
 .icon{
     width: 1em;
+}
+
+
+
+.btn-wsp-wal{
+    position:fixed;
+    width: 55px;
+    height: 55px;
+    bottom:13%;
+    right:5%;
+    line-height: 55px;
+    background: #0df053;
+    color:#fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 0px 0px rgba(0,0,0,3);
+    z-index: 100;
+    -moz-border-radius:50px;
+   -webkit-border-radius:50px;  
+
 }
