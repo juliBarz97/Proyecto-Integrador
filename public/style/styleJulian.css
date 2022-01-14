@@ -159,6 +159,7 @@ html{
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 72%;
     margin: 5% 27% 5% 27%;
     background-color: cornsilk;
     border-radius: 20px;
@@ -167,13 +168,21 @@ html{
 .ingresar:hover{
     background-color:  #0022AA;
 }
+
+#formCuerpo{
+    background-color: #0C6291;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 #formulario{
     display: flex;
+    flex-direction: column;
     margin: 5% 10% 5% 10%;
     background-color: cornsilk;
     border-radius: 20px;
     padding: 6% 8% 5% 8%;
-    width: 50%;
+    width: 70%;
     justify-content: center;
     margin-left: 17%;  
 }
@@ -189,7 +198,11 @@ html{
    justify-content: space-between;
 }
 
-
+#login{
+    height: 400px;
+    background-color: #0C6291;
+    padding-top: 10px;
+}
 
 
 #P1J{
