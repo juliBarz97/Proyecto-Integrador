@@ -1,7 +1,23 @@
 const express = require('express')
 const path = require('path')
 const app = express();
-const rutas = require('./mainRouter/routes');
+
+
+// Implementacion de rutas
+
+const rutasCarrito = require('.mainRouter/carritoRoute')
+const rutasHome = require('.mainRouter/homeRoute')
+const rutasIndex = require('.mainRouter/indexRoute')
+const rutasLogin = require('.mainRouter/loginRoute')
+const rutasRegister = require('.mainRouter/registerRoute')
+
+app.use('/mainRoute', carritoRoute)
+app.use('/mainRoute', homeRoute)
+app.use('/mainRoute', indexRoute)
+app.use('/mainRoute', loginRoute)
+app.use('/mainRoute', registerRoute)
+
+
 
 app.use('/', );  
 
