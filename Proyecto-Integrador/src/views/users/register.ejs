@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+      
+<%- include ('./partials/head') %>    
+ 
+  <body >
+    
+<%- include ('./partials/header') %>
+
+
+
+    <main id="formCuerpo">
+        <form id="formulario" action="home.html" method="get" id="regis">
+          <div>
+            <label for="nombre completo"> Nombre completo: </label>
+            <input type="text" name="nombre completa" id="nombre completo" class="llenar">
+          </div>
+          <br>
+          <div>
+            <label for="usuario"> Nombre de Usuario: </label>
+            <input type="text" name="usuario" id="usuario" class="llenar">
+          </div>
+          <br>
+          <div>
+            <p> Fecha de Nacimiento: 
+            <input type="date" min="1940-01-01" name="fecha" value="2000-01-01" class="llenar"></p>
+          </div>
+          <br>
+          <div>
+            <label for="domicilio"> Domicilio: </label>
+            <input type="text" name="domicilio" id="domicilio" class="llenar">
+          </div>
+          <br>
+          <div>
+            <p>Preferencias: 
+            <select name="perfil"> 
+              <option value="Productos">Productos</option>
+              <option value="Servicios">Servicios</option>
+            </select></p>
+          </div>
+          <br>
+          <div>
+            <label for="interes"> Categorías de Interes: 
+                <input type="checkbox" name="Accesorios"> Accesorios
+                <input type="checkbox" name="Respuestos"> Respuestos Medicos
+                <input type="checkbox" name="Soporte"> Soportes 
+                <input type="checkbox" name="Ortopedicos"> Productos Ortopedicos            
+            </label>
+          </div>
+          <br>
+          <div>
+            <label for="contraseña"> Ingrese Contraseña: </label>
+            <input type="password" name="contraseña" id="contraseña" class="llenar">
+          </div>
+          <br>
+          <div>
+            <label for="confirmacion"> Confirme su Contraseña: </label>
+            <input type="password" name="confirmacion" id= "confirmacion" class="llenar">
+          </div>
+          <br>
+          <div>
+            <input type="file" name="avatar" accept=".jpg">
+          </div>
+          <br>
+          <div id="limpieza">
+            <button type="reset" class="btn btn-danger"> Limpiar datos </button>
+            <button type="submit" class="btn btn-primary"> Home </button>
+
+          </div> 
+        </form>
+            
+    </main>
+    
+<%- include ('./partials/footer') %>
+   
+  </body>
+</html>
