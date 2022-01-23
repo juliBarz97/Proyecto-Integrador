@@ -1,0 +1,52 @@
+[
+    {
+        "id": "1",
+        "nombre":"Julian",
+        "apellido":"Barza",
+        "e-mail":"JuliBarza@gmail.com",
+        "password":"123",
+        "telefono":"1163897425",
+        "imagen":""
+    },
+    {
+        "id": "2",
+        "nombre":"Arbaces",
+        "apellido":"Restrepo",
+        "e-mail":"Arbaces@gmail.com",
+        "password":"1234",
+        "telefono":"1167412586",
+        "imagen":""   
+    },
+    {
+        "id": "3",
+        "nombre":"",
+        "apellido":"",
+        "e-mail":"",
+        "password":"",
+        "telefono":"",
+        "imagen":""
+    },
+    {
+        "id": "4",
+        "nombre":"",
+        "apellido":"",
+        "e-mail":"",
+        "password":"",
+        "telefono":"",
+        "imagen":""
+    },
+    {
+        "id": "5",
+        "nombre":"",
+        "apellido":"",
+        "e-mail":"",
+        "password":"",
+        "telefono":"",
+        "imagen":""
+    }
+]
+
+
+
+
+ 

@@ -1,7 +1,12 @@
 const controlador = {	
     carrito: (req, res) => {		
         res.render("Carrito");    
-}
+},
+
+    index: (req, res) => {		
+        res.render("Carrito");    
+},
+
 }
 
 //un rutador y un controlador para c/u
