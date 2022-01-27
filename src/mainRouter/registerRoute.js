@@ -2,9 +2,9 @@ const express = require('express');
 const router = express.Router();
 
 
-const registerCont = require('../controllers/registerCont');
+const registerCont = require('../mainController/registerCont');
 
-router.get('/', registerCont.index); 
+router.get('/', registerCont.register); 
 
 
 module.exports = router;

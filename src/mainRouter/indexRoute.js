@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-
-const indexCont = require('../controllers/indexCont');
+const indexCont = require('../mainController/indexCont');
 
 let lista = [
     {
@@ -26,23 +25,25 @@ let lista = [
         precio: 50.000,
         imgPath: "soporte1.jpg"
     },
-         ]
+]
+
 const controlador = //chequear que los nombres esten bien vinculados
 {	
     index: (req, res) => {
         res.render("index", {productos:lista});
-},
-detail: (req, res) => {	
-    let id = req.params.id;
-    let productoEncontrado;
-
-    for (let i=0;i<menu.length;i++){
-        if (lista[i].id==id){
-            productoEncontrado=lista[i];
-            break;
+    },
+    detail: (req, res) => {
+        let id = req.params.id;
+        let productoEncontrado;
+    
+        for (let i=0;i<menu.length;i++){
+            if (lista[i].id==id){
+                productoEncontrado=lista[i];
+                break;
+            }
         }
+    }
 }
-
 
 router.get('/', indexCont.index); 
 

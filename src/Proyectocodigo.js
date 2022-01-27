@@ -5,25 +5,27 @@ const app = express();
 
 // Implementacion de rutas
 
-const rutasCarrito = require('.mainRouter/carritoRoute')
-const rutasHome = require('.mainRouter/homeRoute')
-const rutasIndex = require('.mainRouter/indexRoute')
-const rutasLogin = require('.mainRouter/loginRoute')
-const rutasRegister = require('.mainRouter/registerRoute')
+const rutasHome = require('./mainRouter/homeRoute')
+const rutasIndex = require('./mainRouter/indexRoute')
+const rutasCarrito = require('./mainRouter/carritoRoute')
+const rutasLogin = require('./mainRouter/loginRoute')
+const rutasRegister = require('./mainRouter/registerRoute')
 
-app.use('/src/mainRoute', carritoRoute)
-app.use('/src/mainRoute', homeRoute)
-app.use('/src/mainRoute', indexRoute)
-app.use('/src/mainRoute', loginRoute)
-app.use('/src/mainRoute', registerRoute)
+app.use('/', rutasHome)
+app.use('/index', rutasIndex)
+app.use('/carrito', rutasCarrito)
+app.use('/login', rutasLogin)
+app.use('/register', rutasRegister)
 
-app.use('/public/', express.static(__dirname + '/public/'))
-
-
-app.listen(process.env.PORT || 3000, () => console.log("Hola"));
+app.use('/public/', express.static(__dirname + '../../public/'))
 
 app.set("view engine", "ejs")
 
+app.set('views', './src/views')
+
+app.listen(process.env.PORT || 3000, () => console.log("Hola"));
+
+/*
 app.get('/', function(req, res){
     res.sendFile(path.resolve(__dirname, './views/home.html'));
 })
@@ -47,5 +49,5 @@ app.get('/register.html', function(req, res){
 app.get('/login.html', function(req, res){
     res.sendFile(path.resolve(__dirname, './views/login.html'));
 })
-
+*/
 

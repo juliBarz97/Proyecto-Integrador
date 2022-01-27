@@ -2,9 +2,9 @@ const express = require('express');
 const router = express.Router();
 
 
-const carritoCont = require('../controllers/carritoCont');
+const carritoCont = require('../mainController/carritoCont');
 
-router.get('/', carritoCont.index); 
+router.get('/', carritoCont.carrito); 
 
 
 module.exports = router;
