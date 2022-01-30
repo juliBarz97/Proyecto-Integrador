@@ -9,7 +9,8 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const controller = {
 	// Root - Show all products
 	index: (req, res) => {
-		res.render('listado',{p: lista});
+		lista = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		res.render('products/listado',{p: lista});
 	},
 
 	// Detail - Detail from one product
@@ -26,18 +27,18 @@ const controller = {
 			}
 		}
 
-		res.render('detail',{producto: productoSeleccionado});
+		res.render('products/detalle',{producto: productoSeleccionado});
 	},
 
 	// Create - Form to create
 	create: (req, res) => {
-		res.render('product-create-form');
+		res.render('products/creacion');
 	},
 	
 	// Create -  Method to store
 	store: (req, res) => {
 		
-		let nuevoID=(products[products.length-1].id)+1 
+		let nuevoID=(lista[lista.length-1].id)+1 
 		
 		let productoNuevo = {
 			id: nuevoID,
@@ -45,14 +46,13 @@ const controller = {
 			descripcion: req.body.descripcion,
 			precio: req.body.precio,
 			descuento: req.body.descuento,
-			imagen: "FundaCelular3D.jpg",
-			categoria:"en venta"		
+			imagen: req.body.imagen,
+			categoria:"en venta"
 		}
-
 		
-		products.push(productoNuevo)
+		lista.push(productoNuevo)
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(products,null,' '));
+		fs.writeFileSync(productsFilePath, JSON.stringify(lista,null,' '));
 
 		res.redirect('/');
 
@@ -60,12 +60,10 @@ const controller = {
 
 	// Update - Form to edit
 	edit: (req, res) => {
-		
-		
 		let idProductoSeleccionado = req.params.id;
 		let productoSeleccionado;
 
-		for (let p of products){
+		for (let p of lista){
 
 			if(p.id==idProductoSeleccionado){
 				productoSeleccionado=p;
@@ -73,7 +71,7 @@ const controller = {
 			}
 		}
 
-		res.render('product-edit-form',{producto: productoSeleccionado});
+		res.render('products/edicion',{producto: productoSeleccionado});
 	},
 	// Update - Method to update
 	update: (req, res) => {
@@ -81,17 +79,19 @@ const controller = {
 		let idProductoSeleccionado = req.params.id;
 		let datos = req.body;
 
-		for (let p of products){
+		for (let p of lista){
 			if(p.id==idProductoSeleccionado){
 				p.nombre = datos.nombre;
+				p.descripcion = datos.descripcion;
 				p.precio = datos.precio;
 				p.descuento = datos.descuento;
-				p.descripcion = datos.descripcion;
+				p.categoria = datos.categoria;
+				p.imagen = datos.imagen;
 				break;
 			}
 		}
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(products,null,' '));
+		fs.writeFileSync(productsFilePath, JSON.stringify(lista,null,' '));
 
 	    res.redirect('/');
 
@@ -102,15 +102,15 @@ const controller = {
 
 		let idProductoSeleccionado = req.params.id;
 
-		let products2 = products.filter(function(element){
+		let products2 = lista.filter(function(element){
 			return element.id!=idProductoSeleccionado;
 		})
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(products2,null,' '));
 
-	    res.redirect('/');
+		lista = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-
+		res.redirect('/');
 	}
 };
 
