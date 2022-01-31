@@ -27,7 +27,7 @@ let lista = [
     },
 ]
 
-const controlador = //chequear que los nombres esten bien vinculados
+const controlador = 
 {	
     index: (req, res) => {
         res.render("index", {productos:lista});

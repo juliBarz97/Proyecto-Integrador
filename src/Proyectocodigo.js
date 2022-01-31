@@ -14,8 +14,8 @@ const rutasRegister = require('./mainRouter/registerRoute')
 app.use('/', rutasHome)
 app.use('/index', rutasIndex)
 app.use('/carrito', rutasCarrito)
-app.use('/login', rutasLogin)
-app.use('/register', rutasRegister)
+app.use('/users/login', rutasLogin)
+app.use('/users/register', rutasRegister)
 
 app.use('/public/', express.static(__dirname + '../../public/'))
 
