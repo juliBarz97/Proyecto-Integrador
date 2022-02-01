@@ -5,7 +5,12 @@ html{
 }
 
 #cabezaJ{
-    background-color: #0C6291 ;
+    
+    position:fixed;
+    width: 100%;
+    justify-content: flex-start;
+    background-color: transparent;
+    top: 0%;
    
 }
 
@@ -27,6 +32,11 @@ html{
     border-style: solid;
     border-color: black;
     
+}
+
+#logo3J{
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -68,20 +78,6 @@ html{
         margin-left: 0%;
         height: 50px;
     }
-}
-
-
-#fotoJ{
-    display: flex;
-    position: fixed;
-    width: 6%;
-    height: 6%;
-    background-color: burlywood;
-    border-style: solid;
-    border-color: black;
-    border-radius: 20px;
-    bottom: 4%;
-    right: 4%;
 }
 
 
@@ -184,7 +180,7 @@ html{
     background-color: cornsilk;
     border-radius: 20px;
     padding: 6% 8% 5% 8%;
-    width: 70%;
+    width: 50%;
     justify-content: center;
     margin-left: 17%;  
 }
@@ -256,6 +252,7 @@ html{
 #cuerpoJ{
     background-color: #0C6291;
     padding-bottom: 10%;
+    margin-top: 13%;
 }
 
 #pieJ{
@@ -316,7 +313,7 @@ html{
     position:fixed;
     width: 55px;
     height: 55px;
-    bottom:13%;
+    bottom:5%;
     right:5%;
     line-height: 55px;
     background: #0df053;
