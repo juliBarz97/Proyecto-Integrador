@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+     
+<%- include ('./partials/head') %>    
 
-<%- include('partials/head', {title: 'Formulario de creación'}) %>
 <body>
+   
+<%- include ('./partials/header') %>
 
-	<%- include('partials/headerNavbar') %>
-
-
-	<form id="formulario" action="/products/create" method="POST">
+	<form id="formulario" action="crear.ejs" method="POST">
 		<h2 id="tituloCreacion"> Formulario de creacion de productos </h2>
 		<div>
 		  <label for="name"> Nombre del producto: </label>

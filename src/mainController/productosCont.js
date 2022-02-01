@@ -10,7 +10,7 @@ const controller = {
 	// Root - Show all products
 	index: (req, res) => {
 		lista = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		res.render('products/listado',{p: lista});
+		res.render('/products/listado',{p: lista});
 	},
 
 	// Detail - Detail from one product
@@ -27,12 +27,12 @@ const controller = {
 			}
 		}
 
-		res.render('products/detalle',{producto: productoSeleccionado});
+		res.render('index',{producto: productoSeleccionado});
 	},
 
 	// Create - Form to create
 	create: (req, res) => {
-		res.render('products/creacion');
+		res.render('crear');
 	},
 	
 	// Create -  Method to store
@@ -71,7 +71,7 @@ const controller = {
 			}
 		}
 
-		res.render('products/edicion',{producto: productoSeleccionado});
+		res.render('editar',{producto: productoSeleccionado});
 	},
 	// Update - Method to update
 	update: (req, res) => {

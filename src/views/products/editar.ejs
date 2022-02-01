@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+     
+<%- include ('./partials/head') %>    
 
-<%- include('partials/head', {title: 'Editando: ' + producto.name}) %>
 <body>
-	
-	<%- include('partials/headerNavbar') %>
+   
+<%- include ('./partials/header') %>
 	
 	<form id="formulario" action="/products/create" method="POST">
 		<h2 id="tituloCreacion"> Edicion de productos </h2>

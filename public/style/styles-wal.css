@@ -1,4 +1,4 @@
-
+/*
 
 #cabezaJ{
     background-color: #0C6291 ;
@@ -83,8 +83,12 @@
         width: 12%;
     }
 }
+html{
+    font-family: sans-serif, Arial, Helvetica;
+    background-color:#0C6291
+}
 
-
+*/
 
 .descripcion-wal{
     text-align:left;
@@ -189,10 +193,6 @@ input{
     
 
 
-html{
-    font-family: sans-serif, Arial, Helvetica;
-    background-color:#0C6291
-}
 
 #cabeza-wal{
     background-color: #0C6291 ;
@@ -226,7 +226,7 @@ html{
     border-style: double;
     
 }
-
+/*
 #pieJ{
     display: flex;
     justify-content: center;
@@ -257,7 +257,7 @@ html{
         font-size: 10px;
     }
 }
-
+*/
 .icon{
     width: 1em;
 }

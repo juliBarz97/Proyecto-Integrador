@@ -5,7 +5,7 @@
   
 
 <body>
-
+	
 <%- include ('./partials/header') %>	
 
   <main id="cuerpo-wal">
@@ -54,7 +54,11 @@
 				<a href="https://api.whatsapp.com/send?phone=9876654321"
 				class="btn-wsp-wal" target="_blank"><i class="fab fa-whatsapp"></i></a>
 				<form action="/productsRoute/delete/?_method=DELETE" method="POST" style="display: inline-flex">
-					<button type="submit" class="action-button delete">ELIMINAR</button> <!-- revisar esto-->
+					<button type="submit" class="action-button delete"> Eliminar Producto</button> <!-- revisar esto-->
+				</form>
+				<a href="../mainRouter/productosRoute/edit" class="action-button edit">Editar Producto</a>
+				<form action="/productosRoute/delete/" method="POST" style="display: inline-flex">
+					<button type="submit" class="action-button delete">Crear nuevo producto</button> <!-- revisar esto-->
 				</form>
 			</div>
 		</div>
