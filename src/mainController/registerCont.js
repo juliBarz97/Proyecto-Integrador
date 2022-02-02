@@ -1,6 +1,6 @@
 const controlador = {	
     register: (req, res) => {		
-        res.render("register");    
+        res.render("users/register");    
 }, 
 }
 

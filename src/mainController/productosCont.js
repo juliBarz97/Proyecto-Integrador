@@ -32,7 +32,7 @@ const controller = {
 
 	// Create - Form to create
 	create: (req, res) => {
-		res.render('crear');
+		res.render('products/crear');
 	},
 	
 	// Create -  Method to store
@@ -60,7 +60,7 @@ const controller = {
 
 	// Update - Form to edit
 	edit: (req, res) => {
-		let idProductoSeleccionado = req.params.id;
+/*		let idProductoSeleccionado = req.params.id;
 		let productoSeleccionado;
 
 		for (let p of lista){
@@ -72,6 +72,10 @@ const controller = {
 		}
 
 		res.render('editar',{producto: productoSeleccionado});
+
+			
+	    */
+		res.render('products/editar');
 	},
 	// Update - Method to update
 	update: (req, res) => {

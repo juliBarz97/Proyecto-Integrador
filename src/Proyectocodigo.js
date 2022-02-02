@@ -17,10 +17,11 @@ const rutasProducto = require('./mainRouter/productosRoute')
 app.use('/', rutasHome)
 app.use('/index', rutasIndex)
 app.use('/carrito', rutasCarrito)
-app.use('/products/crear', rutasProducto)
-app.use('/products/editar', rutasProducto)
-app.use('/login', rutasLogin)
-app.use('/register', rutasRegister)
+app.use('/products', rutasProducto)
+
+app.use('/users', rutasLogin)
+app.use('/users', rutasRegister)
+
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
