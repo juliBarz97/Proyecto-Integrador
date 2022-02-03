@@ -9,9 +9,14 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const controller = {
 	// Root - Show all products
 	index: (req, res) => {
-		lista = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		res.render('/products/listado',{p: lista});
+		
+		res.render('/index',{p: lista});
 	},
+	listado: (req, res) => {
+		
+		res.render('products/listado',{p: lista});
+	},
+
 
 	// Detail - Detail from one product
 	detail: (req, res) => {
@@ -71,7 +76,7 @@ const controller = {
 			}
 		}
 
-		res.render('editar',{producto: productoSeleccionado});
+		res.render('products/editar',{producto: productoSeleccionado});
 
 			
 	    */

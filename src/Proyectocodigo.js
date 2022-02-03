@@ -8,12 +8,10 @@ const methodOverride = require('method-override');
 // Implementacion de rutas
 
 const rutasHome = require('./mainRouter/homeRoute')
-//const rutasIndex = require('./mainRouter/indexRoute')
 const rutasUsers = require('./mainRouter/usersRoute')
 const rutasProducto = require('./mainRouter/productosRoute')
 
 app.use('/', rutasHome)
-//app.use('/index', rutasIndex)
 app.use('/products', rutasProducto)
 app.use('/users', rutasUsers)
 

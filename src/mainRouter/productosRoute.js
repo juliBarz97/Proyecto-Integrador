@@ -7,6 +7,7 @@ const productosCont = require('../mainController/productosCont');
 
 /*** GET ALL PRODUCTS ***/ 
 router.get('/', productosCont.index); 
+router.get('/listado', productosCont.listado); 
 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/crear', productosCont.create); 

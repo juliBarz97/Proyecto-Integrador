@@ -169,15 +169,18 @@ html{
 
 #formCuerpo{
     background-color: #0C6291;
-    margin-top: 10%;
-    padding-top: 10px;
-    padding-bottom: 10px;
 }
+
+#listado{
+    margin-top: 130px;
+    margin-bottom: 64px;
+}
+
 
 #formulario{
     display: flex;
     flex-direction: column;
-    margin: 100px 10% 5% 10%;
+    margin: 150px 10% 5% 10%;
     background-color: cornsilk;
     border-radius: 20px;
     padding: 6% 8% 5% 8%;
