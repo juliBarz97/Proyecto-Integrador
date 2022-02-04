@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const productsFilePath = path.join(__dirname, '../mainData/productos.json');
-let lista = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const lista = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -51,7 +51,7 @@ const controller = {
 			descripcion: req.body.descripcion,
 			precio: req.body.precio,
 			descuento: req.body.descuento,
-			imagen: req.body.imagen,
+		//	imagen: req.body.imagen,
 			categoria:"en venta"
 		}
 		
@@ -65,7 +65,7 @@ const controller = {
 
 	// Update - Form to edit
 	edit: (req, res) => {
-/*		let idProductoSeleccionado = req.params.id;
+		let idProductoSeleccionado = req.params.id;
 		let productoSeleccionado;
 
 		for (let p of lista){
@@ -79,8 +79,8 @@ const controller = {
 		res.render('products/editar',{producto: productoSeleccionado});
 
 			
-	    */
-		res.render('products/editar');
+	    
+		//res.render('products/editar');
 	},
 	// Update - Method to update
 	update: (req, res) => {

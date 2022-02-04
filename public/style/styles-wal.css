@@ -1,21 +1,9 @@
-
-.descripcion-wal{
-    text-align:left;
-    font-family:  sans-serif, Arial, Helvetica;
-    font-weight: 100px;
-    color:black;
-    
-
-}  
-
-.nuevo{
-    background:green;
-    width:50px;
-    color:white;
-    font-size:12px;
-    font-weight:bold;
-
+#cuerpo-wal{
+    display:flex;
+    margin-top:20%;
 }
+
+
 .codigo-producto-wal{
     color:dimgray;
 
@@ -39,6 +27,11 @@
     color:orange;
 
 }
+.contenedor-titulos-wal{
+    border:1px solid #ccc;
+    border-radius: 10px;
+
+} 
 input{
     border:3px solid black;
     font-weight: bold;
@@ -55,10 +48,17 @@ input{
     margin-right:auto ;
 
 }
-.contenedor-titulos-wal{
-    border:1px solid #ccc;
-    border-radius: 10px;
+.descripcion-wal{
+    text-align:left;
+    font-family:  sans-serif, Arial, Helvetica;
+    font-weight: 100px;
+    color:black;
+    
 
+} 
+
+.icon{
+    width: 1em;
 }
 .comprar-wal{
     color:white;
@@ -90,51 +90,11 @@ input{
 .btn-wsp-wal:hover{
     text-decoration: none;
     color:#0df053;
-    background: #fff;
-    
-   
-
-
-
+    background: #fff;   
 } 
   
 
-#cabeza-wal{
-    background-color: #0C6291 ;
-}
-#cuerpo-wal{
-    display:flex;
-    margin-top:20%;
-}
 
-#logo-wal {
-    display: flex;
-    background-color: #0C6291;
-    justify-content: center;
-    
-}
-
-#logo2-wal{
-    width: 15%;
-    height: 15%;
-    margin-bottom: 4%;
-    margin-top: 5%;
-    
-}
-
-#cabecera-wal{
-    background-color: #526e7e;
-    display: flex;
-    justify-content: space-evenly;
-    margin-left: 20%;
-    margin-right: 20%;
-    border-style: double;
-    
-}
-
-.icon{
-    width: 1em;
-}
 @media only screen and (max-width: 600px) and (min-width: 400px) {
 
     #imagen1{
