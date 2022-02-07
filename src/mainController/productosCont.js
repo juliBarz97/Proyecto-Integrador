@@ -51,7 +51,6 @@ const controller = {
 			descripcion: req.body.descripcion,
 			precio: req.body.precio,
 			descuento: req.body.descuento,
-		//	imagen: req.body.imagen,
 			categoria:"en venta"
 		}
 		
@@ -64,7 +63,7 @@ const controller = {
 	},
 
 	// Update - Form to edit
-	edit: (req, res) => {
+	editar: (req, res) => {
 		let idProductoSeleccionado = req.params.id;
 		let productoSeleccionado;
 

@@ -7,36 +7,37 @@
    
 <%- include ('../partials/header') %>
 	
-	<form id="formulario" action="/products/edit/<%=producto.id%>?_method=PUT" method="POST">
+	<form id="formulario" action="/products/editar/<%=producto.id%>?_method=PUT" method="POST">
 		<h2 id="tituloCreacion"> Edicion de productos </h2>
 		<div>
-		  <label for="name"> Nombre del producto: </label>
-		  <input type="text" id="name" name="name" placeholder="producto" class="llenar">
+		  <label for="nombre"> Nombre del producto: </label>
+		  <input type="text" id="nombre" name="nombre" placeholder="<%= producto.nombre %>" class="llenar">
 		</div>
 		<br>
 		<div>
-		  <label for="price"> Precio del producto: </label>
-		  <input type="text" id="price" name="price" placeholder="precio" class="llenar">
+		  <label for="precio"> Precio del producto: </label>
+		  <input type="text" id="precio" name="precio" placeholder="<%= producto.precio %>" class="llenar">
 		</div>
 		<br>
 		<div>
-			<label for="discount"> Descuento del producto: </label>
-			<input type="password" name="discount" id="discount" placeholder="descuento" class="llenar">
+			<label for="descuento"> Descuento del producto: </label>
+			<input type="text" name="descuento" id="descuento" placeholder="<%= producto.descuento %>" class="llenar">
 		</div>
 		<br>
-		<label for="category" class="form-label">Categoría:</label>
-						<select name="category" id="category" class="form-input">
+		<label for="categoria" class="form-label">Categoría:</label>
+						<select name="categoria" id="categoria" class="form-input">
 							<option value="">Elegí</option>
 							<option value="in-sale">En oferta</option>
 							<option value="visited">Últimos agregados</option>
 						</select>
 		<br>
 		<div>
-			<label for="description" class="llenar">Descipción:</label>
+			<label for="descripcion" class="llenar">Descipción:</label>
 			<br>
-			<textarea name="description" id="description" class="form-input"></textarea>
+			<textarea name="descripcion" id="descripcion" class="form-input"><%= producto.descripcion %></textarea>
 		</div>
 		<br>
+		
 		<div>
 		  <button type="button" class="btn btn-secondary"> <a href="/">Home</a>  </button>
 		  <button type="submit" class="btn btn-success">  Guardar Producto</button>

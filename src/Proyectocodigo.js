@@ -1,9 +1,11 @@
 const express = require('express')
 const path = require('path')
 const app = express();
-
 const methodOverride = require('method-override');
 
+app.use(methodOverride('_method')); 
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 // Implementacion de rutas
 
@@ -16,10 +18,6 @@ app.use('/products', rutasProducto)
 app.use('/users', rutasUsers)
 
 
-
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
-app.use(methodOverride('_method')); 
 
 app.use('/public/', express.static(__dirname + '../../public/'))
 

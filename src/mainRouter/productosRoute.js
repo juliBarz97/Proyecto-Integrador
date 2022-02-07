@@ -18,8 +18,8 @@ router.post('/crear', productosCont.store);
 router.get('/detail/:id', productosCont.detail); 
 
 /*** EDIT ONE PRODUCT ***/ 
-router.get('/editar', productosCont.edit); 
-router.put('/editar', productosCont.update); 
+router.get('/editar/:id', productosCont.editar); 
+router.put('/editar/:id', productosCont.update); 
 
 
 /*** DELETE ONE PRODUCT***/ 

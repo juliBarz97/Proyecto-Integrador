@@ -44,7 +44,7 @@
 				<p class="codigo-producto-wal">codigo producto: <b>ISRC20</b>
 				<i class="far fa-heart"></i></p>
 				
-				<span class="precio-wal">$<%=producto.precio%><sup>68</sup></span><span class="cuotas-wal">en 6 x $ <%= (producto.imagen)/6 %> sin interés</span>
+				<span class="precio-wal">$<%=producto.precio%><sup>68</sup></span><span class="cuotas-wal">en 6 x $ <%= (producto.precio)/6 %> sin interés</span>
 				
 				<p class="devolucion-wal"><i class="fas fa-reply" ></i><b>Devolucion gratis 30 dias</b></p>
 				<p class="disponibilidad-wal"><b>Disponibilidad: <h2><%=producto.categoria%></h2></b></p>
@@ -55,12 +55,12 @@
 				<p><button type="button" class="default comprar-wal">Comprar ahora</button></p>
 				<a href="https://api.whatsapp.com/send?phone=9876654321"
 				class="btn-wsp-wal" target="_blank"><i class="fab fa-whatsapp"></i></a>
-				<form action="/productsRoute/delete/?_method=DELETE" method="POST" style="display: inline-flex">
-					<button type="submit" class="action-button delete"> Eliminar Producto</button> <!-- revisar esto-->
+				<form action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+					<button type="submit" class="action-button delete"> Eliminar Producto</button> 
 				</form>
-				<a href="/products/editar" class="action-button edit">Editar Producto</a>
+				<button type="submit" class="action-button"><a href="/products/editar/<%= producto.id %>" class="action-button edit">Editar Producto</a></button>
 				
-				<button type="submit" class="action-button"> <a href="./products/crear">Crear nuevo producto</a></button> <!-- revisar esto-->
+				<button type="submit" class="action-button"> <a href="../crear">Crear nuevo producto</a></button> <!-- revisar esto-->
 				
 			</div>
 		</div>
