@@ -118,7 +118,7 @@ const controller = {
 
 		lista = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-		res.redirect('/');
+		res.redirect('home');
 	}
 };
 

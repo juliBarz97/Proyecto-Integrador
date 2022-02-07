@@ -1,30 +1,29 @@
 [
  {
   "id": 1,
-  "nombre": "Maceta 3D",
+  "nombre": "Maceta 5D",
   "descripcion": "Maceta color marron",
-  "precio": 4300,
-  "descuento": 5,
-  "categoria": "en venta",
-  "imagen": "producto1.jpg"
+  "precio": "4123123",
+  "descuento": "",
+  "categoria": ""
  },
  {
   "id": 2,
-  "nombre": "Soporte vaso 3D",
-  "descripcion": "soporte vaso para automovil",
-  "precio": 6900,
-  "descuento": 10,
+  "nombre": "Abridor botellas 3D",
+  "descripcion": "abridor botellas",
+  "precio": 750,
+  "descuento": 3,
   "categoria": "en venta",
-  "imagen": "producto2.jpg"
+  "imagen": "AbridorBotellas3D.jpg"
  },
  {
-  "id": 4,
-  "nombre": "Funda para celular 3D",
-  "descripcion": "Fundas distintos modelos y colores",
-  "precio": 1900,
-  "descuento": 0,
+  "id": 3,
+  "nombre": "Abridor botellas 3D",
+  "descripcion": "abridor botellas",
+  "precio": 750,
+  "descuento": 3,
   "categoria": "en venta",
-  "imagen": "FundaCelular3D.jpg"
+  "imagen": "AbridorBotellas3D.jpg"
  },
  {
   "id": 5,
@@ -32,7 +31,7 @@
   "descripcion": "soporte rollo cocina varios colores",
   "precio": "500000000",
   "descuento": "",
-  "categoria": ""
+  "categoria": "SoporteRolloCocina3D.jpg"
  },
  {
   "id": 6,
@@ -54,10 +53,10 @@
  },
  {
   "id": 8,
-  "nombre": "awdawd",
-  "descripcion": "",
-  "precio": "213123",
-  "descuento": "2",
+  "nombre": "PRODUCTO CREADO PRUEBA",
+  "descripcion": "PRODUCTO PRUEBA",
+  "precio": "99999",
+  "descuento": "1",
   "categoria": "en venta"
  }
 ]
