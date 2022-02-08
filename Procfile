@@ -1,1 +1,1 @@
-web: node Proyectocodigo.js
+web: npm start

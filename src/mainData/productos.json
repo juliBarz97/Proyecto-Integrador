@@ -17,15 +17,6 @@
   "imagen": "AbridorBotellas3D.jpg"
  },
  {
-  "id": 3,
-  "nombre": "Abridor botellas 3D",
-  "descripcion": "abridor botellas",
-  "precio": 750,
-  "descuento": 3,
-  "categoria": "en venta",
-  "imagen": "AbridorBotellas3D.jpg"
- },
- {
   "id": 5,
   "nombre": "Soporte Rollo de Cocina 3D ",
   "descripcion": "soporte rollo cocina varios colores",
