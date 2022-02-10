@@ -18,7 +18,6 @@ app.use('/products', rutasProducto)
 app.use('/users', rutasUsers)
 
 
-
 app.use('/public/', express.static(__dirname + '../../public/'))
 
 app.set("view engine", "ejs")
