@@ -34,7 +34,6 @@ const controlador = {
 		fs.writeFileSync(userDBPath, JSON.stringify(userDB, null, " "));
 
 		return res.redirect("login");
-
     }
 }
 

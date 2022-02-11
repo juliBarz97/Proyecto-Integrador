@@ -98,6 +98,9 @@ body{
     background-color: #0C6291;
 }
 
+#cuerpoArba{
+    margin-top: 100px;
+}
 header .SeccionEncabezado{
     display: flex;
     background-color: rgb(241, 222, 145);
@@ -202,3 +205,4 @@ footer{
    -webkit-border-radius:50px;  
 
 }
+ 

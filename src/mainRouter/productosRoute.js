@@ -7,18 +7,19 @@ const productosCont = require('../mainController/productosCont');
 
 /*** GET ALL PRODUCTS ***/ 
 router.get('/', productosCont.index); 
+router.get('/listado', productosCont.listado); 
 
 /*** CREATE ONE PRODUCT ***/ 
-router.get('/create', productosCont.create); 
-router.post('/create', productosCont.store); 
+router.get('/crear', productosCont.create); 
+router.post('/crear', productosCont.store); 
 
 
 /*** GET ONE PRODUCT ***/ 
 router.get('/detail/:id', productosCont.detail); 
 
 /*** EDIT ONE PRODUCT ***/ 
-router.get('/edit/:id', productosCont.edit); 
-router.put('/edit/:id', productosCont.update); 
+router.get('/editar/:id', productosCont.editar); 
+router.put('/editar/:id', productosCont.update); 
 
 
 /*** DELETE ONE PRODUCT***/ 

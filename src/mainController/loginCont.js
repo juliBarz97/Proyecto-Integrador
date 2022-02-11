@@ -18,13 +18,13 @@ const controlador = {
 		}
 
 		if (userToLogin !== undefined) {
-			const isPasswordOk = bcrypt.compareSync(req.body.password, userToLogin.password); // true || false
-
+			const isPasswordOk = bcrypt.compareSync(req.body.password, userToLogin.password);
+			
 			if (!isPasswordOk) {
 				return res.send("Las contraseñas no coinciden");
 			}
 
-			delete userToLogin.password; // elimina la propiedad password del objeto
+			delete userToLogin.password;
 			req.session.user = userToLogin;
 
 			return res.redirect("/index");

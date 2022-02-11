@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+     
+<%- include ('../partials/head') %>    
+
+<body>
+   
+<%- include ('../partials/header') %>
+<main id="listado">
+    <div id="productosJ">
+      <% for (let i=0 ; i<p.length ; i++) { %>
+        <div id="P1J" class="SPJ">
+        <section>
+          <a class="botonJ" href="/products/detail/<%=p[i].id%>" ><img src="../public/imagenes/<%=p[i].imagen%>" class="fotos"> <p class="textosPS">Ver más - Producto </p></a> 
+        </section>
+        </div>
+       <% } %>   
+      </div>
+      <br>
+      <div id="serviciosJ">
+        <div id="S1J" class="SPJ">
+          <a class="botonJ" href="../index"> <img src="../public/imagenes/impresora1.png" class="fotos"> <p class="textosPS">  Ver más - Servicio 1 </p></a> 
+        </div>
+        <div id="S2J" class="SPJ">
+          <a class="botonJ" href="../index"> <img src="../public/imagenes/impresora2.png" class="fotos"> <p class="textosPS"> Ver más - Servicio 2 </p></a> 
+        </div>
+      </div>
+  </main>
+
+	
+	<%- include('../partials/footer') %>
+
+</body>	
+</html>
