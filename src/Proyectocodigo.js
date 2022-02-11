@@ -1,7 +1,15 @@
 const express = require('express')
 const path = require('path')
+const session = require('express-session');
+
 const app = express();
 
+// Seteamos la sesión
+app.use(session({
+	secret: "Inicio de session",
+	resave: true,
+	saveUninitialized: false,
+}));
 
 // Implementacion de rutas
 

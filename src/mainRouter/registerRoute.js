@@ -6,5 +6,6 @@ const registerCont = require('../mainController/registerCont');
 
 router.get('/', registerCont.register); 
 
+router.post('/', registerCont.registrarUsuario); 
 
 module.exports = router;
