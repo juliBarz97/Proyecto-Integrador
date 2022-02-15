@@ -1,50 +1,6 @@
 [
  {
   "id": 1,
-<<<<<<< HEAD
-  "nombre": "Julian",
-  "apellido": "Barza",
-  "e-mail": "JuliBarza@gmail.com",
-  "password": "123",
-  "telefono": "1163897425",
-  "imagen": ""
- },
- {
-  "id": 2,
-  "nombre": "Arbaces",
-  "apellido": "Restrepo",
-  "e-mail": "Arbaces@gmail.com",
-  "password": "1234",
-  "telefono": "1167412586",
-  "imagen": ""
- },
- {
-  "id": 3,
-  "nombre": "",
-  "apellido": "",
-  "e-mail": "",
-  "password": "",
-  "telefono": "",
-  "imagen": ""
- },
- {
-  "id": 4,
-  "nombre": "",
-  "apellido": "",
-  "e-mail": "",
-  "password": "",
-  "telefono": "",
-  "imagen": ""
- },
- {
-  "id": 5,
-  "nombre": "",
-  "apellido": "",
-  "e-mail": "",
-  "password": "",
-  "telefono": "",
-  "imagen": ""
-=======
   "nombre_completo": "Julian Barzana",
   "email": "JuliBarza@gmail.com",
   "password": "123",
@@ -73,6 +29,5 @@
   "domicilio": "Chacarita 123",
   "perfil": "Productos",
   "password": "$2a$10$yt.eDVIe20adVw3g3Ry0p.yNl1zLOxhiHgJ1b80Q8oM4m83TPtXge"
->>>>>>> 4c3416da25107f97fb3b91acbe4793dd714be64d
  }
 ]
