@@ -11,11 +11,6 @@
 
 
     <main id="formCuerpo">
-      <% if (locals.errors) { %>
-        <% for (let oneError in errors ) { %>
-          <p> <%= errors[oneError].msg %></p> <!-- aca imprime todos los errores si es que existen -->
-         <% } %>
-      <% } %> 
 
         <form id="formulario" action="/users/register" method="POST" id="regis" enctype="multipart/form-data">
           <h2 id="tituloCreacion"> Registro de cuenta </h2>
@@ -106,27 +101,12 @@
             class="llenar"
             class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
             value= "<%= locals.oldData ? oldData.password : null%>">
-            <% if (locals.errors && errors.contraseña) { %>
+            <% if (locals.errors && errors.password) { %>
               <div class="text-error"> 
-                <%= errors.contraseña.msg %>
+                <%= errors.password.msg %>
               </div>
             <% } %>
           </div>
-          <br>
-          <!--<div>
-            <label for="confirmacion"> Confirme su Contraseña: </label>
-            <input type="password" 
-            name="confirmacion" 
-            id= "confirmacion" 
-            class="llenar"
-            class="form-control <%= locals.errors && errors.confirmacion ? 'is-invalid' : null %>"
-            value= "<%= locals.oldData ? oldData.confirmacion : null%>">
-            <% if (locals.errors && errors.confirmacion) { %>
-              <div class="text-error"> 
-                <%= errors.confirmacion.msg %>
-              </div>
-            <% } %>
-          </div> -->
           <br>
           <div >
             <input type="file" name="avatar" accept=".jpg" id="avatar">

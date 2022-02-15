@@ -1,6 +1,6 @@
-/*
+
 const path = require('path');
-//const multer = require('multer');
+
 
 const { body } = require('express-validator');
 
@@ -27,4 +27,4 @@ const validations = [
     body('password').notEmpty().withMessage('Escriba una contraseña'),   
 ]
 
-module.exports = validations;*/
+module.exports = validations;
