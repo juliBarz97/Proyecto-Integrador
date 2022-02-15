@@ -5,7 +5,6 @@ const session = require('express-session');
 const app = express();
 const methodOverride = require('method-override');
 
-// Seteamos la sesión
 app.use(session({
 	secret: "Inicio de session",
 	resave: true,

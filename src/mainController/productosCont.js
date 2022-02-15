@@ -79,7 +79,7 @@ const controller = {
 
 			
 	    
-		//res.render('products/editar');
+		
 	},
 	// Update - Method to update
 	update: (req, res) => {

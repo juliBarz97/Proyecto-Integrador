@@ -12,7 +12,7 @@ const controlador = {
         res.render("users/register");
     },
     
-    processRegister: (req, res) => {
+    processRegister: (req,res) => {
         const resultValidation = validationResult(req);
         
         if (resultValidation.errors.length > 0 ){
@@ -53,7 +53,7 @@ const controlador = {
 
 		return res.redirect("/");
     },
-    
+        
     login: (req, res) => {
         res.render("users/login");
     },
@@ -91,6 +91,6 @@ const controlador = {
 		}
     },
 }
-//un rutador y un controlador para c/u
+
 
 module.exports = controlador;
