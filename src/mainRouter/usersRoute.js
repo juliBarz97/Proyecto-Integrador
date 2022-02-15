@@ -6,17 +6,17 @@ const multer = require('multer');
 
 const { body } = require('express-validator');
 
-const storage = multer.diskStorage({
+const multerDiskStorage = multer.diskStorage({
     destination : (req, file, cb) => {
         cb(null, './public/imagenes/avatars') 
     },
     filename: (req, file, cb) => {
-        let fileName= '${Date.now()}_img${path.extname(file.originalname)}'; //chequear esto 
+        let fileName = Date.now() + path.extname(file.originalname); //chequear esto 
         cb(null, fileName);
     }
 })
 
-const uploadFile = multer({ storage });
+const uploadFile = multer({ storage: multerDiskStorage });
 
 const usersCont = require('../mainController/usersCont');
 
@@ -34,8 +34,8 @@ const validations = [
         if (!file) {
             throw new Error('Suba una imagen');
         } else { 
-            if (acceptedExtensions.includes(fileExtensions)){
-                throw new Error('Los archivos permitidos son ${acceptedExtensions.join(', ')}')
+            if (acceptedExtensions.includes(fileExtensions) === false){
+                throw new Error('Los archivos permitidos son: ' + acceptedExtensions.join())
             }
         };    
         return true; 
@@ -46,9 +46,11 @@ const validations = [
 
 router.get('/register', usersCont.register); // form registro
 
-router.post('/register', uploadFile.single('avatar'), validations , usersCont.processRegister); //procesar registro
+router.post('/register', uploadFile.single('avatar'), validations, usersCont.processRegister); //procesar registro
 
 router.get('/login', usersCont.login); // form login 
+
+router.post('/login', usersCont.validarUsuario); // Validar usuario 
 
 router.get('/profile/:userId', usersCont.profile) // perfil
 

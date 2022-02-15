@@ -1,26 +1,87 @@
+const path = require('path');
+const fs = require('fs');
+const bcrypt = require('bcryptjs');
+
+const userDBPath = path.resolve(__dirname, "../mainData/usuarios.json");
+const userDB = JSON.parse(fs.readFileSync(userDBPath, "utf8"));
+
 const {validationResult} = require('express-validator')
 
 const controlador = {	
     register: (req, res) => {		
-        res.render("users/register");    
-},  
-    processRegister: (req,res) => {
+        res.render("users/register");
+    },
+    
+    processRegister: (req, res) => {
         const resultValidation = validationResult(req);
         
         if (resultValidation.errors.length > 0 ){
-            return res.render('register',{
+            return res.render('users/register', {
                 errors: resultValidation.mapped(),
-                oldData : req.body,
-            })
+                oldData : req.body })
         }
-        
+
+		const generateID = () => {
+			const lastUser = userDB[userDB.length - 1];
+
+			if(lastUser !== undefined) {
+				const lastID = lastUser.id;
+                return lastID + 1;
+			}
+
+			return 1;
+		}
+
+		const newUser = {
+			id: generateID(),
+			nombre: req.body.nombre_completo,
+			email: req.body.email,
+			fecha: req.body.fecha,
+			domicilio: req.body.domicilio,
+			perfil: req.body.perfil,
+			Accesorios: req.body.Accesorios,
+			Respuestos: req.body.Respuestos,
+			Soporte: req.body.Soporte,
+			Ortopedicos: req.body.Ortopedicos,
+			password: bcrypt.hashSync(req.body.contraseña, 10),
+			image: req.file.filename,
+		}
+
+		userDB.push(newUser);
+
+		fs.writeFileSync(userDBPath, JSON.stringify(userDB, null, " "));
+
+		return res.redirect("/");
     },
+    
     login: (req, res) => {
         res.render("users/login");
-},
+    },
+    
     profile: (req, res) => {
         res.render("users/profile");
-}
+    },
+
+    validarUsuario: (req, res) => {
+		const userToLogin = userDB.find(oneUser => oneUser.email === req.body.email);
+
+		if (userToLogin === undefined) {
+            return res.render( 'login' );
+		}
+
+		if (userToLogin !== undefined) {
+			const isPasswordOk = bcrypt.compareSync(req.body.password, userToLogin.password);
+			
+			if (!isPasswordOk) {
+				return res.render( 'login' );
+			}
+
+			delete userToLogin.password;
+			req.session.user = userToLogin;
+
+			return res.redirect("/");
+		}
+    },
 }
 //un rutador y un controlador para c/u
 
