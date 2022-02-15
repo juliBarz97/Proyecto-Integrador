@@ -5,6 +5,12 @@ const session = require('express-session');
 const app = express();
 const methodOverride = require('method-override');
 
+app.use(session({
+	secret: "Inicio de session",
+	resave: true,
+	saveUninitialized: false,
+}));
+
 app.use(methodOverride('_method')); 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());

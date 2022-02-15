@@ -2,32 +2,27 @@ const express = require('express');
 const router = express.Router();
 
 const path = require('path');
-const multer = require('multer');
 
 const { body } = require('express-validator');
 const validations = require('../middlewares/ValidationsU')
 const mult = require('../middlewares/multer')
-/*
-const storage = multer.diskStorage({
-    destination : (req, file, cb) => {
-        cb(null, './public/imagenes/avatars') 
-    },
-    filename: (req, file, cb) => {
-        let fileName= `${Date.now()}_img${path.extname(file.originalname)}`; //chequear esto 
-        cb(null, fileName);
-    }
-})
 
-const uploadFile = multer({ storage });*/
 
 const usersCont = require('../mainController/usersCont');
 
+
+const validationsLogin = [
+    body('email').notEmpty().withMessage('Escriba un email').bail(),
+    body('contraseña').notEmpty().withMessage('Escriba una contraseña'),
+]
 
 router.get('/register', usersCont.register); // form registro
 
 router.post('/register', mult.single('avatar'), validations , usersCont.registrarUsuario); //procesar registro
 
 router.get('/login', usersCont.login); // form login 
+
+router.post('/login', validationsLogin, usersCont.validLogin); // Validar usuario 
 
 router.get('/profile/:userId', usersCont.profile) // perfil
 

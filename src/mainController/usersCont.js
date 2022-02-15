@@ -1,4 +1,3 @@
-const {validationResult} = require('express-validator')
 const path = require('path');
 const fs = require('fs');
 const bcrypt = require('bcryptjs');
@@ -6,29 +5,23 @@ const bcrypt = require('bcryptjs');
 const userDBPath = path.resolve(__dirname, "../mainData/usuarios.json");
 const userDB = JSON.parse(fs.readFileSync(userDBPath, "utf8"));
 
+const {validationResult} = require('express-validator')
+
 const controlador = {	
     register: (req, res) => {		
-        return res.render("users/register");    
-},  
-    registrarUsuario: ( req, res ) => {
-		const resultValidation = validationResult(req);
+        res.render("users/register");
+    },
+    
+    processRegister: (req,res) => {
+        const resultValidation = validationResult(req);
         
         if (resultValidation.errors.length > 0 ){
-            return res.render('users/register',{
+            return res.render('users/register', {
                 errors: resultValidation.mapped(),
-                oldData : req.body,
-            })
+                oldData : req.body })
         }
-        
-        let userToCreate = {
-            ... req.body,
-            avatar : req.file.filename
-    }
-        //user.create(userToCreate); 
-        
-       
-        
-        const generateID = () => {
+
+		const generateID = () => {
 			const lastUser = userDB[userDB.length - 1];
 
 			if(lastUser !== undefined) {
@@ -41,48 +34,62 @@ const controlador = {
 
 		const newUser = {
 			id: generateID(),
-			nombre_completo: req.body.nombre_completo,
+			nombre: req.body.nombre_completo,
 			email: req.body.email,
-            date : req.body.date,
-            domicilio : req.body.domicilio,
+			fecha: req.body.fecha,
+			domicilio: req.body.domicilio,
 			perfil: req.body.perfil,
-			interes : req.body.interes,
-			password: bcrypt.hashSync(req.body.password, 10),
-			avatar: req.body.avatar  
+			Accesorios: req.body.Accesorios,
+			Respuestos: req.body.Respuestos,
+			Soporte: req.body.Soporte,
+			Ortopedicos: req.body.Ortopedicos,
+			password: bcrypt.hashSync(req.body.contraseña, 10),
+			image: req.file.filename,
 		}
 
 		userDB.push(newUser);
 
 		fs.writeFileSync(userDBPath, JSON.stringify(userDB, null, " "));
 
-		return res.redirect("login");
+		return res.redirect("/");
     },
-    validarUsuario: (req, res) => {
-        const userToLogin = userDB.find(oneUser => oneUser.email === req.body.email);
+        
+    login: (req, res) => {
+        res.render("users/login");
+    },
+    
+    profile: (req, res) => {
+        res.render("users/profile");
+    },
+
+    validLogin: (req, res) => {
+        const resultValidationLogin = validationResult(req);
+        
+        if (resultValidationLogin.errors.length > 0 ){
+            return res.render('users/login', {
+                errors: resultValidationLogin.mapped(),
+                oldData : req.body })
+        }
+
+		const userToLogin = userDB.find(oneUser => oneUser.email === req.body.email);
 
 		if (userToLogin === undefined) {
-			return res.send("No existe el usuario");
+            return res.render( 'users/login' );
 		}
 
 		if (userToLogin !== undefined) {
 			const isPasswordOk = bcrypt.compareSync(req.body.password, userToLogin.password);
 			
 			if (!isPasswordOk) {
-				return res.send("Las contraseñas no coinciden");
+				return res.render( 'users/login' );
 			}
 
 			delete userToLogin.password;
 			req.session.user = userToLogin;
 
-			return res.redirect("/index");
-    }
-},
-    login: (req, res) => {
-        res.render("users/login");
-},
-    profile: (req, res) => {
-        res.render("users/profile");
-}
+			return res.redirect("/");
+		}
+    },
 }
 
 
