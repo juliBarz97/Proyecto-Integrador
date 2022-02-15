@@ -1,6 +1,6 @@
 [
  {
-  "id": "1",
+  "id": 1,
   "nombre_completo": "Julian Barzana",
   "email": "JuliBarza@gmail.com",
   "password": "123",
@@ -11,7 +11,7 @@
   "avatar": ""
  },
  {
-  "id": "2",
+  "id": 2,
   "nombre_completo": "Arbaces Restrepo",
   "email": "Arbaces@gmail.com",
   "password": "1234",
@@ -22,21 +22,12 @@
   "avatar": ""
  },
  {
-  "id": "21",
-  "nombre_completo": "Pedro Son",
-  "email": "Son@hotmail.com",
-  "date": "2000-01-08",
-  "domicilio": "Boca 500",
-  "perfil": "Servicios",
-  "password": "Boca123"
- },
- {
-  "id": "211",
-  "nombre_completo": "Pedro rodriguez Son",
-  "email": "Sonchichi@gmail.com",
+  "id": 3,
+  "nombre_completo": "Pedro rodriguez",
+  "email": "julianmod@hotmail.com",
   "date": "2000-01-01",
-  "domicilio": "Rrr 123",
+  "domicilio": "Chacarita 123",
   "perfil": "Productos",
-  "password": "RR12#\""
+  "password": "$2a$10$yt.eDVIe20adVw3g3Ry0p.yNl1zLOxhiHgJ1b80Q8oM4m83TPtXge"
  }
 ]

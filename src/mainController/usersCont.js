@@ -43,7 +43,7 @@ const controlador = {
             domicilio : req.body.domicilio,
 			perfil: req.body.perfil,
 			interes : req.body.interes,
-			password: req.body.password,
+			password: bcrypt.hashSync(req.body.password, 10),
 			avatar: req.body.avatar  
 		}
 
