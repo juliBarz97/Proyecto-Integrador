@@ -1,50 +1,42 @@
-
 [
-    {
-        "id": "1",
-        "nombre":"Julian",
-        "apellido":"Barza",
-        "e-mail":"JuliBarza@gmail.com",
-        "password":"123",
-        "telefono":"1163897425",
-        "imagen":""
-    },
-    {
-        "id": "2",
-        "nombre":"Arbaces",
-        "apellido":"Restrepo",
-        "e-mail":"Arbaces@gmail.com",
-        "password":"1234",
-        "telefono":"1167412586",
-        "imagen":""   
-    },
-    {
-        "id": "3",
-        "nombre":"",
-        "apellido":"",
-        "e-mail":"",
-        "password":"",
-        "telefono":"",
-        "imagen":""
-    },
-    {
-        "id": "4",
-        "nombre":"",
-        "apellido":"",
-        "e-mail":"",
-        "password":"",
-        "telefono":"",
-        "imagen":""
-    },
-    {
-        "id": "5",
-        "nombre":"",
-        "apellido":"",
-        "e-mail":"",
-        "password":"",
-        "telefono":"",
-        "imagen":""
-    }
+ {
+  "id": "1",
+  "nombre_completo": "Julian Barzana",
+  "email": "JuliBarza@gmail.com",
+  "password": "123",
+  "perfil": "Productos",
+  "date": "",
+  "domicilio": "",
+  "interes": "",
+  "avatar": ""
+ },
+ {
+  "id": "2",
+  "nombre_completo": "Arbaces Restrepo",
+  "email": "Arbaces@gmail.com",
+  "password": "1234",
+  "perfil": "Productos",
+  "date": "",
+  "domicilio": "",
+  "interes": "",
+  "avatar": ""
+ },
+ {
+  "id": "21",
+  "nombre_completo": "Pedro Son",
+  "email": "Son@hotmail.com",
+  "date": "2000-01-08",
+  "domicilio": "Boca 500",
+  "perfil": "Servicios",
+  "password": "Boca123"
+ },
+ {
+  "id": "211",
+  "nombre_completo": "Pedro rodriguez Son",
+  "email": "Sonchichi@gmail.com",
+  "date": "2000-01-01",
+  "domicilio": "Rrr 123",
+  "perfil": "Productos",
+  "password": "RR12#\""
+ }
 ]
-
-

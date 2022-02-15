@@ -11,7 +11,7 @@ const storage = multer.diskStorage({
         cb(null, './public/imagenes/avatars') 
     },
     filename: (req, file, cb) => {
-        let fileName= '${Date.now()}_img${path.extname(file.originalname)}'; //chequear esto 
+        let fileName= `${Date.now()}_img${path.extname(file.originalname)}`; //chequear esto 
         cb(null, fileName);
     }
 })
@@ -20,14 +20,14 @@ const uploadFile = multer({ storage });
 
 const usersCont = require('../mainController/usersCont');
 
-const validations = [
+const validations =[
     body('nombre_completo').notEmpty().withMessage('Escriba un nombre'),
     body('email')
         .notEmpty().withMessage('Escriba un email').bail()
         .isEmail().withMessage('Escriba un correo valido'),
-    body('fecha').notEmpty().withMessage('Escriba una fecha'),
+    body('date').notEmpty().withMessage('Escriba una fecha'),
     body('domicilio').notEmpty().withMessage('Escriba un domicilio'),
-    body('avatar').custom((valur,{req }) => {
+    body('avatar').custom((value,{req }) => {
         let file = req.file;
         let acceptedExtensions = ['.jpg' , '.png'];
         let fileExtensions = path.extname(file.originalname);
@@ -40,13 +40,13 @@ const validations = [
         };    
         return true; 
     }), 
-    body('contraseña').notEmpty().withMessage('Escriba una contraseña'),
-    body('confirmacion').notEmpty().withMessage('Reescriba la contraseña'),
+    body('password').notEmpty().withMessage('Escriba una contraseña'),
+    
 ]
 
 router.get('/register', usersCont.register); // form registro
 
-router.post('/register', uploadFile.single('avatar'), validations , usersCont.processRegister); //procesar registro
+router.post('/register', uploadFile.single('avatar'), validations , usersCont.registrarUsuario); //procesar registro
 
 router.get('/login', usersCont.login); // form login 
 

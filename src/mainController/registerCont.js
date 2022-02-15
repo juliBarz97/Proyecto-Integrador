@@ -7,7 +7,7 @@ const userDB = JSON.parse(fs.readFileSync(userDBPath, "utf8"));
 
 const controlador = {	
     register: (req, res) => {		
-        res.render("register");
+        return res.render("register");
     },
     
     registrarUsuario: ( req, res ) => {
@@ -24,9 +24,14 @@ const controlador = {
 
 		const newUser = {
 			id: generateID(),
-			fullName: req.body.fullName,
+			nombre_completo: req.body.nombre_completo,
 			password: bcrypt.hashSync(req.body.password, 10),
 			email: req.body.email,
+			perfil: req.body.perfil,
+			date : req.body.date,
+			domicilio : req.body.date,
+			interes : req.body.interes,
+			avatar: req.body.avatar  
 		}
 
 		userDB.push(newUser);
@@ -37,6 +42,5 @@ const controlador = {
     }
 }
 
-//un rutador y un controlador para c/u
 
 module.exports = controlador;
