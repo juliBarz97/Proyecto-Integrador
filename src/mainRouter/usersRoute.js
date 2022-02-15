@@ -44,13 +44,18 @@ const validations = [
     body('confirmacion').notEmpty().withMessage('Reescriba la contraseña'),
 ]
 
+const validationsLogin = [
+    body('email').notEmpty().withMessage('Escriba un email').bail(),
+    body('contraseña').notEmpty().withMessage('Escriba una contraseña'),
+]
+
 router.get('/register', usersCont.register); // form registro
 
 router.post('/register', uploadFile.single('avatar'), validations, usersCont.processRegister); //procesar registro
 
 router.get('/login', usersCont.login); // form login 
 
-router.post('/login', usersCont.validarUsuario); // Validar usuario 
+router.post('/login', validationsLogin, usersCont.validLogin); // Validar usuario 
 
 router.get('/profile/:userId', usersCont.profile) // perfil
 
