@@ -29,5 +29,23 @@
   "domicilio": "Chacarita 123",
   "perfil": "Productos",
   "password": "$2a$10$yt.eDVIe20adVw3g3Ry0p.yNl1zLOxhiHgJ1b80Q8oM4m83TPtXge"
+ },
+ {
+  "id": 4,
+  "nombre": "usuario de prueba",
+  "email": "arbacesrestrepo@hotmail.com",
+  "domicilio": "calle 101c 76a 53",
+  "perfil": "Productos",
+  "password": "$2a$10$kE4Un6nzdrD5LK021FrDzeiEwZDAAXlUUAqYk0ggfx8qeaJDmtUF6",
+  "image": "1644966047824.jpg"
+ },
+ {
+  "id": 5,
+  "nombre": "usuario de prueba 2",
+  "email": "arbacesrestrepo@hotmail.com",
+  "domicilio": "domicilio",
+  "perfil": "Productos",
+  "password": "$2a$10$DfY3vhlUeXecGPIwqt825ecuDaFX00hbmCu59S6a.bdZlbjHxQYOW",
+  "image": "1644966137755.jpg"
  }
 ]

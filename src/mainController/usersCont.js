@@ -43,7 +43,7 @@ const controlador = {
 			Respuestos: req.body.Respuestos,
 			Soporte: req.body.Soporte,
 			Ortopedicos: req.body.Ortopedicos,
-			password: bcrypt.hashSync(req.body.contraseña, 10),
+			password: bcrypt.hashSync(req.body.password, 10),
 			image: req.file.filename,
 		}
 

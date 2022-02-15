@@ -1,10 +1,13 @@
+const bcrypt = require('bcryptjs');
+
+const userDBPath = path.resolve(__dirname, "../mainData/usuarios.json");
+const userDB = JSON.parse(fs.readFileSync(userDBPath, "utf8"));
+
 const controlador = {	
     register: (req, res) => {		
         return res.render("register");
     },
     
-<<<<<<< HEAD
-=======
     registrarUsuario: ( req, res ) => {
 		const generateID = () => {
 			const lastUser = userDB[userDB.length - 1];
@@ -24,9 +27,9 @@ const controlador = {
 			email: req.body.email,
 			perfil: req.body.perfil,
 			date : req.body.date,
-			domicilio : req.body.date,
+			domicilio : req.body.domicilio,
 			interes : req.body.interes,
-			avatar: req.body.avatar  
+			avatar: req.body.avatar
 		}
 
 		userDB.push(newUser);
@@ -35,7 +38,6 @@ const controlador = {
 
 		return res.redirect("login");
     }
->>>>>>> 4c3416da25107f97fb3b91acbe4793dd714be64d
 }
 
 
