@@ -29,5 +29,14 @@
   "domicilio": "Chacarita 123",
   "perfil": "Productos",
   "password": "$2a$10$yt.eDVIe20adVw3g3Ry0p.yNl1zLOxhiHgJ1b80Q8oM4m83TPtXge"
+ },
+ {
+  "id": 4,
+  "nombre_completo": "asdawqdaw",
+  "email": "awsdawd@gmail.com",
+  "date": "2000-01-01",
+  "domicilio": "asdqwd 123",
+  "perfil": "Productos",
+  "password": "$2a$10$9Wo7ApyafRS8UAr9sB1lLu3Js6rBYp3zS5mdSRkbSUKbHqzSUi2y."
  }
 ]

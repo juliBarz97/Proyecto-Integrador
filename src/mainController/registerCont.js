@@ -1,4 +1,4 @@
-const path = require('path');
+/*const path = require('path');
 const fs = require('fs');
 const bcrypt = require('bcryptjs');
 
@@ -43,4 +43,4 @@ const controlador = {
 }
 
 
-module.exports = controlador;
+module.exports = controlador; */

@@ -1,4 +1,4 @@
-/*
+
 const path = require('path');
 //const multer = require('multer');
 
@@ -27,4 +27,4 @@ const validations = [
     body('password').notEmpty().withMessage('Escriba una contraseña'),   
 ]
 
-module.exports = validations;*/
+module.exports = validations;

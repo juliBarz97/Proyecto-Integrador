@@ -10,21 +10,25 @@ const controlador = {
     register: (req, res) => {		
         return res.render("users/register");    
 },  
-    processRegister: (req,res) => {
-        const resultValidation = validationResult(req);
+    registrarUsuario: ( req, res ) => {
+		const resultValidation = validationResult(req);
         
         if (resultValidation.errors.length > 0 ){
-            return res.render('register',{
+            return res.render('users/register',{
                 errors: resultValidation.mapped(),
                 oldData : req.body,
             })
         }
         
-    },
-    
-    
-    registrarUsuario: ( req, res ) => {
-		const generateID = () => {
+        let userToCreate = {
+            ... req.body,
+            avatar : req.file.filename
+    }
+        //user.create(userToCreate); 
+        
+       
+        
+        const generateID = () => {
 			const lastUser = userDB[userDB.length - 1];
 
 			if(lastUser !== undefined) {
