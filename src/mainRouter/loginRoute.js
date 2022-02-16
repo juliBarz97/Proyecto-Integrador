@@ -1,12 +1,15 @@
 const express = require('express');
 const router = express.Router();
-
+const { body } = require('express-validator');
 
 const loginCont = require('../mainController/loginCont');
 
-router.get('/', loginCont.login); 
+const validationsLogin = [
+    body('nombre_completo').notEmpty().withMessage('Escriba un nombre_completo').bail(),
+    body('contraseña').notEmpty().withMessage('Escriba una contraseña'),
+]
 
-router.post('/login', loginCont.validarUsuario); 
+router.post('/login', validationsLogin ,loginCont.validLogin); 
 
 
 module.exports = router;

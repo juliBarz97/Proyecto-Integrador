@@ -1,7 +1,7 @@
 [
  {
   "id": 1,
-  "nombre_completo": "Julian Barzana",
+  "nombre": "Julian Barzana",
   "email": "JuliBarza@gmail.com",
   "password": "123",
   "perfil": "Productos",
@@ -12,7 +12,7 @@
  },
  {
   "id": 2,
-  "nombre_completo": "Arbaces Restrepo",
+  "nombre": "Arbaces Restrepo",
   "email": "Arbaces@gmail.com",
   "password": "1234",
   "perfil": "Productos",
@@ -23,29 +23,53 @@
  },
  {
   "id": 3,
-  "nombre_completo": "Pedro rodriguez",
-  "email": "julianmod@hotmail.com",
-  "date": "2000-01-01",
+  "nombre": "julias",
+  "email": "asd@gmail.com",
   "domicilio": "Chacarita 123",
   "perfil": "Productos",
-  "password": "$2a$10$yt.eDVIe20adVw3g3Ry0p.yNl1zLOxhiHgJ1b80Q8oM4m83TPtXge"
+  "Accesorios": "on",
+  "Respuestos": "on",
+  "password": "$2a$10$g2HByRtAQiipHzEsFoM9t.fLeYaBxWq7.uLyEtc5d9japSfenkFf2",
+  "image": "1644967565505_img.JPG"
  },
  {
   "id": 4,
-  "nombre": "usuario de prueba",
-  "email": "arbacesrestrepo@hotmail.com",
-  "domicilio": "calle 101c 76a 53",
+  "nombre": "asds",
+  "email": "asd@gmail.com",
+  "domicilio": "asdasd 123",
   "perfil": "Productos",
-  "password": "$2a$10$kE4Un6nzdrD5LK021FrDzeiEwZDAAXlUUAqYk0ggfx8qeaJDmtUF6",
-  "image": "1644966047824.jpg"
+  "Accesorios": "on",
+  "Respuestos": "on",
+  "password": "$2a$10$U5Ech7M/JhEDTg/Ky6A4L.MCMcaMC28bt3TTbAR5ncUmdpbmkMhbq",
+  "image": "1644967863153_img.JPG"
  },
  {
   "id": 5,
-  "nombre": "usuario de prueba 2",
-  "email": "arbacesrestrepo@hotmail.com",
-  "domicilio": "domicilio",
+  "nombre": "s",
+  "email": "s@gmail.com",
+  "domicilio": "s1",
   "perfil": "Productos",
-  "password": "$2a$10$DfY3vhlUeXecGPIwqt825ecuDaFX00hbmCu59S6a.bdZlbjHxQYOW",
-  "image": "1644966137755.jpg"
+  "Respuestos": "on",
+  "password": "$2a$10$wLXE0hoES7gl0Trt0WzpLuAPTb9vitM/uwseW/Ey8eyuR3o1X.3j6",
+  "image": "1644968506283_img.JPG"
+ },
+ {
+  "id": 6,
+  "nombre": "julian barzana",
+  "email": "julianmod@hotmail.com",
+  "domicilio": "Estomba 1919",
+  "perfil": "Productos",
+  "Respuestos": "on",
+  "password": "$2a$10$0oboeklWfqVF7T13Y2Cf/emsnwFc8qQnq9SopIhc3BTs1Zg8e.3GC",
+  "image": "1644968873828_img.JPG"
+ },
+ {
+  "id": 7,
+  "nombre": "sss",
+  "email": "ss@gmail.com",
+  "domicilio": "s123",
+  "perfil": "Productos",
+  "password": "$2a$10$C.iJNEeb9qoSLzfCxlzMp.6ZWNKjjpIumu.DgyvXgBHUR8011ytmG",
+  "image": "1644969491657_img.JPG"
  }
 ]

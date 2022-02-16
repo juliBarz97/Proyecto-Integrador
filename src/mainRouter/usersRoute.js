@@ -18,7 +18,7 @@ const validationsLogin = [
 
 router.get('/register', usersCont.register); // form registro
 
-router.post('/register', mult.single('avatar'), validations , usersCont.registrarUsuario); //procesar registro
+router.post('/register', mult.single('avatar'), validations , usersCont.processRegister); //procesar registro
 
 router.get('/login', usersCont.login); // form login 
 
