@@ -51,7 +51,7 @@ const controlador = {
 
 		fs.writeFileSync(userDBPath, JSON.stringify(userDB, null, " "));
 
-		return res.redirect("login");
+		return res.redirect("users/login");
     },
         
     login: (req, res) => {
