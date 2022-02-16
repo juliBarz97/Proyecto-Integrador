@@ -9,7 +9,6 @@ const validationsLogin = [
     body('contraseña').notEmpty().withMessage('Escriba una contraseña'),
 ]
 
-router.post('/login', validationsLogin ,loginCont.validLogin); 
-
+router.post('/login', validationsLogin, loginCont.validLogin); // Validar usuario 
 
 module.exports = router;

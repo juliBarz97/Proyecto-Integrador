@@ -51,7 +51,7 @@ const controlador = {
 
 		fs.writeFileSync(userDBPath, JSON.stringify(userDB, null, " "));
 
-		return res.redirect("users/login");
+		return res.redirect("login");
     },
         
     login: (req, res) => {
@@ -62,34 +62,6 @@ const controlador = {
         res.render("users/profile");
     },
 
-    validLogin: (req, res) => {
-        const resultValidationLogin = validationResult(req);
-        
-        if (resultValidationLogin.errors.length > 0 ){
-            return res.render('users/login', {
-                errors: resultValidationLogin.mapped(),
-                oldData : req.body })
-        }
-
-		const userToLogin = userDB.find(oneUser => oneUser.email === req.body.email);
-
-		if (userToLogin === undefined) {
-            return res.render( 'users/login' );
-		}
-
-		if (userToLogin !== undefined) {
-			const isPasswordOk = bcrypt.compareSync(req.body.password, userToLogin.password);
-			
-			if (!isPasswordOk) {
-				return res.render( 'users/login' );
-			}
-
-			delete userToLogin.password;
-			req.session.user = userToLogin;
-
-			return res.redirect("/");
-		}
-    },
 }
 
 

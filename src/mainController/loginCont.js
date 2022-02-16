@@ -22,28 +22,29 @@ const controlador = {
                 oldData : req.body })
         }
 		
-		
 		const userToLogin = userDB.filter( function(e){
 			return e.email == req.body.email;
 		})
 
-		console.log(userToLogin);
 		if (userToLogin === undefined) {
             res.render( 'users/login' );
 		}
 
 		if (userToLogin !== undefined) {
-			const isPasswordOk = bcrypt.compareSync(req.body.password, userToLogin.password);
+			const isPasswordOk = bcrypt.compareSync(req.body.password, userToLogin[0].password);
 			
 			if (!isPasswordOk) {
 				return res.render( 'users/login' );
 			}
 
-			delete userToLogin.password;
-			req.session.user = userToLogin;
+			delete userToLogin[0].password;
+			req.session.user = userToLogin[0];
 
-			return res.redirect("/");
-	} }
+			console.log( req.session.user );
+
+			return res.redirect("index");
+		}
+	}
 }
 
 

@@ -71,5 +71,14 @@
   "perfil": "Productos",
   "password": "$2a$10$C.iJNEeb9qoSLzfCxlzMp.6ZWNKjjpIumu.DgyvXgBHUR8011ytmG",
   "image": "1644969491657_img.JPG"
+ },
+ {
+  "id": 8,
+  "nombre": "usuario de prueba",
+  "email": "arbacesrestrepo@hotmail.com",
+  "domicilio": "calle 101c 76a 53",
+  "perfil": "Productos",
+  "password": "$2a$10$xzKmg9WCJk5fFvEa5Tizm.3/SOLRa1DXq0sWdhticpgPGbr4ZjOu6",
+  "image": "1644971837124_img.jpg"
  }
 ]
