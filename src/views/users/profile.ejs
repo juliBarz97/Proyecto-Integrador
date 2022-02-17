@@ -7,7 +7,21 @@
   <body >
     
 <%- include ('../partials/header') %>
- 
+  <main id="perfil">
+    <form id="formulario-2" action="/users/login" method="POST" >
+      <h2 id="tituloCreacion"> Perfil </h2>
+      <div>
+        <label for="email">  Este es su email </label>
+        <h2> <%= user.email %> </h2>                     
+      </div>          
+      </div>
+      <br>
+      <div>
+        <label for="password"> Este es su domicilio </label>
+        <h2> <%= user.domicilio %> </h2>         
+      </div>          
+  </form>  
+</main>
     
 <%- include ('../partials/footer') %>
     

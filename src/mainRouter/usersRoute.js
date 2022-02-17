@@ -24,7 +24,7 @@ router.post('/register', mult.single('avatar'), validations , usersCont.processR
 
 router.get('/login', usersCont.login); // form login 
 
-//router.get('/profile', usersCont.perfil);
+router.get('/profile', usersCont.profile);
 
 router.post('/login', validationsLogin, usersCont.validLogin); // Validar usuario 
 

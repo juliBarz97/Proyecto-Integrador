@@ -7,7 +7,7 @@ const methodOverride = require('method-override');
 
 app.use(session({
 	secret: "Inicio de session",
-	resave: true,
+	resave: false,
 	saveUninitialized: false,
 }));
 
@@ -20,12 +20,11 @@ app.use(express.json());
 const rutasHome = require('./mainRouter/homeRoute')
 const rutasUsers = require('./mainRouter/usersRoute')
 const rutasProducto = require('./mainRouter/productosRoute')
-const rutasLogin = require('./mainRouter/loginRoute')
 
 app.use('/', rutasHome)
 app.use('/products', rutasProducto)
 app.use('/users', rutasUsers)
-app.use('/users2', rutasLogin)
+
 
 
 app.use('/public/', express.static(__dirname + '../../public/'))
