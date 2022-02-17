@@ -12,12 +12,32 @@
         <h2 id="tituloCreacion"> Login: </h2>
         <div>
           <label for="email"> Ingrese su Email: </label>
-          <input type="text" name="email" id="email" class="llenar">
+          <input type="text" 
+            name="email" 
+            id="email" 
+            class="llenar"
+            class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+            value= "<%= locals.oldData ? oldData.email : null%>">
+            <% if (locals.errors && errors.email) { %>
+              <div class="text-error"> 
+                <%= errors.email.msg %>
+              </div>
+            <% } %>
         </div>
         <br>
         <div>
           <label for="password"> Ingrese su Contraseña: </label>
-          <input type="password" name="password" id="password" class="llenar">
+          <input type="password" 
+            name="password" 
+            id="password" 
+            class="llenar"
+            class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+            value= "<%= locals.oldData ? oldData.password : null%>">
+            <% if (locals.errors && errors.password) { %>
+              <div class="text-error"> 
+                <%= errors.password.msg %>
+              </div>
+            <% } %>
         </div>
         <br>
         <div>

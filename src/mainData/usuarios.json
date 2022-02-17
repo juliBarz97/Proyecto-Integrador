@@ -71,5 +71,34 @@
   "perfil": "Productos",
   "password": "$2a$10$C.iJNEeb9qoSLzfCxlzMp.6ZWNKjjpIumu.DgyvXgBHUR8011ytmG",
   "image": "1644969491657_img.JPG"
+ },
+ {
+  "id": 8,
+  "nombre": "d321",
+  "email": "d3@gmail.com",
+  "domicilio": "d3",
+  "perfil": "Productos",
+  "password": "$2a$10$LviRqdOLMLiCvBftlrhbFefmX1n4fJ93Qep0CWgeBvxuRpbAXlTha",
+  "image": "1645061431057_img.JPG"
+ },
+ {
+  "id": 9,
+  "nombre": "asd",
+  "email": "asds@gmail.com",
+  "domicilio": "asds ",
+  "perfil": "Productos",
+  "Accesorios": "on",
+  "password": "$2a$10$tSmpM9x9ejTmDc6U/xteyehM37/fWrZh5lh0.0lzEwM3aZNKpUOxa",
+  "image": "1645064275987_img.JPG"
+ },
+ {
+  "id": 10,
+  "nombre": "juli",
+  "email": "s1s@gmail.com",
+  "domicilio": "s1s",
+  "perfil": "Productos",
+  "Respuestos": "on",
+  "password": "$2a$10$/bjQg0Lxqia8/vXEvBCn9e7ENtsxOqWqwbCoSDreWN94hEnhRsXau",
+  "image": "1645064695768_img.JPG"
  }
 ]

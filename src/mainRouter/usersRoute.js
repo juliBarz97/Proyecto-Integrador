@@ -12,8 +12,10 @@ const usersCont = require('../mainController/usersCont');
 
 
 const validationsLogin = [
-    body('email').notEmpty().withMessage('Escriba un email').bail(),
-    body('contraseña').notEmpty().withMessage('Escriba una contraseña'),
+    body('email')
+        .notEmpty().withMessage('Escriba un email').bail()
+        .isEmail().withMessage('Escriba un correo valido'),
+    body('password').notEmpty().withMessage('Escriba una contraseña'),
 ]
 
 router.get('/register', usersCont.register); // form registro
@@ -22,8 +24,10 @@ router.post('/register', mult.single('avatar'), validations , usersCont.processR
 
 router.get('/login', usersCont.login); // form login 
 
+//router.get('/profile', usersCont.perfil);
+
 router.post('/login', validationsLogin, usersCont.validLogin); // Validar usuario 
 
-router.get('/profile/:userId', usersCont.profile) // perfil
+//router.get('/profile/:userId', usersCont.profile) // perfil
 
 module.exports = router;

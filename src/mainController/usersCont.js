@@ -51,7 +51,7 @@ const controlador = {
 
 		fs.writeFileSync(userDBPath, JSON.stringify(userDB, null, " "));
 
-		return res.redirect("users/login");
+		return res.redirect("login");
     },
         
     login: (req, res) => {
@@ -59,7 +59,7 @@ const controlador = {
     },
     
     profile: (req, res) => {
-        res.render("users/profile");
+        res.render("profile");
     },
 
     validLogin: (req, res) => {
@@ -87,7 +87,7 @@ const controlador = {
 			delete userToLogin.password;
 			req.session.user = userToLogin;
 
-			return res.redirect("/");
+			return res.redirect("users/profile");
 		}
     },
 }
