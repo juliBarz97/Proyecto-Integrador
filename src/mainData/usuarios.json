@@ -100,5 +100,25 @@
   "Respuestos": "on",
   "password": "$2a$10$/bjQg0Lxqia8/vXEvBCn9e7ENtsxOqWqwbCoSDreWN94hEnhRsXau",
   "image": "1645064695768_img.JPG"
+ },
+ {
+  "id": 11,
+  "nombre": "ss2",
+  "email": "ss2@gmail.com",
+  "domicilio": "ss2",
+  "perfil": "Productos",
+  "Respuestos": "on",
+  "password": "$2a$10$v0dQjgUQMmkIGbIL0cVPQOFsXgIoTexMAlmqeip7f0RnWJ7J3vQaK",
+  "image": "1645191651791_img.JPG"
+ },
+ {
+  "id": 12,
+  "nombre": "julo pa",
+  "email": "paj@gmail.com",
+  "domicilio": "asd 123",
+  "perfil": "Productos",
+  "Respuestos": "on",
+  "password": "$2a$10$xP4Oc1C2zOfS3BIwioz2puH6mVSWzMWQTZy2LQJj6QQ0aQl57FRcS",
+  "image": "1645197127610_img.JPG"
  }
 ]
