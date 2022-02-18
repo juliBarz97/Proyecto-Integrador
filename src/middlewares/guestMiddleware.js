@@ -1,10 +1,10 @@
 function guestMiddleware(req,res,next){
-    if( req.session.userToLogin == undefined){
+    if(req.session.user){
+        return res.render('/users/profile')       
+    }  
         next();
-    } else {
-        res.send('Pagina para invitados')
-    }
 }
+
 
 // esto lo podriamos poner en una pagina mas para verificar si el que
 // entra esta logueado o no

@@ -120,5 +120,14 @@
   "Respuestos": "on",
   "password": "$2a$10$xP4Oc1C2zOfS3BIwioz2puH6mVSWzMWQTZy2LQJj6QQ0aQl57FRcS",
   "image": "1645197127610_img.JPG"
+ },
+ {
+  "id": 13,
+  "nombre": "juli barzana",
+  "email": "julibarzana@gmail.com",
+  "domicilio": "asdasd2",
+  "perfil": "Productos",
+  "password": "$2a$10$gU/SXbExXZzg2WmiTcbVCe7G.yYAiGQzmNqXvjpYIejPXNm9CBeoW",
+  "image": "1645213145953_img.JPG"
  }
 ]

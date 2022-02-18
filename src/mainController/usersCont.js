@@ -8,7 +8,8 @@ const userDB = JSON.parse(fs.readFileSync(userDBPath, "utf8"));
 const {validationResult} = require('express-validator')
 
 const controlador = {	
-    register: (req, res) => {		
+    register: (req, res) => {
+				
         res.render("users/register");
     },
     
@@ -55,11 +56,12 @@ const controlador = {
     },
         
     login: (req, res) => {
-		
+		console.log(req.cookies.test)
         res.render("users/login");
     },
 
     validLogin: (req, res) => {
+		
 		const resultValidationLogin = validationResult(req);
 		 
 		 if (resultValidationLogin.errors.length > 0 ){
@@ -78,25 +80,35 @@ const controlador = {
 		 if (!userToLogin) {
 			 return	res.render( 'users/login' );
 		 }
- 
+		 
 		 if (userToLogin) {
 			 const isPasswordOk = bcrypt.compareSync(req.body.password, userToLogin[0].password);
 			 
 			 if (!isPasswordOk) {
 				 return res.render( 'users/login' );
 			 } else {			 
-				delete userToLogin.password; //no borra, habria que reveerlo 
-				req.session.user = userToLogin[0];
+				delete userToLogin[0].password; //no borra, habria que reveerlo 
+				req.session.userLogged = userToLogin[0];
+
+				if(req.body.recordarUsuario) {
+					res.cookie('userEmail', req.body.email , { maxAge : (1000*60)})
+				}
+
 				return res.redirect("/users/profile");
 			}
 	 } },
 	 profile: (req, res) => {
-		 console.log('profile')
-		 console.log(req.session.user);
+		 console.log(req.cookies.userEmail)
+		 console.log(req.session.userLogged);
 		 res.render("users/profile",{
-			 user: req.session.user,
+			 user: req.session.userLogged,
 		 });
-		 
+	
+	 },
+	 logout: (req,res)=>{
+		 req.session.destroy;
+		 console.log(req.session.user);
+		 return res.redirect('/')
 	 }
 }
 

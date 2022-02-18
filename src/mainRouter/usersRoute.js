@@ -6,7 +6,7 @@ const path = require('path');
 const { body } = require('express-validator');
 const validations = require('../middlewares/ValidationsU')
 const mult = require('../middlewares/multer')
-
+//const guestMiddleware = require('../middlewares/guestMiddleware')
 
 const usersCont = require('../mainController/usersCont');
 
@@ -28,6 +28,8 @@ router.get('/profile', usersCont.profile);
 
 router.post('/login', validationsLogin, usersCont.validLogin); // Validar usuario 
 
-//router.get('/profile/:userId', usersCont.profile) // perfil
+// desloguearse
+
+router.get('/logout', usersCont.logout)
 
 module.exports = router;
