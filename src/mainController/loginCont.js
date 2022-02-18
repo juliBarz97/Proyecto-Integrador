@@ -42,7 +42,7 @@ const controlador = {
 
 			console.log( req.session.user );
 
-			return res.redirect("index");
+			return res.require("index");
 		}
 	}
 }
