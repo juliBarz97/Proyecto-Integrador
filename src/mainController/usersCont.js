@@ -107,7 +107,7 @@ const controlador = {
 	 },
 	 logout: (req,res)=>{
 		 req.session.destroy;
-		 console.log(req.session.user);
+		 console.log(req.session.userLogged);
 		 return res.redirect('/')
 	 }
 }

@@ -129,5 +129,14 @@
   "perfil": "Productos",
   "password": "$2a$10$gU/SXbExXZzg2WmiTcbVCe7G.yYAiGQzmNqXvjpYIejPXNm9CBeoW",
   "image": "1645213145953_img.JPG"
+ },
+ {
+  "id": 14,
+  "nombre": "ssd",
+  "email": "ssd@gmail.com",
+  "domicilio": "ssd",
+  "perfil": "Productos",
+  "password": "$2a$10$TYb52CNGsaaD3MGLRNK/Ruf2wdZnEY3welHyqQFo/0AxvS6pCI19C",
+  "image": "1645539538001_img.JPG"
  }
 ]

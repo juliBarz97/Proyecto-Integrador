@@ -7,16 +7,12 @@ const { body } = require('express-validator');
 const validations = require('../middlewares/ValidationsU')
 const mult = require('../middlewares/multer')
 //const guestMiddleware = require('../middlewares/guestMiddleware')
+const validationsL = require('../middlewares/validationsL')
 
 const usersCont = require('../mainController/usersCont');
 
 
-const validationsLogin = [
-    body('email')
-        .notEmpty().withMessage('Escriba un email').bail()
-        .isEmail().withMessage('Escriba un correo valido'),
-    body('password').notEmpty().withMessage('Escriba una contraseña'),
-]
+
 
 router.get('/register', usersCont.register); // form registro
 
@@ -26,10 +22,9 @@ router.get('/login', usersCont.login); // form login
 
 router.get('/profile', usersCont.profile);
 
-router.post('/login', validationsLogin, usersCont.validLogin); // Validar usuario 
+router.post('/login', validationsL, usersCont.validLogin); // Validar usuario 
 
-// desloguearse
 
-router.get('/logout', usersCont.logout)
+router.get('/logout', usersCont.logout) // desloguearse
 
 module.exports = router;
