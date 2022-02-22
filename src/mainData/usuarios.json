@@ -138,5 +138,25 @@
   "perfil": "Productos",
   "password": "$2a$10$TYb52CNGsaaD3MGLRNK/Ruf2wdZnEY3welHyqQFo/0AxvS6pCI19C",
   "image": "1645539538001_img.JPG"
+ },
+ {
+  "id": 15,
+  "nombre": "asds",
+  "email": "asdss@gmail.com",
+  "domicilio": "asdss",
+  "perfil": "Productos",
+  "Respuestos": "on",
+  "password": "$2a$10$b9hZWheMwcJkO96.Luz5O.lvoZXiEXwi4WYv8gNPvBumqVmgRvF.u",
+  "image": "1645562356201_img.JPG"
+ },
+ {
+  "id": 16,
+  "nombre": "sssss",
+  "email": "sssss@gmail.com",
+  "domicilio": "sssss",
+  "perfil": "Productos",
+  "Respuestos": "on",
+  "password": "$2a$10$3AGbdMcbTpcdjn8wpdgaGu6.93SSAw4NW6S9ylRxpAoomwPqGIaze",
+  "image": "1645563214892_img.JPG"
  }
 ]

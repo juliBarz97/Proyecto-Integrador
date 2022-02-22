@@ -16,7 +16,7 @@ const usersCont = require('../mainController/usersCont');
 
 router.get('/register', usersCont.register); // form registro
 
-router.post('/register', mult.single('avatar'), validations , usersCont.processRegister); //procesar registro
+router.post('/register',  validations, mult.single('avatar'), usersCont.processRegister); //procesar registro
 
 router.get('/login', usersCont.login); // form login 
 
