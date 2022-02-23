@@ -158,5 +158,15 @@
   "Respuestos": "on",
   "password": "$2a$10$3AGbdMcbTpcdjn8wpdgaGu6.93SSAw4NW6S9ylRxpAoomwPqGIaze",
   "image": "1645563214892_img.JPG"
+ },
+ {
+  "id": 17,
+  "nombre": "sdsd",
+  "email": "sdsd@gmail.com",
+  "domicilio": "sdsd",
+  "perfil": "Productos",
+  "Respuestos": "on",
+  "password": "$2a$10$SH8I5v0gbR9.27G8XPFRceFg0F99MK5iQ0sCCg1NDVrF/VimjZNRm",
+  "image": "1645624408091_img.JPG"
  }
 ]
