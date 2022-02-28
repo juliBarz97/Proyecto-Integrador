@@ -1,15 +1,23 @@
 const express = require('express')
 const path = require('path')
 const session = require('express-session');
+const cookies = require('cookie-parser');
 
 const app = express();
+
+const usuarioLogeadoMW = require('../src/middlewares/usuarioLogeado')
+
 const methodOverride = require('method-override');
 
 app.use(session({
 	secret: "Inicio de session",
-	resave: true,
+	resave: false,
 	saveUninitialized: false,
 }));
+
+app.use(cookies());
+
+app.use(usuarioLogeadoMW);
 
 app.use(methodOverride('_method')); 
 app.use(express.urlencoded({ extended: false }));
@@ -20,12 +28,11 @@ app.use(express.json());
 const rutasHome = require('./mainRouter/homeRoute')
 const rutasUsers = require('./mainRouter/usersRoute')
 const rutasProducto = require('./mainRouter/productosRoute')
-const rutasLogin = require('./mainRouter/loginRoute')
 
 app.use('/', rutasHome)
 app.use('/products', rutasProducto)
 app.use('/users', rutasUsers)
-app.use('/users2', rutasLogin)
+
 
 
 app.use('/public/', express.static(__dirname + '../../public/'))

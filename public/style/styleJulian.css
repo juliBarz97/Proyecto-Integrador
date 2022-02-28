@@ -158,11 +158,54 @@ html{
     flex-direction: column;
     align-items: center;
     height: 72%;
-    margin: 5% 27% 5% 27%;
+    margin: 50px 27% 5% 27%;
     background-color: cornsilk;
     border-radius: 20px;
     padding: 6% 8% 5% 8%;
 }
+/* PROFILE */
+#formulario-3{
+    display: flex;
+    flex-direction: column;
+    height: 86%;
+    margin: 100px 27% 5% 27%;
+    background-color: cornsilk;
+    border-radius: 20px;
+    padding: 3% 8% 5% 8%;
+}
+
+#tituloCreacion{
+    display: flex;
+    justify-content: center;
+}
+
+.textoPerfil2{
+    display: flex;
+    justify-content: center;
+}
+
+
+#fotoPerfil{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    
+}
+
+#fotoPerfilDiv{
+    display: flex;
+    justify-content: center;
+
+}
+
+#fotoPerfilNavbar{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    
+}
+
+
 .ingresar:hover{
     background-color:  #0022AA;
 }
@@ -265,6 +308,8 @@ html{
     margin-top: 10%;
 }
 
+
+
 #pieJ{
     display: flex;
     justify-content: center;
@@ -303,6 +348,25 @@ html{
     }
     .socialMedia{
         width: 10%;
+    }
+    #formulario-2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 72%;
+        margin: 50px 7% 5% 7%;
+        background-color: cornsilk;
+        border-radius: 20px;
+        padding: 6% 8% 5% 8%;
+    }
+    #formulario-3{
+        display: flex;
+        flex-direction: column;
+        height: 90%;
+        margin: 80px 10% 5% 10%;
+        background-color: cornsilk;
+        border-radius: 20px;
+        padding: 3% 8% 5% 15%;
     }
 }
 

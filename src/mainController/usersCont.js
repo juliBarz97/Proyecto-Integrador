@@ -8,7 +8,8 @@ const userDB = JSON.parse(fs.readFileSync(userDBPath, "utf8"));
 const {validationResult} = require('express-validator')
 
 const controlador = {	
-    register: (req, res) => {		
+    register: (req, res) => {
+				
         res.render("users/register");
     },
     
@@ -55,14 +56,12 @@ const controlador = {
     },
         
     login: (req, res) => {
+		console.log(req.cookies.test)
         res.render("users/login");
-    },
-    
-    profile: (req, res) => {
-        res.render("users/profile");
     },
 
 }
+
 
 
 module.exports = controlador;

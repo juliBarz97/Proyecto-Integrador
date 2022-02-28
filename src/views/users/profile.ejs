@@ -7,7 +7,24 @@
   <body >
     
 <%- include ('../partials/header') %>
- 
+  <main id="perfil">
+    <form id="formulario-3" action="/users/login" method="POST" >
+      <h2 id="tituloCreacion"> Bienvenido a D3, <%= user.nombre %>! </h2>
+      <div>
+        <p class="textoPerfil1"> Este es su email </p> 
+        <h2 class="textoPerfil2"> <%= user.email %> </h2>                     
+      </div>          
+      </div>
+      <br>
+      <div>
+        <p class="textoPerfil1"> Este es su domicilio: </p> 
+        <h2 class="textoPerfil2"> <%= user.domicilio %> </h2>         
+      </div>
+      <p class="textoPerfil1"> Esta es su foto de perfil: </p> 
+      <div id="fotoPerfilDiv" > <img src="/public/imagenes/avatars/<%=user.image%>" id="fotoPerfil"> </div>         
+  </form>  
+
+</main>
     
 <%- include ('../partials/footer') %>
     
