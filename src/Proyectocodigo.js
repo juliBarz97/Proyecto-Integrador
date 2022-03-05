@@ -5,18 +5,12 @@ const session = require('express-session');
 const app = express();
 const methodOverride = require('method-override');
 
-<<<<<<< HEAD
 // Seteamos la sesión
 app.use(session({
 	secret: "Inicio de session",
 	resave: true,
 	saveUninitialized: false,
 }));
-=======
-app.use(methodOverride('_method')); 
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
->>>>>>> a3c251dbea4a32c0f80a78ff2310a5a947326a53
 
 // Implementacion de rutas
 

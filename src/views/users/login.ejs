@@ -8,16 +8,17 @@
     
 <%- include ('../partials/header') %>
     <main id="login">
-      <form id="formulario-2">
+
+      <form id="formulario-2" method= "post" action="/users/login">
         <h2 id="tituloCreacion"> Login: </h2>
         <div>
-          <label for="usuario"> Nombre de Usuario: </label>
-          <input type="text" name="usuario" id="usuario" class="llenar">
+          <label for="usuario"> E-mail: </label>
+          <input type="text" name="usuario" id="usuario" size= "30" class="llenar">
         </div>
         <br>
         <div>
           <label for="contraseña"> Ingrese Contraseña: </label>
-          <input type="password" name="contraseña" id="contraseña" class="llenar">
+          <input type="password" name="contraseña" id="contraseña" size= "10"class="llenar">
         </div>
         <br>
         <div>
@@ -25,6 +26,9 @@
           <button type="button" class="btn btn-success"> Ingresar </button>
         </div>
         
+          
+          
+               
       </form>  
     </main>
     

@@ -7,25 +7,25 @@
         "e-mail":"JuliBarza@gmail.com",
         "password":"123",
         "telefono":"1163897425",
-        "imagen":""
+        "imagen":"avatar_m.jpg"
     },
     {
         "id": "2",
         "nombre":"Arbaces",
         "apellido":"Restrepo",
-        "e-mail":"Arbaces@gmail.com",
+        "e-mail":"arbaces@gmail.com",
         "password":"1234",
         "telefono":"1167412586",
-        "imagen":""   
+        "avatar":"avatar_m.jpg"   
     },
     {
         "id": "3",
-        "nombre":"",
-        "apellido":"",
-        "e-mail":"",
-        "password":"",
-        "telefono":"",
-        "imagen":""
+        "nombre":"Walberto",
+        "apellido":"Vera",
+        "e-mail":"wal@gmail.com",
+        "password":"4567",
+        "telefono":"3518524569",
+        "imagen":"avatar_m.jpg"
     },
     {
         "id": "4",
