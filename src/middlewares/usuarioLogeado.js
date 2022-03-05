@@ -13,6 +13,7 @@ function usuarioLogeado(req, res, next) {
     //let emailCookie = req.cookies.userEmail;
 
     //console.log(emailCookie)
+    // no funciono, revisar tema cookies
     next();
     
 } 
