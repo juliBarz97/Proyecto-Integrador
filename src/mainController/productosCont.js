@@ -1,8 +1,11 @@
+const session = require('express-session');
 const fs = require('fs');
 const path = require('path');
 
 const productsFilePath = path.join(__dirname, '../mainData/productos.json');
 const lista = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+const db = require('../database/models');
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -58,7 +61,22 @@ const controller = {
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(lista,null,' '));
 
-		res.redirect('/');
+		db.productos.create({
+			nombre: req.body.nombre,
+			descripcion: req.body.descripcion,
+			precio: req.body.precio,
+			descuento: req.body.descuento,
+			stock: req.body.stock,
+			fecha_eliminacion: null,
+			fecha_creacion: req.body.fecha_creacion,
+			usuario_id: req.session.user.id,
+			categoria_id: req.body.categoria_id,
+		}
+		).then((resultados) => {
+			res.redirect('/');
+		})
+
+		
 
 	},
 

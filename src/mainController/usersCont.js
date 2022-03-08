@@ -60,6 +60,11 @@ const controlador = {
         res.render("users/login");
     },
 
+	profile:(req, res) =>{
+		console.log(req.cookies.test)
+		res.render("users/profile")
+	}
+
 }
 
 

@@ -2,7 +2,7 @@
 
 const db = require('../models/index');
 
-const op = db.Sequelize.Op;
+//const op = db.Sequelize.Op;
 const usuarios = (sequelize, DataTypes) => {
 	const usuario = sequelize.define(
 		'usuario',

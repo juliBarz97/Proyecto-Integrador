@@ -4,7 +4,7 @@ function data(sequelize, Datatypes){
     
     cols = {
       id: {type: Datatypes.INTEGER, primaryKey: true, autoIncrement: true},
-      nombre: {type: Datatypes.VARCHAR},
+      nombre: {type: Datatypes.STRING},
       descripcion: {type: Datatypes.TEXT},
       precio: {type: Datatypes.INTEGER},
       descuento: {type: Datatypes.INTEGER},
