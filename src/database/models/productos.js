@@ -1,3 +1,4 @@
+
 function data(sequelize, Datatypes){
 
     alias = 'productos';
@@ -19,28 +20,28 @@ function data(sequelize, Datatypes){
     
     const productos = sequelize.define(alias,cols,config)
     
-    productos.associate = function (modelos){
+    productos.associate = function (models){
     
-      productos.belongsTo(modelos.users, {   
+      productos.belongsTo(models.usuario, {   
         as: "usuarios",
         foreignKey: "usuario_id"
       });
     
     
-      productos.belongsToMany(modelos.categorias, {
+      productos.belongsToMany(models.categorias, {
             as: "categorias",
             through: "Producto-categoria",   // tabla intermedia
             foreignKey: "producto_id",  // es el FK del modelo en el que estas (en la tabla intermedia de la bd)
             otherKey: "categoria_id",    // es el FK del otro modelo (en la tabla intermedia de la bd)
             timestamps: false
-      });
-      productos.belongsToMany(modelos.ventas, {
+      }); 
+    /*  productos.belongsToMany(models.ventas, {
             as: "ventas",
             through: "ventas",   // tabla intermedia
             foreignKey: "producto_id",  // es el FK del modelo en el que estas (en la tabla intermedia de la bd)
             otherKey: "usuario_id",    // es el FK del otro modelo (en la tabla intermedia de la bd)
             timestamps: false
-  });
+  });*/
     
     }
     

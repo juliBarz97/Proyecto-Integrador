@@ -1,6 +1,5 @@
-'use strict';
 
-function usuarios(sequelize, DataTypes){
+function data(sequelize, DataTypes){
 
 
     const usuario = sequelize.define(
@@ -61,4 +60,5 @@ function usuarios(sequelize, DataTypes){
 
     return usuario;
 };
-module.exports = usuarios;
+
+module.exports = data;

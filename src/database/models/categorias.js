@@ -1,3 +1,4 @@
+
 function data(sequelize, Datatypes){
 
     alias = 'categorias';
