@@ -1,50 +1,172 @@
-
 [
-    {
-        "id": "1",
-        "nombre":"Julian",
-        "apellido":"Barza",
-        "e-mail":"JuliBarza@gmail.com",
-        "password":"123",
-        "telefono":"1163897425",
-        "imagen":"avatar_m.jpg"
-    },
-    {
-        "id": "2",
-        "nombre":"Arbaces",
-        "apellido":"Restrepo",
-        "e-mail":"arbaces@gmail.com",
-        "password":"1234",
-        "telefono":"1167412586",
-        "avatar":"avatar_m.jpg"   
-    },
-    {
-        "id": "3",
-        "nombre":"Walberto",
-        "apellido":"Vera",
-        "e-mail":"wal@gmail.com",
-        "password":"4567",
-        "telefono":"3518524569",
-        "imagen":"avatar_m.jpg"
-    },
-    {
-        "id": "4",
-        "nombre":"",
-        "apellido":"",
-        "e-mail":"",
-        "password":"",
-        "telefono":"",
-        "imagen":""
-    },
-    {
-        "id": "5",
-        "nombre":"",
-        "apellido":"",
-        "e-mail":"",
-        "password":"",
-        "telefono":"",
-        "imagen":""
-    }
+ {
+  "id": 1,
+  "nombre": "Julian Barzana",
+  "email": "JuliBarza@gmail.com",
+  "password": "123",
+  "perfil": "Productos",
+  "date": "",
+  "domicilio": "",
+  "interes": "",
+  "avatar": ""
+ },
+ {
+  "id": 2,
+  "nombre": "Arbaces Restrepo",
+  "email": "Arbaces@gmail.com",
+  "password": "1234",
+  "perfil": "Productos",
+  "date": "",
+  "domicilio": "",
+  "interes": "",
+  "avatar": ""
+ },
+ {
+  "id": 3,
+  "nombre": "julias",
+  "email": "asd@gmail.com",
+  "domicilio": "Chacarita 123",
+  "perfil": "Productos",
+  "Accesorios": "on",
+  "Respuestos": "on",
+  "password": "$2a$10$g2HByRtAQiipHzEsFoM9t.fLeYaBxWq7.uLyEtc5d9japSfenkFf2",
+  "image": "1644967565505_img.JPG"
+ },
+ {
+  "id": 4,
+  "nombre": "asds",
+  "email": "asd@gmail.com",
+  "domicilio": "asdasd 123",
+  "perfil": "Productos",
+  "Accesorios": "on",
+  "Respuestos": "on",
+  "password": "$2a$10$U5Ech7M/JhEDTg/Ky6A4L.MCMcaMC28bt3TTbAR5ncUmdpbmkMhbq",
+  "image": "1644967863153_img.JPG"
+ },
+ {
+  "id": 5,
+  "nombre": "s",
+  "email": "s@gmail.com",
+  "domicilio": "s1",
+  "perfil": "Productos",
+  "Respuestos": "on",
+  "password": "$2a$10$wLXE0hoES7gl0Trt0WzpLuAPTb9vitM/uwseW/Ey8eyuR3o1X.3j6",
+  "image": "1644968506283_img.JPG"
+ },
+ {
+  "id": 6,
+  "nombre": "julian barzana",
+  "email": "julianmod@hotmail.com",
+  "domicilio": "Estomba 1919",
+  "perfil": "Productos",
+  "Respuestos": "on",
+  "password": "$2a$10$0oboeklWfqVF7T13Y2Cf/emsnwFc8qQnq9SopIhc3BTs1Zg8e.3GC",
+  "image": "1644968873828_img.JPG"
+ },
+ {
+  "id": 7,
+  "nombre": "sss",
+  "email": "ss@gmail.com",
+  "domicilio": "s123",
+  "perfil": "Productos",
+  "password": "$2a$10$C.iJNEeb9qoSLzfCxlzMp.6ZWNKjjpIumu.DgyvXgBHUR8011ytmG",
+  "image": "1644969491657_img.JPG"
+ },
+ {
+  "id": 8,
+  "nombre": "d321",
+  "email": "d3@gmail.com",
+  "domicilio": "d3",
+  "perfil": "Productos",
+  "password": "$2a$10$LviRqdOLMLiCvBftlrhbFefmX1n4fJ93Qep0CWgeBvxuRpbAXlTha",
+  "image": "1645061431057_img.JPG"
+ },
+ {
+  "id": 9,
+  "nombre": "asd",
+  "email": "asds@gmail.com",
+  "domicilio": "asds ",
+  "perfil": "Productos",
+  "Accesorios": "on",
+  "password": "$2a$10$tSmpM9x9ejTmDc6U/xteyehM37/fWrZh5lh0.0lzEwM3aZNKpUOxa",
+  "image": "1645064275987_img.JPG"
+ },
+ {
+  "id": 10,
+  "nombre": "juli",
+  "email": "s1s@gmail.com",
+  "domicilio": "s1s",
+  "perfil": "Productos",
+  "Respuestos": "on",
+  "password": "$2a$10$/bjQg0Lxqia8/vXEvBCn9e7ENtsxOqWqwbCoSDreWN94hEnhRsXau",
+  "image": "1645064695768_img.JPG"
+ },
+ {
+  "id": 11,
+  "nombre": "ss2",
+  "email": "ss2@gmail.com",
+  "domicilio": "ss2",
+  "perfil": "Productos",
+  "Respuestos": "on",
+  "password": "$2a$10$v0dQjgUQMmkIGbIL0cVPQOFsXgIoTexMAlmqeip7f0RnWJ7J3vQaK",
+  "image": "1645191651791_img.JPG"
+ },
+ {
+  "id": 12,
+  "nombre": "julo pa",
+  "email": "paj@gmail.com",
+  "domicilio": "asd 123",
+  "perfil": "Productos",
+  "Respuestos": "on",
+  "password": "$2a$10$xP4Oc1C2zOfS3BIwioz2puH6mVSWzMWQTZy2LQJj6QQ0aQl57FRcS",
+  "image": "1645197127610_img.JPG"
+ },
+ {
+  "id": 13,
+  "nombre": "juli barzana",
+  "email": "julibarzana@gmail.com",
+  "domicilio": "asdasd2",
+  "perfil": "Productos",
+  "password": "$2a$10$gU/SXbExXZzg2WmiTcbVCe7G.yYAiGQzmNqXvjpYIejPXNm9CBeoW",
+  "image": "1645213145953_img.JPG"
+ },
+ {
+  "id": 14,
+  "nombre": "ssd",
+  "email": "ssd@gmail.com",
+  "domicilio": "ssd",
+  "perfil": "Productos",
+  "password": "$2a$10$TYb52CNGsaaD3MGLRNK/Ruf2wdZnEY3welHyqQFo/0AxvS6pCI19C",
+  "image": "1645539538001_img.JPG"
+ },
+ {
+  "id": 15,
+  "nombre": "asds",
+  "email": "asdss@gmail.com",
+  "domicilio": "asdss",
+  "perfil": "Productos",
+  "Respuestos": "on",
+  "password": "$2a$10$b9hZWheMwcJkO96.Luz5O.lvoZXiEXwi4WYv8gNPvBumqVmgRvF.u",
+  "image": "1645562356201_img.JPG"
+ },
+ {
+  "id": 16,
+  "nombre": "sssss",
+  "email": "sssss@gmail.com",
+  "domicilio": "sssss",
+  "perfil": "Productos",
+  "Respuestos": "on",
+  "password": "$2a$10$3AGbdMcbTpcdjn8wpdgaGu6.93SSAw4NW6S9ylRxpAoomwPqGIaze",
+  "image": "1645563214892_img.JPG"
+ },
+ {
+  "id": 17,
+  "nombre": "sdsd",
+  "email": "sdsd@gmail.com",
+  "domicilio": "sdsd",
+  "perfil": "Productos",
+  "Respuestos": "on",
+  "password": "$2a$10$SH8I5v0gbR9.27G8XPFRceFg0F99MK5iQ0sCCg1NDVrF/VimjZNRm",
+  "image": "1645624408091_img.JPG"
+ }
 ]
-
-

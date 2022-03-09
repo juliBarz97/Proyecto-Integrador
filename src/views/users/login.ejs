@@ -8,30 +8,47 @@
     
 <%- include ('../partials/header') %>
     <main id="login">
-
-      <form id="formulario-2" method= "post" action="/users/login">
+      <form id="formulario-2" action="/users/login" method="POST" >
         <h2 id="tituloCreacion"> Login: </h2>
         <div>
-          <label for="usuario"> E-mail: </label>
-          <input type="text" name="usuario" id="usuario" size= "30" class="llenar">
+          <label for="email"> Ingrese su Email: </label>
+          <input type="text" 
+            name="email" 
+            id="email" 
+            class="llenar"
+            class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+            value= "<%= locals.oldData ? oldData.email : null%>">
+            <% if (locals.errors && errors.email) { %>
+              <div class="text-error"> 
+                <%= errors.email.msg %>
+              </div>
+            <% } %>
         </div>
         <br>
         <div>
-          <label for="contraseña"> Ingrese Contraseña: </label>
-          <input type="password" name="contraseña" id="contraseña" size= "10"class="llenar">
+          <label for="password"> Ingrese su Contraseña: </label>
+          <input type="password" 
+            name="password" 
+            id="password" 
+            class="llenar"
+            class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+            value= "<%= locals.oldData ? oldData.password : null%>">
+            <% if (locals.errors && errors.password) { %>
+              <div class="text-error"> 
+                <%= errors.password.msg %>
+              </div>
+            <% } %>
         </div>
         <br>
+ <!--      <label for="interes" name="interes"> Recordar mi cuenta 
+          <input type="checkbox" name="recordarUsuario">       
+        </label>--> 
         <div>
-          <button type="button" class="btn btn-secondary"> <a href="./home.html">Home</a>  </button>
-          <button type="button" class="btn btn-success"> Ingresar </button>
-        </div>
-        
-          
-          
-               
-      </form>  
+          <button type="button" class="btn btn-secondary"> <a href="/">Home</a>  </button>
+          <button type="submit" class="btn btn-success"> Ingresar </button>
+        </div> 
     </main>
-    
+
 <%- include ('../partials/footer') %>
     
   </body>

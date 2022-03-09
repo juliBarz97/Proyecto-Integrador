@@ -1,9 +1,6 @@
- const path = require('path');
-const fs = require('fs');
+const db = require('../database/models');
 const bcrypt = require('bcryptjs');
 
-const userDBPath = path.resolve(__dirname, "../mainData/usuarios.json");
-const userDB = JSON.parse(fs.readFileSync(userDBPath, "utf8"));
 
 const controlador = {	 
     login: (req, res) => {
@@ -11,7 +8,7 @@ const controlador = {
     },
 
     validarUsuario: (req, res) => {
-		const userToLogin = userDB.find(oneUser => oneUser.email === req.body.email);
+		const userToLogin = db.usuario.find(oneUser => oneUser.email === req.body.email);
 
 		if (userToLogin === undefined) {
 			return res.send("No existe el usuario");
