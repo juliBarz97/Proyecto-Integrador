@@ -18,8 +18,8 @@ router.post('/register',  mult.single('avatar'), validations,  usersCont.process
 router.get('/login', usersCont.login); // form login 
 router.post('/login', usersCont.login); 
 
-router.post('/login', usersLogin.validLogin ); // form login 
+//router.post('/login', usersLogin.validLogin ); // form login 
 
-router.get('/profile/:userId', usersCont.profile) // perfil
+//router.get('/profile/:userId', usersCont.profile) // perfil
 
 module.exports = router;

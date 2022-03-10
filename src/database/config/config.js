@@ -24,7 +24,6 @@ data = {
       "dialect": "mysql"
     }
   }
-  
   require('dotenv').config();
 
 module.exports = data;
