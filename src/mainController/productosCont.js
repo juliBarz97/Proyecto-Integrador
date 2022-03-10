@@ -61,6 +61,8 @@ const controller = {
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(lista,null,' '));
 
+		console.log(req.session);
+
 		db.productos.create({
 			nombre: req.body.nombre,
 			descripcion: req.body.descripcion,

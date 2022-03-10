@@ -27,7 +27,7 @@ const controlador = {
 		})
 
 		if (userToLogin === undefined) {
-            res.render( 'users/login' );
+            return res.render( 'users/login' );
 		}
 
 		if (userToLogin !== undefined) {
@@ -42,7 +42,9 @@ const controlador = {
 
 			console.log( req.session.user );
 
-			return res.require("index");
+			console.log( req.session );
+ 
+			return res.redirect("/home");
 		}
 	}
 }

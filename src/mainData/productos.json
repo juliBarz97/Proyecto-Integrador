@@ -49,5 +49,77 @@
   "precio": "99999",
   "descuento": "1",
   "categoria": "en venta"
+ },
+ {
+  "id": 9,
+  "nombre": "prueba de producto",
+  "descripcion": "esta es una prueba",
+  "precio": "1000",
+  "descuento": "5",
+  "categoria": "en venta"
+ },
+ {
+  "id": 10,
+  "nombre": "prueba de producto",
+  "descripcion": "esta es una prueba",
+  "precio": "1000",
+  "descuento": "5",
+  "categoria": "en venta"
+ },
+ {
+  "id": 11,
+  "nombre": "prueba de producto",
+  "descripcion": "esta es una prueba",
+  "precio": "1000",
+  "descuento": "5",
+  "categoria": "en venta"
+ },
+ {
+  "id": 12,
+  "nombre": "prueba de producto",
+  "descripcion": "Ésta es una prueba",
+  "precio": "1000",
+  "descuento": "5",
+  "categoria": "en venta"
+ },
+ {
+  "id": 13,
+  "nombre": "prueba de producto",
+  "descripcion": "Es una prueba",
+  "precio": "1000",
+  "descuento": "5",
+  "categoria": "en venta"
+ },
+ {
+  "id": 14,
+  "nombre": "prueba de producto",
+  "descripcion": "Es una prueba",
+  "precio": "1000",
+  "descuento": "5",
+  "categoria": "en venta"
+ },
+ {
+  "id": 15,
+  "nombre": "prueba de producto",
+  "descripcion": "Es una prueba",
+  "precio": "1000",
+  "descuento": "5",
+  "categoria": "en venta"
+ },
+ {
+  "id": 16,
+  "nombre": "prueba de producto",
+  "descripcion": "es una prueba",
+  "precio": "1000",
+  "descuento": "5",
+  "categoria": "en venta"
+ },
+ {
+  "id": 17,
+  "nombre": "prueba de producto",
+  "descripcion": "es una prueba",
+  "precio": "1000",
+  "descuento": "5",
+  "categoria": "en venta"
  }
 ]
