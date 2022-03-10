@@ -51,7 +51,7 @@ function usuarios(sequelize, DataTypes){
 			foreingKey: 'usuario_id', // foreing key de la tabla de ventas
 			as: 'ventas',
 		});*/
-		usuario.hasMany(models.productos, {
+		usuario.hasMany(models.producto, {
 			foreingKey: ' usuario_id', // foreing key de la tabla de producto
 			as: 'ventas',
 		});

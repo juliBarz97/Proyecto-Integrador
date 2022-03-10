@@ -16,11 +16,8 @@
           <h2 id="tituloCreacion"> Registro de cuenta </h2>
           <div>
             <label for="nombre_completo"> Nombre completo: </label>
-            <input 
-            type="text" 
-            name="nombre_completo" 
-            id="nombre completo" 
-            class="llenar" 
+            <input type="text" name="nombre_completo" id="nombre completo" class="llenar" 
+            
             class="form-control <%= locals.errors && errors.nombre_completo ? 'is-invalid' : null %>"
             value= "<%= locals.oldData ? oldData.nombre_completo : null%>">
             <% if (locals.errors && errors.nombre_completo) { %>
@@ -28,6 +25,7 @@
                 <%= errors.nombre_completo.msg %>
               </div>
             <% } %>
+            
           </div>
           <br>
           <div>
@@ -124,9 +122,9 @@
           </div> 
         </form>
             
-    </main>
-    
-<%- include ('../partials/footer') %>
-   
-  </body>
-</html>
+      </main>
+      <script src="js/user.js"></script>      
+  <%- include ('../partials/footer') %>
+     
+    </body>
+  </html>

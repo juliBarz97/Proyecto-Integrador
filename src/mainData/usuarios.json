@@ -74,99 +74,11 @@
  },
  {
   "id": 8,
-  "nombre": "d321",
-  "email": "d3@gmail.com",
-  "domicilio": "d3",
+  "nombre": "usuario de prueba",
+  "email": "arbacesrestrepo@hotmail.com",
+  "domicilio": "calle 101c 76a 53",
   "perfil": "Productos",
-  "password": "$2a$10$LviRqdOLMLiCvBftlrhbFefmX1n4fJ93Qep0CWgeBvxuRpbAXlTha",
-  "image": "1645061431057_img.JPG"
- },
- {
-  "id": 9,
-  "nombre": "asd",
-  "email": "asds@gmail.com",
-  "domicilio": "asds ",
-  "perfil": "Productos",
-  "Accesorios": "on",
-  "password": "$2a$10$tSmpM9x9ejTmDc6U/xteyehM37/fWrZh5lh0.0lzEwM3aZNKpUOxa",
-  "image": "1645064275987_img.JPG"
- },
- {
-  "id": 10,
-  "nombre": "juli",
-  "email": "s1s@gmail.com",
-  "domicilio": "s1s",
-  "perfil": "Productos",
-  "Respuestos": "on",
-  "password": "$2a$10$/bjQg0Lxqia8/vXEvBCn9e7ENtsxOqWqwbCoSDreWN94hEnhRsXau",
-  "image": "1645064695768_img.JPG"
- },
- {
-  "id": 11,
-  "nombre": "ss2",
-  "email": "ss2@gmail.com",
-  "domicilio": "ss2",
-  "perfil": "Productos",
-  "Respuestos": "on",
-  "password": "$2a$10$v0dQjgUQMmkIGbIL0cVPQOFsXgIoTexMAlmqeip7f0RnWJ7J3vQaK",
-  "image": "1645191651791_img.JPG"
- },
- {
-  "id": 12,
-  "nombre": "julo pa",
-  "email": "paj@gmail.com",
-  "domicilio": "asd 123",
-  "perfil": "Productos",
-  "Respuestos": "on",
-  "password": "$2a$10$xP4Oc1C2zOfS3BIwioz2puH6mVSWzMWQTZy2LQJj6QQ0aQl57FRcS",
-  "image": "1645197127610_img.JPG"
- },
- {
-  "id": 13,
-  "nombre": "juli barzana",
-  "email": "julibarzana@gmail.com",
-  "domicilio": "asdasd2",
-  "perfil": "Productos",
-  "password": "$2a$10$gU/SXbExXZzg2WmiTcbVCe7G.yYAiGQzmNqXvjpYIejPXNm9CBeoW",
-  "image": "1645213145953_img.JPG"
- },
- {
-  "id": 14,
-  "nombre": "ssd",
-  "email": "ssd@gmail.com",
-  "domicilio": "ssd",
-  "perfil": "Productos",
-  "password": "$2a$10$TYb52CNGsaaD3MGLRNK/Ruf2wdZnEY3welHyqQFo/0AxvS6pCI19C",
-  "image": "1645539538001_img.JPG"
- },
- {
-  "id": 15,
-  "nombre": "asds",
-  "email": "asdss@gmail.com",
-  "domicilio": "asdss",
-  "perfil": "Productos",
-  "Respuestos": "on",
-  "password": "$2a$10$b9hZWheMwcJkO96.Luz5O.lvoZXiEXwi4WYv8gNPvBumqVmgRvF.u",
-  "image": "1645562356201_img.JPG"
- },
- {
-  "id": 16,
-  "nombre": "sssss",
-  "email": "sssss@gmail.com",
-  "domicilio": "sssss",
-  "perfil": "Productos",
-  "Respuestos": "on",
-  "password": "$2a$10$3AGbdMcbTpcdjn8wpdgaGu6.93SSAw4NW6S9ylRxpAoomwPqGIaze",
-  "image": "1645563214892_img.JPG"
- },
- {
-  "id": 17,
-  "nombre": "sdsd",
-  "email": "sdsd@gmail.com",
-  "domicilio": "sdsd",
-  "perfil": "Productos",
-  "Respuestos": "on",
-  "password": "$2a$10$SH8I5v0gbR9.27G8XPFRceFg0F99MK5iQ0sCCg1NDVrF/VimjZNRm",
-  "image": "1645624408091_img.JPG"
+  "password": "$2a$10$xzKmg9WCJk5fFvEa5Tizm.3/SOLRa1DXq0sWdhticpgPGbr4ZjOu6",
+  "image": "1644971837124_img.jpg"
  }
 ]

@@ -11,10 +11,13 @@
       <% for (let i=0 ; i<p.length ; i++) { %>
         <div id="P1J" class="SPJ">
         <section>
-          <a class="botonJ" href="/products/detail/<%=p[i].id%>" ><img src="../public/imagenes/<%=p[i].imagen%>" class="fotos"> <p class="textosPS">Ver más - Producto </p></a> 
+            <a class="botonJ" href="/products/detail/<%=p[i].id%>" ><img src="../public/imagenes/<%=p[i].imagen%>" class="fotos"> 
+            <p><%=p[i].nombre %></p>
+            <p><%=p[i].precio %></p>
+            <p class="textosPS">Ver más - Producto </p></a> 
         </section>
         </div>
-       <% } %>   
+       <% } %>  
       </div>
       <br>
       <div id="serviciosJ">
@@ -27,8 +30,8 @@
       </div>
   </main>
 
-	
-	<%- include('../partials/footer') %>
+ 
+  <%- include('../partials/footer') %>
 
-</body>	
+</body> 
 </html>

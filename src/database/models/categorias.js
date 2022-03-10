@@ -1,3 +1,4 @@
+
 function data(sequelize, Datatypes){
 
     alias = 'categorias';
@@ -13,7 +14,7 @@ function data(sequelize, Datatypes){
     
     categoria.associate = function (modelos){    
     
-       categoria.belongsToMany(modelos.productos, {
+       categoria.belongsToMany(modelos.producto, {
             as: "productos",
             through: "Producto-categoria",   // tabla intermedia
             foreignKey: "Categoria_id",  // es el FK del modelo en el que estas (en la tabla intermedia de la bd)

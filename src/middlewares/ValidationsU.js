@@ -18,8 +18,8 @@ const validations = [
         if (!file) {
             throw new Error('Suba una imagen');
         } else { 
-            if (acceptedExtensions.includes(fileExtensions)){
-                throw new Error('Los archivos permitidos son ${acceptedExtensions.join(', ')}')
+            if (acceptedExtensions.includes(fileExtensions)===false){
+                throw new Error('Los archivos permitidos son ' + acceptedExtensions.join(', '))
             }
         };    
         return true; 

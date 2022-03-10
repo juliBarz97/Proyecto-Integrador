@@ -90,28 +90,9 @@ const controlador = {
 				delete userToLogin[0].password; //no borra, habria que reveerlo 
 				req.session.userLogged = userToLogin[0];
 
-				if(req.body.recordarUsuario) {
-					res.cookie('userEmail', req.body.email , { maxAge : (1000*60)})
-				}
-
-				return res.redirect("/users/profile");
 			}
-	 } },
-	 profile: (req, res) => {
-		 console.log(req.cookies.userEmail)
-		 console.log(req.session.userLogged);
-		 res.render("users/profile",{
-			 user: req.session.userLogged,
-		 });
-	
-	 },
-	 logout: (req,res)=>{
-		 req.session.destroy;
-		 console.log(req.session.userLogged);
-		 return res.redirect('/')
-	 }
+		 }
+	}
 }
-
-
 
 module.exports = controlador;
