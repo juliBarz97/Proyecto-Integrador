@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Formulario de creación'}) %>
+<body>
+	<!-- Header -->
+	<%- include('partials/headerNavbar') %>
+	<!-- /Header -->
+
+	<div class="container products-wrapper">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="products-title">Formulario de creación de producto</h2>
+			</div>
+		</div>
+		<div class="col-12">
+			<form action="/genre/create" method="POST">
+				<div class="row product-detail">
+					<div class="col-12 col-md-6">
+						<label for="name" class="form-label">Nombre producto:</label>
+						<input type="text" id="name" name="name" placeholder="" class="form-input">
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="description" class="form-label">Descripcion:</label>
+						<input type="text" id="descripcion" name="descripcion" placeholder="" class="form-input">
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="price" class="form-label">Precio:</label>
+						<select id="precio" name="precio" class = "form-input">
+                        </div>        
+                    <div class="col-12 col-md-6">
+                         <label for="discount" class="form-label">Descuento:</label>
+                         <input type="text" id="descuento" name="descuento" placeholder="" class="form-input">
+                     </div>
+                     <div class="col-12 col-md-6">
+						<label for="category" class="form-label">Categoria:</label>
+						<select id="categoria" name="categoria" class = "form-input">
+                        </div>
+                     <div class="col-12 col-md-6">
+                            <label for="category" class="form-label">Categoria:</label>
+                            <select id="imagen" name="imagen" class = "form-input">
+                        </div>
+
+						</select>
+						
+					</div>
+					
+					<div class="col-12">
+						<button type="submit" class="buy-now-button">Guardar</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+	</div>
+	<!-- /todos los productos -->
+
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>	
+</html>

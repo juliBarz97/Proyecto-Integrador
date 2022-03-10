@@ -1,4 +1,4 @@
-module.exports = {
+data = {
     "development": {
       "username": "julpb97",
       "password": "Grupo8dh",
@@ -6,6 +6,8 @@ module.exports = {
       "host": "mysql-julpb97.alwaysdata.net",
       "dialect": "mysql",
       "port": 3306
+
+      
     },
     "test": {
       "username": "root",
@@ -23,4 +25,8 @@ module.exports = {
     }
   }
   
-  
+  require('dotenv').config();
+
+module.exports = data;
+
+ 

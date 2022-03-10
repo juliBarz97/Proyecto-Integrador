@@ -1,11 +1,17 @@
 
 const loginCont = require('../mainController/loginCont');
 
-const validationsLogin = [
-    body('nombre_completo').notEmpty().withMessage('Escriba un nombre_completo').bail(),
-    body('contraseña').notEmpty().withMessage('Escriba una contraseña'),
-]
+router.get('/', loginCont.login); 
 
-router.post('/login', validationsLogin, loginCont.validLogin); // Validar usuario 
+router.post('/login', loginCont.validarUsuario); 
 
 module.exports = router;
+
+
+
+
+
+
+
+
+

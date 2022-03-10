@@ -1,9 +1,9 @@
 const path = require('path');
 const fs = require('fs');
 const bcrypt = require('bcryptjs');
-
-const userDBPath = path.resolve(__dirname, "../mainData/usuarios.json");
-const userDB = JSON.parse(fs.readFileSync(userDBPath, "utf8"));
+const db = require('../database/models/user');
+//const userDBPath = path.resolve(__dirname, "../mainData/usuarios.json");
+//const userDB = JSON.parse(fs.readFileSync(userDBPath, "utf8"));
 
 const {validationResult} = require('express-validator')
 
@@ -23,12 +23,12 @@ const controlador = {
         }
 
 		const generateID = () => {
-			const lastUser = userDB[userDB.length - 1];
+			/*const lastUser = userDB[userDB.length - 1];
 
 			if(lastUser !== undefined) {
 				const lastID = lastUser.id;
                 return lastID + 1;
-			}
+			}*/
 
 			return 1;
 		}
@@ -48,9 +48,9 @@ const controlador = {
 			image: req.file.filename,
 		}
 
-		userDB.push(newUser);
+		//userDB.push(newUser);
 
-		fs.writeFileSync(userDBPath, JSON.stringify(userDB, null, " "));
+		//fs.writeFileSync(userDBPath, JSON.stringify(userDB, null, " "));
 
 		return res.redirect("login");
     },
@@ -60,13 +60,39 @@ const controlador = {
         res.render("users/login");
     },
 
-	profile:(req, res) =>{
-		console.log(req.cookies.test)
-		res.render("users/profile")
+    validLogin: (req, res) => {
+		
+		const resultValidationLogin = validationResult(req);
+		 
+		 if (resultValidationLogin.errors.length > 0 ){
+			 res.render('users/login', {
+				 errors: resultValidationLogin.mapped(),
+				 oldData : req.body })
+				}
+		 
+		 
+		 /*let userToLogin = userDB.filter( function(e){
+			 return e.email == req.body.email;
+		 })*/
+ 
+		 //console.log(userToLogin[0].password);
+		 //console.log(req.body.password);
+		 if (!userToLogin) {
+			 return	res.render( 'users/login' );
+		 }
+		 
+		 if (userToLogin) {
+			 const isPasswordOk = bcrypt.compareSync(req.body.password, userToLogin[0].password);
+			 
+			 if (!isPasswordOk) {
+				 return res.render( 'users/login' );
+			 } else {			 
+				delete userToLogin[0].password; //no borra, habria que reveerlo 
+				req.session.userLogged = userToLogin[0];
+
+			}
+		 }
 	}
-
 }
-
-
 
 module.exports = controlador;
