@@ -77,6 +77,8 @@ const controlador = {
  
 		 //console.log(userToLogin[0].password);
 		 //console.log(req.body.password);
+
+		 
 		 if (!userToLogin) {
 			 return	res.render( 'users/login' );
 		 }
@@ -89,7 +91,6 @@ const controlador = {
 			 } else {			 
 				delete userToLogin[0].password; //no borra, habria que reveerlo 
 				req.session.userLogged = userToLogin[0];
-
 			}
 		 }
 	}
