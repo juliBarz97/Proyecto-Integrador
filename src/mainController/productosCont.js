@@ -37,7 +37,7 @@ const controller = {
 	// Create -  Method to store
 	store: (req, res) => {
 		
-		let nuevoID=(lista[lista.length-1].id)+1 
+/*		let nuevoID=(lista[lista.length-1].id)+1 
 		
 		let productoNuevo = {
 			id: nuevoID,
@@ -51,10 +51,8 @@ const controller = {
 		lista.push(productoNuevo)
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(lista,null,' '));
-
-		console.log(req.session);
-
-		db.productos.create({
+*/
+		db.producto.create({
 			nombre: req.body.nombre,
 			descripcion: req.body.descripcion,
 			precio: req.body.precio,
@@ -62,10 +60,9 @@ const controller = {
 			stock: req.body.stock,
 			fecha_eliminacion: null,
 			fecha_creacion: req.body.fecha_creacion,
-			usuario_id: req.session.user.id,
+			usuario_id: req.session.userLogged.id,
 			categoria_id: req.body.categoria_id,
-		}
-		).then((resultados) => {
+		}).then((resultados) => {
 			res.redirect('/');
 		})
 

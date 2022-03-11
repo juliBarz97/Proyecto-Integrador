@@ -35,14 +35,15 @@ function usuarios(sequelize, DataTypes){
 		(config = {
 			camelCase: false,
 			tablename: 'usuario',
-			timestamps: {
+			timestamps: false 
+			/*{
 				createAt: {
 					type: DataTypes.DATE,
 				},
 				updatedAt: {
 					type: DataTypes.DATE,
 				},
-			},
+			}*/,
 		})
 	);
 

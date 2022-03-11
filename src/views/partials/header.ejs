@@ -5,7 +5,9 @@
       <br>
       <a href="/" id="logo2J" ><img src="/public/imagenes/D3.png" id="logo3J" ></a> 
       <a href="/products/listado">Productos <i class="bi bi-badge-3d" class="icon"></i> </a> 
-      <a href="/products/crear" > Crear Producto  <i class="bi bi-list" class="icon"></i></a> 
+      <% if (locals.isLogged) { %>
+        <a href="/products/crear" > Crear Producto  <i class="bi bi-list" class="icon"></i></a>
+      <% } %>
       <a href="/carrito"> Carrito de Compras  <i class="bi bi-bag" class="icon"></i></a> 
       <% if (locals.isLogged) { %>
       <a href="/users/profile"> Mi Perfil </a>
