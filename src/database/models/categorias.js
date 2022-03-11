@@ -16,7 +16,7 @@ function data(sequelize, Datatypes){
     
        categoria.belongsToMany(modelos.producto, {
             as: "productos",
-            through: "Producto-categoria",   // tabla intermedia
+            through: "Producto-Categoria",   // tabla intermedia
             foreignKey: "Categoria_id",  // es el FK del modelo en el que estas (en la tabla intermedia de la bd)
             otherKey: "Producto_id",    // es el FK del otro modelo (en la tabla intermedia de la bd)
             timestamps: false

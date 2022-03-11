@@ -71,9 +71,9 @@ const controlador = {
 	 }
 		 
 		 
-		 /*let userToLogin = userDB.filter( function(e){
+		 let userToLogin = userDB.filter( function(e){
 			 return e.email == req.body.email;
-		 })*/
+		 })
  
 		 //console.log(userToLogin[0].password);
 		 //console.log(req.body.password);

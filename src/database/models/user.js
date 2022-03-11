@@ -47,13 +47,16 @@ function usuarios(sequelize, DataTypes){
 	);
 
 	usuario.associate = function (models) {
-		/*usuario.hasMany(models.ventas, {
-			foreingKey: 'usuario_id', // foreing key de la tabla de ventas
-			as: 'ventas',
-		});*/
+		usuario.belongsToMany(models.producto, {
+			as: "producto",
+			through: "ventas", //ESTE DA ERROR
+			foreignKey: "Usuario_id", // es el FK del modelo en el que estas (en la tabla intermedia de la bd)
+			otherKey: "Producto_id",  // referencia al otro FK
+          	timestamps: false // REL USUARIO-VENTAS
+		});
 		usuario.hasMany(models.producto, {
-			foreingKey: ' usuario_id', // foreing key de la tabla de producto
-			as: 'ventas',
+			foreingKey: 'usuario_id', // foreing key de la tabla de producto
+			as: 'creacion',
 		});
 	};
 
