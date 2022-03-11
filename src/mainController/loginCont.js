@@ -11,7 +11,7 @@ const controlador = {
 		const userToLogin = db.usuario.find(oneUser => oneUser.email === req.body.email);
 
 		if (userToLogin === undefined) {
-			return res.send("No existe el usuario");
+            return res.render( 'users/login' );
 		}
 
 		if (userToLogin !== undefined) {
@@ -24,7 +24,9 @@ const controlador = {
 			delete userToLogin.password;
 			req.session.user = userToLogin;
 
-			return res.redirect("/index");
+			console.log( req.session );
+ 
+			return res.redirect("/home");
 		}
     }
 }

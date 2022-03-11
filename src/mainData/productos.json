@@ -1,0 +1,135 @@
+<<<<<<< HEAD
+=======
+[
+ {
+  "id": 1,
+  "nombre": "Maceta 5D",
+  "descripcion": "Maceta color marron",
+  "precio": 1850,
+  "descuento": 5,
+  "categoria": "en stock",
+  "imagen":"producto1.png"
+ },
+ {
+  "id": 2,
+  "nombre": "Abridor botellas 3D",
+  "descripcion": "abridor botellas",
+  "precio": 750,
+  "descuento": 3,
+  "categoria": "en stock",
+  "imagen": "AbridorBotellas3D.jpg"
+ },
+ {
+  "id": 3,
+  "nombre": "Soporte Rollo de Cocina 3D ",
+  "descripcion": "soporte rollo cocina varios colores",
+  "precio": 1500,
+  "descuento": 2,
+  "categoria": "SoporteRolloCocina3D.jpg"
+ },
+ {
+  "id": 4,
+  "nombre": "Clip bolsas 3D",
+  "descripcion": "Clip para cerrado bolsas plasticas",
+  "precio": 650,
+  "descuento": 3,
+  "categoria": "en stock",
+  "imagen": "ClipBolsasPlasticas3D.jpg"
+ },
+ {
+  "id": 5,
+  "nombre": "Soporte Notebook 3D",
+  "descripcion": "soporte notebook color naranja",
+  "precio": 2100,
+  "descuento": 3,
+  "categoria": "en stock",
+  "imagen": "soporte1.jpg"
+ },
+ {
+  "id": 6,
+  "nombre": "PRODUCTO CREADO PRUEBA",
+  "descripcion": "PRODUCTO PRUEBA",
+<<<<<<< HEAD
+  "precio": "99999",
+  "descuento": "1",
+  "categoria": "en venta"
+ },
+ {
+  "id": 9,
+  "nombre": "prueba de producto",
+  "descripcion": "esta es una prueba",
+  "precio": "1000",
+  "descuento": "5",
+  "categoria": "en venta"
+ },
+ {
+  "id": 10,
+  "nombre": "prueba de producto",
+  "descripcion": "esta es una prueba",
+  "precio": "1000",
+  "descuento": "5",
+  "categoria": "en venta"
+ },
+ {
+  "id": 11,
+  "nombre": "prueba de producto",
+  "descripcion": "esta es una prueba",
+  "precio": "1000",
+  "descuento": "5",
+  "categoria": "en venta"
+ },
+ {
+  "id": 12,
+  "nombre": "prueba de producto",
+  "descripcion": "Ésta es una prueba",
+  "precio": "1000",
+  "descuento": "5",
+  "categoria": "en venta"
+ },
+ {
+  "id": 13,
+  "nombre": "prueba de producto",
+  "descripcion": "Es una prueba",
+  "precio": "1000",
+  "descuento": "5",
+  "categoria": "en venta"
+ },
+ {
+  "id": 14,
+  "nombre": "prueba de producto",
+  "descripcion": "Es una prueba",
+  "precio": "1000",
+  "descuento": "5",
+  "categoria": "en venta"
+ },
+ {
+  "id": 15,
+  "nombre": "prueba de producto",
+  "descripcion": "Es una prueba",
+  "precio": "1000",
+  "descuento": "5",
+  "categoria": "en venta"
+ },
+ {
+  "id": 16,
+  "nombre": "prueba de producto",
+  "descripcion": "es una prueba",
+  "precio": "1000",
+  "descuento": "5",
+  "categoria": "en venta"
+ },
+ {
+  "id": 17,
+  "nombre": "prueba de producto",
+  "descripcion": "es una prueba",
+  "precio": "1000",
+  "descuento": "5",
+  "categoria": "en venta"
+=======
+  "precio": 99999,
+  "descuento": 1,
+  "categoria": "sin stock"
+>>>>>>> 524546c54adc6d47320f4b63007aac343b211c5c
+ }
+]
+>>>>>>> d8db4e6dc7a1db07c6a7dcdee01b5123d55b29f1

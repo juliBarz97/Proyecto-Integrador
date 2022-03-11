@@ -9,12 +9,16 @@ const mult = require('../middlewares/multer')
 
 const usersCont = require('../mainController/usersCont');
 
+const usersLogin = require('../mainController/loginCont');
+
 router.get('/register', usersCont.register); // form registro
 
 router.post('/register',  mult.single('avatar'), validations,  usersCont.processRegister); //procesar registro
 
 router.get('/login', usersCont.login); // form login 
 router.post('/login', usersCont.login); 
+
+//router.post('/login', usersLogin.validLogin ); // form login 
 
 //router.get('/profile/:userId', usersCont.profile) // perfil
 
