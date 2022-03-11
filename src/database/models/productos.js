@@ -14,33 +14,32 @@ function producto(sequelize, Datatypes){
     stock: { type: Datatypes.INTEGER},
     fecha_eliminacion: {type: Datatypes.DATE},
     fecha_creacion: {type: Datatypes.DATE}
-  }
+  };
  
   config = {camelCase: false, timestamps: false};
  
-  const producto = sequelize.define(alias,cols,config)
-  /*
-  producto.associate = function (modelos){    
-    producto.belongsTo(modelos.usuario, {  
+  const producto = sequelize.define(alias,cols,config);
+  
+  producto.associate = function (models){    
+    producto.belongsTo(models.usuario, {  
       as: "usuarios",
-      foreignKey: "usuario_id"
+      foreignKey: "usuario_id" //REL PRO-USU 
     });
 
-    producto.belongsToMany(modelos.categorias, {
-          as: "categorias",
+    producto.belongsToMany(models.categorias, {
+          as: "productos",
           through: "Producto-categoria",   // tabla intermedia
           foreignKey: "producto_id",  // es el FK del modelo en el que estas (en la tabla intermedia de la bd)
           otherKey: "categoria_id",    // es el FK del otro modelo (en la tabla intermedia de la bd)
-          timestamps: false
+          timestamps: false // REL PRO-CAT
     });
-    producto.belongsToMany(modelos.ventas, {
-          as: "ventas",
-          through: "ventas",   // tabla intermedia
-          foreignKey: "producto_id",  // es el FK del modelo en el que estas (en la tabla intermedia de la bd)
-          otherKey: "usuario_id",    // es el FK del otro modelo (en la tabla intermedia de la bd)
-          timestamps: false
-           });
-    }*/
+   producto.belongsToMany(models.usuario, { //ESTE DA ERROR
+          as: "usuario", 
+          through: "ventas",   // tabla intermedia, 
+          foreignKey: "Producto_id",  // es el FK del modelo en el que estas (en la tabla intermedia de la bd)
+          otherKey: "Usuario_id",    // es el FK del otro modelo (en la tabla intermedia de la bd)
+          timestamps: false // REL PRO-VENTAS
+           });}
     return producto;
   }
   
