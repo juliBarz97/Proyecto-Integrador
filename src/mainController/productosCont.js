@@ -62,7 +62,7 @@ const controller = {
 
 		let idProductoSeleccionado = req.params.id;
 		let productoSeleccionado;
-
+		console.log(idProductoSeleccionado)
 		for (let p of lista){
 
 			if(p.id==idProductoSeleccionado){
