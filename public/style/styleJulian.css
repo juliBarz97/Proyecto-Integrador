@@ -220,7 +220,19 @@ html{
 }
 
 
-#formulario{
+.formulario{
+    display: flex;
+    flex-direction: column;
+    margin: 150px 10% 5% 10%;
+    background-color: cornsilk;
+    border-radius: 20px;
+    padding: 6% 8% 5% 8%;
+    width: 50%;
+    justify-content: center;
+    margin-left: 17%;  
+}
+
+#formularioP{
     display: flex;
     flex-direction: column;
     margin: 150px 10% 5% 10%;
