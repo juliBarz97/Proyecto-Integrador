@@ -220,7 +220,7 @@ html{
 }
 
 
-#formulario{
+.formulario{
     display: flex;
     flex-direction: column;
     margin: 150px 10% 5% 10%;

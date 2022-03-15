@@ -12,13 +12,13 @@
 
     <main id="formCuerpo">
 
-        <form id="formulario" action="/users/register" method="POST" id="regis" enctype="multipart/form-data">
+        <form class="formulario" action="/users/register" method="POST" enctype="multipart/form-data">
           <h2 id="tituloCreacion"> Registro de cuenta </h2>
           <div>
             <label for="nombre_completo"> Nombre completo: </label>
-            <input type="text" name="nombre_completo" id="nombre completo" class="llenar" 
+            <input type="text" name="nombre_completo" class="nombrecompleto llenar form-control <%= locals.errors && errors.nombre_completo ? 'is-invalid' : null %>"   
             
-            class="form-control <%= locals.errors && errors.nombre_completo ? 'is-invalid' : null %>"
+            
             value= "<%= locals.oldData ? oldData.nombre_completo : null%>">
             <% if (locals.errors && errors.nombre_completo) { %>
               <div class="text-error"> 
@@ -32,8 +32,8 @@
             <label for="email"> Email: </label>
             <input type="text" 
             name="email" 
-            id="email" 
-            class="llenar"
+            class="email llenar" 
+            
             class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
             value= "<%= locals.oldData ? oldData.email : null%>">
             <% if (locals.errors && errors.email) { %>
@@ -49,7 +49,7 @@
             min="1940-01-01" 
             name="date" 
             value="2000-01-01" 
-            class="llenar"
+            class="llenar fechanacimiento" 
             class="form-control <%= locals.errors && errors.date ? 'is-invalid' : null %>"
             value= "<%= locals.oldData ? oldData.date : null%>"></p>
             <% if (locals.errors && errors.date) { %>
@@ -123,7 +123,56 @@
         </form>
             
       </main>
-      <script src="js/user.js"></script>      
+      <script>
+      window.addEventListener("load", function(){
+    let formulario = document.querySelector("form.formulario");
+
+    formulario.addEventListener("submit", function(e){
+        e.preventDefault();
+        
+        let errores = [];
+
+        let campoNombre = document.querySelector("input.nombrecompleto");
+
+        if(campoNombre.value == "") {
+            errores.push("El campo de nombre tiene que estar completo");
+
+        }else if (campoNombre.value.length < 3) {
+            errores.push("El campo de nombre debe tener al menos 3 caracteres");
+        }
+        let campoEmail = document.querySelector("input.email");
+
+        if(campoEmail.value == "") {
+            errores.push("El campo de email tiene que estar completo");
+    }
+    let campoFechaNacimiento = document.querySelector("input.fechanacimiento");
+
+        if(campoFechaNacimiento.value == "") {
+            errores.push("El campo fecha nacimiento tiene que estar completo");
+}
+
+if (errores.length > 0) {
+  //e.preventDefault();
+    //alert("hola2" + errores.length)
+    /*let ulErrores = document.querySelector("div.errores ul");
+    for (let i = 0; 1 <errores.lenght; i++) {
+        ulErrores.innerHTML += "<li"> + errores[i] + ["</li>"]
+    }*/
+    let texto = "";
+    for (let i = 0; i <errores.length; i++) {
+        texto  += errores[i] + "\n";
+
+    } 
+    alert(texto);
+}
+
+
+
+
+});
+})
+
+      </script>      
   <%- include ('../partials/footer') %>
      
     </body>
