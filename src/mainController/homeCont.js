@@ -2,8 +2,32 @@ const db = require('../database/models');
 
 const controlador = {	
     home: (req, res) => {
-        let lista =  db.producto.findAll();
-        res.render("home",{p: lista});
+        
+		db.producto.findAll().then( (productos) => {
+			let lista=[];
+	
+			for ( unProducto of productos ){
+				let unProd = {
+					nombre: unProducto.nombre,
+					descripcion: unProducto.descripcion,
+					precio: unProducto.precio,
+					descuento: unProducto.descuento,
+					stock: unProducto.stock,
+					fecha_eliminacion: unProducto.fecha_eliminacion,
+					fecha_creacion: unProducto.fecha_creacion,
+					usuario_id: unProducto.usuario_id,
+					categoria_id: unProducto.categoria_id,
+					imagen: unProducto.imageProd,
+				}
+	
+				lista.push(unProd);
+	
+			}
+	
+			res.render('home',{p: lista});
+		});
+			
+		
 },
     carrito:(req, res) => {		
         res.render("Carrito");     
