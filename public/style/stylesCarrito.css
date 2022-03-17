@@ -187,22 +187,5 @@ footer{
 
 
 
-.btn-wsp-wal{
-    position:fixed;
-    width: 55px;
-    height: 55px;
-    bottom:13%;
-    right:5%;
-    line-height: 55px;
-    background: #0df053;
-    color:#fff;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 0px 0px 0px rgba(0,0,0,3);
-    z-index: 100;
-    -moz-border-radius:50px;
-   -webkit-border-radius:50px;  
 
-}
  
