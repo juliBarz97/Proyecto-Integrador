@@ -51,7 +51,7 @@
 				<p class="disponibilidad-wal"><b>Disponibilidad: <h2><%=producto.categoria%></h2></b></p>
 				<p><label>cantidad:</label>
 				<input type="text" value="1"/></p>
-
+				<% if (locals.isLogged) { %>
 				<p><button type="button" class="default carrito-wal">Agregar al carrito</button></p>
 				<p><button type="button" class="default comprar-wal">Comprar ahora</button></p>
 				
@@ -64,7 +64,7 @@
 				<button type="submit" class="action-button"><a href="/products/editar/<%= producto.id %>" class="action-button edit">Editar Producto</a></button>
 				
 				<button type="submit" class="action-button"> <a href="../crear">Crear nuevo producto</a></button> <!-- revisar esto-->
-				
+				<% } %>
 			</div>
 		</div>
 	</div>

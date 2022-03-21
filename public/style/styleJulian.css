@@ -7,7 +7,7 @@ html{
 #cabezaJ{
     
     position:fixed;
-    width: 100%;
+    width: 103%;
     justify-content: flex-start;
     background-color: black;
     top: 0%;
@@ -53,14 +53,19 @@ html{
     border-style:solid;
     padding-right: 10px;
     width: 60%;
-    height: 65px;
+    height: 85px;
     border-radius: 20px;
+}
+
+.textoHead{
+    color:black
 }
 
 @media (max-width: 400px){ 
     #cabeceraJ{
         font-size: 12px;
     }
+    
 }
 
 #cabeceraJ ::before{
@@ -76,7 +81,7 @@ html{
     #cabeceraJ{
         width: 97%;
         margin-left: 0%;
-        height: 50px;
+        height: 85px;
     }
 }
 
@@ -130,6 +135,7 @@ html{
 }
 #productosJ{
     display: flex; 
+    flex-wrap: wrap;
     justify-content: space-evenly;
     
 }
@@ -158,10 +164,10 @@ html{
     flex-direction: column;
     align-items: center;
     height: 72%;
-    margin: 50px 27% 5% 27%;
+    margin: 50px 27% 1% 27%;
     background-color: cornsilk;
     border-radius: 20px;
-    padding: 6% 8% 5% 8%;
+    padding: 4% 8% 3% 8%
 }
 /* PROFILE */
 #formulario-3{
@@ -212,24 +218,26 @@ html{
 
 #formCuerpo{
     background-color: #0C6291;
+    height: 880px;
 }
 
 #listado{
     margin-top: 130px;
-    margin-bottom: 64px;
+    background-color: #0C6291;
 }
 
 
 .formulario{
     display: flex;
     flex-direction: column;
-    margin: 150px 10% 5% 10%;
+    height: fit-content;
+    margin: 150px 0% 0% 0%;
     background-color: cornsilk;
     border-radius: 20px;
     padding: 6% 8% 5% 8%;
-    width: 50%;
+    width: 70%;
     justify-content: center;
-    margin-left: 17%;  
+    margin-left: 15%;  
 }
 
 #formularioP{
@@ -260,19 +268,21 @@ html{
 }
 
 #login{
-    height: 400px;
-    margin-top: 100px;
-    margin-bottom: 10%;
+    height: 500px;
+    margin-top: 75px;
     background-color: #0C6291;
     padding-top: 10px;
 }
 
 
+
 #P1J{
     display: flex;
     background-color: cornsilk;
-    width: 30%;
-    height: 18%;
+    width: 22%;
+    margin-bottom: 5%;
+    margin-left: 10px;
+    height: 250px;
     border-radius: 20px;
     border-style: solid;
     border-color: black;
@@ -292,6 +302,7 @@ html{
 .fotos{
     width: 100%;
     height: 90%;
+    border-radius: 10px;
 }
 
 #S1J{
@@ -317,7 +328,6 @@ html{
 #cuerpoJ{
     background-color: #0C6291;
     padding-bottom: 10%;
-    margin-top: 10%;
 }
 
 
@@ -353,14 +363,38 @@ html{
     display: inline-block;
 }
 
-@media (max-width: 600px){
+@media (max-width: 680px){
     .textoCJ{
         width: 20%;
         font-size: 15px;
     }
+    #P1J{
+        display: flex;
+        background-color: cornsilk;
+        width: 28%;
+        margin-bottom: 5%;
+        margin-left: 10px;
+        height: 200px;
+        border-radius: 20px;
+        border-style: solid;
+        border-color: black;
+
+    }
     .socialMedia{
         width: 10%;
     }
+
+    .formulario{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        width: 72%;
+        margin: 130px 7% 0% 15%;
+        background-color: cornsilk;
+        border-radius: 20px;
+        padding: 6% 8% 5% 8%;
+    }
+
     #formulario-2{
         display: flex;
         flex-direction: column;
@@ -382,7 +416,30 @@ html{
     }
 }
 
+@media (max-width: 500px){
+    #pieJ{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        }
+    .textoCJ{
+        width: 70%;
+        font-size: 17px;
+    }
+}
 @media (max-width: 400px){
+    #P1J{
+        display: flex;
+        background-color: cornsilk;
+        width: 44%;
+        margin-bottom: 5%;
+        margin-left: 10px;
+        height: 149px;
+        border-radius: 20px;
+        border-style: solid;
+        border-color: black;
+    }
     .textoCJ{
         width: 70%;
         font-size: 17px;
@@ -390,23 +447,18 @@ html{
     #social{
         height: 10%;
     }
-    #pieJ{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    }
+   
     #social2{
         display: flex;
         width: 100%;
         justify-content: space-evenly;
-        height: 0px;
+        height: 13px;
         }
 }
 
 
 .icon{
-    width: 1em;
+    width: 1em
 }
 
 

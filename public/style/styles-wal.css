@@ -96,6 +96,9 @@ input{
         line-height: 66px;
 	}
 }
-
+form i {
+    margin-left: -30px;
+    cursor: pointer;
+}
 
 
