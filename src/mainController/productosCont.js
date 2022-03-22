@@ -9,6 +9,7 @@ const controller = {
 			let lista=[];
 
 			let unProd = {
+				id: unProducto.id,
 				nombre: unProducto.nombre,
 				descripcion: unProducto.descripcion,
 				precio: unProducto.precio,
@@ -99,6 +100,7 @@ const controller = {
 		fs.writeFileSync(productsFilePath, JSON.stringify(lista,null,' '));
 */
 		db.producto.create({
+			id: req.body.id,
 			nombre: req.body.nombre,
 			descripcion: req.body.descripcion,
 			precio: req.body.precio,
@@ -162,6 +164,16 @@ const controller = {
 	// Delete - Delete one product from DB
 	destroy : (req, res) => {
 
+		db.producto.destroy({
+			where : { 
+				id : req.params.id 
+			}
+		})
+
+		res.redirect('/');
+
+		// ESTO ES CON JSON 
+/*
 		let idProductoSeleccionado = req.params.id;
 
 		let products2 = lista.filter(function(element){
@@ -172,7 +184,7 @@ const controller = {
 
 		lista = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-		res.render('home');
+		*/
 	}
 };
 

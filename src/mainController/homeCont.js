@@ -8,6 +8,7 @@ const controlador = {
 	
 			for ( unProducto of productos ){
 				let unProd = {
+					id: unProducto.id,
 					nombre: unProducto.nombre,
 					descripcion: unProducto.descripcion,
 					precio: unProducto.precio,
