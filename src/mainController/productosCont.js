@@ -100,7 +100,7 @@ const controller = {
 		fs.writeFileSync(productsFilePath, JSON.stringify(lista,null,' '));
 */
 		db.producto.create({
-			id: req.body.id,
+			
 			nombre: req.body.nombre,
 			descripcion: req.body.descripcion,
 			precio: req.body.precio,

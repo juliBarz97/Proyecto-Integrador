@@ -87,7 +87,9 @@ html{
 }
 
 
-
+#dropdown{
+    display: none;
+}
 
 #descripcionJ{     
     display: flex;   
@@ -454,6 +456,15 @@ html{
     }
 }
 @media (max-width: 400px){
+    #dropdown{
+        font-size: 17px;
+        display: flex;
+        background-color: burlywood;
+    }
+    .cuenta{
+        display: none;
+    }
+
     #P1J{
         display: flex;
         background-color: cornsilk;
