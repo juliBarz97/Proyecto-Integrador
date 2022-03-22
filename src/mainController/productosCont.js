@@ -187,6 +187,8 @@ const controller = {
 			res.redirect('/');
 		})
 
+		/*
+
 		for (let p of lista){
 			if(p.id==idProductoSeleccionado){
 				p.nombre = datos.nombre;
@@ -200,6 +202,7 @@ const controller = {
 		}
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(lista,null,' '));
+		*/
 
 	    res.redirect('/');
 

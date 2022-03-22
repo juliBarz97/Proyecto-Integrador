@@ -95,10 +95,7 @@ const controlador = {
 				   return res.redirect('/')
 			   }
 			}
-		})
-		.catch(
-			console.log("error de consulta")
-		);
+		});
 		
 
 	}
