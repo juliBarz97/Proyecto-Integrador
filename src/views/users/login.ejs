@@ -4,7 +4,7 @@
   <title>Toggle Password Visibility</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="css/style.css" />
-
+  
   
   
 <%- include ('../partials/head') %>    
@@ -16,8 +16,9 @@
       <form id="formulario-2" action="/users/login" method="POST" >
         <h2 id="tituloCreacion"> Login: </h2>
         <div>
+          
           <label for="email"> Ingrese su Email: </label>
-          <input type="text" name="name" required id="email" class="llenar"
+          <input type="text" name="name" required id="email"  class="llenar"
             class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
             value= "<%= locals.oldData ? oldData.email : null%>">
             
@@ -32,7 +33,7 @@
         <br>
         <div>
           <label for="password"> Ingrese su Contraseña: </label>
-          
+           
           <input type="password" name="password" required value="FakePSW" id="password" class="llenar"
             class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
             value= "<%= locals.oldData ? oldData.password : null%>">
@@ -49,9 +50,7 @@
         
 
         <br>
- <!--      <label for="interes" name="interes"> Recordar mi cuenta 
-          <input type="checkbox" name="recordarUsuario">       
-        </label>--> 
+ 
         
         <div>
           <button type="button" class="btn btn-secondary"> <a href="/">Home</a>  </button>
@@ -79,6 +78,8 @@
           e.preventDefault();
       });
   </script>
+    
+    
 
 <%- include ('../partials/footer') %>
 
