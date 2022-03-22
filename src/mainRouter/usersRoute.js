@@ -18,7 +18,7 @@ router.post('/register',  mult.single('avatar'), validations,  usersCont.process
 router.get('/login', usersCont.login); // form login 
 router.post('/login', usersCont.validLogin); 
 
-//router.post('/login', usersLogin.validLogin ); // form login 
+router.get('/logout', usersCont.logout)
 
 //router.get('/profile/:userId', usersCont.profile) // perfil
 

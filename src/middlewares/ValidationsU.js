@@ -13,7 +13,7 @@ const validations = [
     body('domicilio').notEmpty().withMessage('Escriba un domicilio'),
     body('avatar').custom((valur,{req }) => {
         let file = req.file;
-        let acceptedExtensions = ['.jpg' , '.png'];
+        let acceptedExtensions = ['.jpg' , '.png', '.jpeg' ];
         let fileExtensions = path.extname(file.originalname);
         if (!file) {
             throw new Error('Suba una imagen');
