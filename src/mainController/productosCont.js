@@ -35,6 +35,7 @@ const controller = {
 
 			for ( unProducto of productos ){
 				let unProd = {
+					id: unProducto.id,
 					nombre: unProducto.nombre,
 					descripcion: unProducto.descripcion,
 					precio: unProducto.precio,
@@ -50,7 +51,6 @@ const controller = {
 				lista.push(unProd);
 
 			}
-
 			res.render('products/listado',{p: lista});
 		});
 		
@@ -63,6 +63,29 @@ const controller = {
 		let idProductoSeleccionado = req.params.id;
 		let productoSeleccionado;
 
+		db.producto.findOne( {where: {id: idProductoSeleccionado}}).then( (unProducto) =>{
+			let unProd = {
+				id: unProducto.id,
+				nombre: unProducto.nombre,
+				descripcion: unProducto.descripcion,
+				precio: unProducto.precio,
+				descuento: unProducto.descuento,
+				stock: unProducto.stock,
+				fecha_eliminacion: unProducto.fecha_eliminacion,
+				fecha_creacion: unProducto.fecha_creacion,
+				usuario_id: unProducto.usuario_id,
+				categoria_id: unProducto.categoria_id,
+				imagen: unProducto.imageProd,
+			}
+
+			res.render('index',{producto: unProd});
+
+		}
+
+		)
+
+		/*
+
 		for (let p of lista){
 
 			if(p.id==idProductoSeleccionado){
@@ -70,8 +93,8 @@ const controller = {
 				break;
 			}
 		}
+		*/
 
-		res.render('index',{producto: productoSeleccionado});
 	},
 
 	// Create - Form to create
@@ -119,19 +142,27 @@ const controller = {
 	editar: (req, res) => {
 		let idProductoSeleccionado = req.params.id;
 		let productoSeleccionado;
-
-		for (let p of lista){
-
-			if(p.id==idProductoSeleccionado){
-				productoSeleccionado=p;
-				break;
+		
+		db.producto.findOne( {where: {id: idProductoSeleccionado}}).then( (unProducto) =>{
+			let unProd = {
+				id: unProducto.id,
+				nombre: unProducto.nombre,
+				descripcion: unProducto.descripcion,
+				precio: unProducto.precio,
+				descuento: unProducto.descuento,
+				stock: unProducto.stock,
+				fecha_eliminacion: unProducto.fecha_eliminacion,
+				fecha_creacion: unProducto.fecha_creacion,
+				usuario_id: unProducto.usuario_id,
+				categoria_id: unProducto.categoria_id,
+				imagen: unProducto.imageProd,
 			}
+
+			res.render('products/editar',{producto: unProd});
+
 		}
 
-		res.render('products/editar',{producto: productoSeleccionado});
-
-			
-	    
+		)
 		
 	},
 	// Update - Method to update
@@ -139,6 +170,22 @@ const controller = {
 
 		let idProductoSeleccionado = req.params.id;
 		let datos = req.body;
+
+		db.producto.update({
+			nombre: datos.nombre,
+			descripcion: datos.descripcion,
+			precio: datos.precio,
+			descuento: datos.descuento,
+			stock: datos.stock,
+			categoria_id: datos.categoria_id,
+			imagen: datos.imageProd,
+		},
+		{
+			where: {id: idProductoSeleccionado}
+		}
+		).then((resultados) => {
+			res.redirect('/');
+		})
 
 		for (let p of lista){
 			if(p.id==idProductoSeleccionado){
