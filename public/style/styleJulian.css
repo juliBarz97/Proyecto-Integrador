@@ -42,6 +42,7 @@ html{
 
 
 
+
 #cabeceraJ{
     background-color: burlywood;
     color: black;
@@ -49,7 +50,7 @@ html{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-left: 20%;
+    margin-left: 18%;
     border-style:solid;
     padding-right: 10px;
     width: 60%;
@@ -112,12 +113,36 @@ html{
     margin-right: 10%;
 }
 
-.textosPS{
+
+
+#textoProducto{
     display: flex;
-    justify-content: center;
-    top: 7px;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+
+.textosPS  {    
+    display: flex;
+    justify-content: left;
+    color: black;
+    font-size: 13px;
+    font-weight: bold;
     
 }
+
+.textosPSP  {    
+    display: flex;
+    justify-content: right;
+    color: green;
+    font-size: 13px;
+    font-weight: bold;
+    
+}
+
+
+
+
 
 @media (max-width: 600px){
     .textosPS{

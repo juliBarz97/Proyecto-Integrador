@@ -25,18 +25,18 @@
         <br>
         <div id="productosJ">
           <% for (let i=0 ; i<6 ; i++) { %>
-            <div id="P1J" class="SPJ">
-            <section>
+            <div id="P1J">
+            <section id="seccion">
                 <a class="botonJ" href="/products/detail/<%=p[i].id%>" ><img src="../public/imagenes/<%=p[i].imagen%>" class="fotos"> 
-                  <p><%=p[i].nombre %></p>
-                  <p><%=p[i].precio %></p>
-                  <p class="textosPS">Ver más - Producto </p></a>            
+                  <div id="textoProducto">
+                    <p class="textosPS"><%=p[i].nombre %> </p>
+                    <p class="textosPSP"><%=p[i].precio %>$</p>
+                  </div>
+                </a>            
             </section>
-            </div>
-           <% } %>  
           </div>
         
-      
+      <% } %>
     </main>
      
 <%- include ('./partials/footer') %>
