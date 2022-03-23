@@ -22,19 +22,10 @@ const controlador = {
                 oldData : req.body })
         }
 
-		const generateID = () => {
-			/*const lastUser = userDB[userDB.length - 1];
+		
 
-			if(lastUser !== undefined) {
-				const lastID = lastUser.id;
-                return lastID + 1;
-			}*/
-
-			return 1;
-		}
-
-		const newUser = {
-			id: generateID(),
+		db.usuario.create({
+			
 			nombre: req.body.nombre_completo,
 			email: req.body.email,
 			fecha: req.body.fecha,
@@ -46,11 +37,8 @@ const controlador = {
 			Ortopedicos: req.body.Ortopedicos,
 			password: bcrypt.hashSync(req.body.password, 10),
 			image: req.file.filename,
-		}
+		})
 
-		//userDB.push(newUser);
-
-		//fs.writeFileSync(userDBPath, JSON.stringify(userDB, null, " "));
 
 		return res.redirect("login");
     },
@@ -59,6 +47,11 @@ const controlador = {
 		console.log(req.cookies.test)
         res.render("users/login");
     },
+
+	logout: (req,res) => {
+		req.session.destroy();
+		return res.redirect('/')
+	},
 
     validLogin: (req, res) => {
 		
@@ -70,13 +63,6 @@ const controlador = {
 				 oldData : req.body })
 				}
 		 
-		 
-		 //let userToLogin = userDB.filter( function(e){
-		//	 return e.email == req.body.email;
-		 //})
- 
-		 //console.log(userToLogin[0].password);
-		 //console.log(req.body.password);
 
 		db.usuario.findOne({where: {email: req.body.email }}).then( (userToLogin) => {
 			if (!userToLogin) {
@@ -95,10 +81,7 @@ const controlador = {
 				   return res.redirect('/')
 			   }
 			}
-		})
-		.catch(
-			console.log("error de consulta")
-		);
+		});
 		
 
 	}
