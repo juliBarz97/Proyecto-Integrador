@@ -1,5 +1,6 @@
 window.addEventListener("load", function(){
     let formulario = document.querySelector("form.formulario");
+    
 
     formulario.addEventListener("submit", function(e){
         e.preventDefault();
@@ -38,6 +39,7 @@ if (errores.length > 0) {
 
     } 
     alert(texto);
+    
 }
 
 });

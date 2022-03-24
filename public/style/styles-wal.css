@@ -57,9 +57,7 @@ input{
 
 } 
 
-.icon{
-    width: 1em;
-}
+
 .comprar-wal{
     color:white;
     background-color:dodgerblue;
@@ -69,36 +67,28 @@ input{
     margin-right:auto ;
 
 }
-.btn-wsp{
+.floatWapp{
     position:fixed;
     width:60px;
     height:60px;
-    line-height: 63px;
-    bottom:25px;
-    right:25px;
-    background:#25d366;
+    bottom:20px;
+    right:20px;
+    background-color:#25d366;
     color:#FFF;
     border-radius:50px;
     text-align:center;
-    font-size:35px;
-    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    font-size:30px;
+    box-shadow: 2px 2px 3px #999;
     z-index:100;
-    transition: all 300ms ease;
-}
-.btn-wsp:hover{
-    background-color: #20ba5a;
-    transition: background-color .5s;
-}
-@media only screen and (min-width:320px) and (max-width:768px){
-    .btn-wsp{
-        width:63px;
-        height:63px;
-        line-height: 66px;
-	}
-}
+  }
+  
+  .my-floatWapp{
+    margin-top:16px;
+  }
+
+
 form i {
     margin-left: -30px;
     cursor: pointer;
 }
-
 

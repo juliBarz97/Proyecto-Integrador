@@ -34,7 +34,7 @@
         <div>
           <label for="password"> Ingrese su Contraseña: </label>
            
-          <input type="password" name="password" required value="FakePSW" id="password" class="llenar"
+          <input type="password" name="password" required value="" id="password" class="llenar"
             class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
             value= "<%= locals.oldData ? oldData.password : null%>">
             <i class="bi bi-eye-slash" id="togglePassword"></i>
@@ -76,7 +76,9 @@
       const form = document.querySelector("form");
       form.addEventListener('submit', function (e) {
           e.preventDefault();
+
       });
+      
   </script>
     
     

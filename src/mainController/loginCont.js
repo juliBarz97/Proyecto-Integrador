@@ -28,6 +28,7 @@ const controlador = {
  
 			return res.redirect("/home");
 		}
+		
     }
 }
 

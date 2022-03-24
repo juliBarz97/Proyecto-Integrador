@@ -9,7 +9,7 @@ html{
     position:fixed;
     width: 103%;
     justify-content: flex-start;
-    background-color: black;
+    background-color: 33FFF9;
     top: 0%;
     
 }
@@ -44,7 +44,7 @@ html{
 
 
 #cabeceraJ{
-    background-color: burlywood;
+    background-color: white;
     color: black;
     font-size: 18px;
     display: flex;
@@ -369,7 +369,7 @@ html{
 }
 
 .social2{
-    width: 21%;
+    width: 50%;
     height: 13%;
     display: flex;
     justify-content: center;
@@ -381,6 +381,7 @@ html{
     justify-items: center;
     color: burlywood;
 }
+
 
 .textoCJ{
     width: 25%;
