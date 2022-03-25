@@ -132,6 +132,7 @@ const controller = {
 			fecha_creacion: req.body.fecha_creacion,
 			usuario_id: req.session.userLogged.id,
 			categoria_id: req.body.categoria_id,
+			imageProd: req.file.filename
 		}).then((resultados) => {
 			res.redirect('/');
 		})

@@ -178,6 +178,10 @@ html{
 .llenar{
     transition: 200ms;
     width: 100%;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
     background-color: white;
 }
 .llenar:hover{
@@ -195,6 +199,31 @@ html{
     background-color: cornsilk;
     border-radius: 20px;
     padding: 4% 8% 3% 8%
+}
+
+/* CREACION PRODUCTO VISTA */
+
+#vistaCrearP{
+    background-color: #0C6291 ;
+    display: flex;
+}
+
+/* EDITAR PRODUCTO VISTA */
+#editarProducto{
+    background-color: #0C6291;
+    display: flex;
+}
+
+#formularioP{
+    display: flex;
+    flex-direction: column;
+    margin: 150px 10% 5% 10%;
+    background-color: cornsilk;
+    border-radius: 20px;
+    padding: 6% 8% 5% 8%;
+    width: 70%;
+    justify-content: center;
+    margin-left: 15%;  
 }
 /* PROFILE */
 #formulario-3{
@@ -267,17 +296,7 @@ html{
     margin-left: 15%;  
 }
 
-#formularioP{
-    display: flex;
-    flex-direction: column;
-    margin: 150px 10% 5% 10%;
-    background-color: cornsilk;
-    border-radius: 20px;
-    padding: 6% 8% 5% 8%;
-    width: 50%;
-    justify-content: center;
-    margin-left: 17%;  
-}
+
 
 @media (max-width:600px){
     #regis{
@@ -293,6 +312,11 @@ html{
 #avatar{
     width: 179px;
 }
+
+#imageProd{
+    width: 179px;
+}
+
 
 #login{
     height: 500px;

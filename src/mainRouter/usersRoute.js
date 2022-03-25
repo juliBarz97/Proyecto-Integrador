@@ -20,6 +20,6 @@ router.post('/login', usersCont.validLogin);
 
 router.get('/logout', usersCont.logout)
 
-//router.get('/profile/:userId', usersCont.profile) // perfil
+router.get('/profile/:userId', usersCont.profile)  //perfil
 
 module.exports = router;

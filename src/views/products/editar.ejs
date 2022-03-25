@@ -6,7 +6,7 @@
 <body>
    
 <%- include ('../partials/header') %>
-	
+	<main id="editarProducto">
 	<form id="formularioP" action="/products/editar/<%=producto.id%>?_method=PUT" method="POST">
 		<h2 id="tituloCreacion"> Edicion de productos </h2>
 		<div>
@@ -32,7 +32,7 @@
 						</select>
 		<br>
 		<div>
-			<label for="descripcion" class="llenar">Descipción:</label>
+			<label for="descripcion">Descipción:</label>
 			<br>
 			<textarea name="descripcion" id="descripcion" class="form-input"><%= producto.descripcion %></textarea>
 		</div>
@@ -44,7 +44,7 @@
 		</div>
 		
 	  </form> 
-	
+	</main>
 	<%- include('../partials/footer') %>
 	
 </body>	

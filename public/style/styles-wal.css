@@ -1,6 +1,7 @@
 #cuerpo-wal{
     display:flex;
     margin-top:20%;
+    background-color: #0C6291;
 }
 
 
@@ -12,6 +13,25 @@
     color:black;
     font-size:33px;
      
+}
+
+#fotoDetalle{
+    height: 60%;
+    width: 75%;
+}
+.row{
+    display: flex;
+    z-index: 0;
+    flex-direction: row;
+    background: cornsilk;
+    border-radius: 20px;
+}
+ 
+#cuerpoW{
+    display: flex;
+    background-color: cornsilk;
+    border-radius: 20px;
+    margin: 0 10% 0 10%;
 }
 
 .cuotas-wal{
@@ -53,8 +73,8 @@ input{
     font-family:  sans-serif, Arial, Helvetica;
     font-weight: 100px;
     color:black;
-    
-
+    background-color: cornsilk;
+    margin-top: 50px;
 } 
 
 .icon{

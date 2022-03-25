@@ -13,6 +13,10 @@ const controlador = {
         res.render("users/register");
     },
     
+	profile : (req, res) => {
+		res.render("users/profile/:userId");
+	},
+
     processRegister: (req,res) => {
         const resultValidation = validationResult(req);
         
@@ -21,22 +25,23 @@ const controlador = {
                 errors: resultValidation.mapped(),
                 oldData : req.body })
         }
-
 		
-
+		console.log("asdasd: " ,req.body)
+		let images = req.file.filename
 		db.usuario.create({
 			
 			nombre: req.body.nombre_completo,
 			email: req.body.email,
 			fecha: req.body.fecha,
 			domicilio: req.body.domicilio,
+			image: req.file.filename,
 			perfil: req.body.perfil,
 			Accesorios: req.body.Accesorios,
 			Respuestos: req.body.Respuestos,
 			Soporte: req.body.Soporte,
 			Ortopedicos: req.body.Ortopedicos,
-			password: bcrypt.hashSync(req.body.password, 10),
-			image: req.file.filename,
+			password: bcrypt.hashSync(req.body.password, 10)
+			
 		})
 
 
