@@ -3,7 +3,7 @@ window.addEventListener("load", function(){
     
 
     formulario.addEventListener("submit", function(e){
-        e.preventDefault();
+        //e.preventDefault();
         //alert("hola")
         let errores = [];
 

@@ -16,7 +16,7 @@
           <h2 id="tituloCreacion"> Registro de cuenta </h2>
           <div>
             <label for="nombre_completo"> Nombre completo: </label>
-            <input type="text" name="nombre_completo" required class="nombrecompleto llenar form-control <%= locals.errors && errors.nombre_completo ? 'is-invalid' : null %>"   
+            <input type="text" name="nombre_completo"  class="nombrecompleto llenar form-control <%= locals.errors && errors.nombre_completo ? 'is-invalid' : null %>"   
             
             
             value= "<%= locals.oldData ? oldData.nombre_completo : null%>">
@@ -31,7 +31,7 @@
           <br>
           <div>
             <label for="email"> Email: </label>
-            <input type="text" name="email" required class="email llenar" 
+            <input type="text" name="email"  class="email llenar" 
             
             class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
             value= "<%= locals.oldData ? oldData.email : null%>">
@@ -112,12 +112,13 @@
             <button type="reset" class="btn btn-danger"> Limpiar datos </button>
             <button type="submit" class="btn btn-primary"> Registar </button>
 
-          </div> 
+          </div>
+           
         </form>
             
       </main>
          
   <%- include ('../partials/footer') %>
-     
+  
     </body>
   </html>
