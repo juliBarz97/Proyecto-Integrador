@@ -9,7 +9,7 @@ html{
     position:fixed;
     width: 103%;
     justify-content: flex-start;
-    background-color: 33FFF9;
+    background-color: #99CC99;
     top: 0%;
     
 }
@@ -23,20 +23,20 @@ html{
 }
 
 #logo2J{
-    width: 15%;
-    height: 87%;
-    margin-bottom: 4%;
-    margin-top: 5%;
-    background-color: burlywood;
-    border-radius: 20px;
+    width: 20%;
+    height: 90%;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    background-color: #CCFF33;
+    border-radius: 90px;
     border-style: solid;
     border-color: black;
     
 }
 
 #logo3J{
-    width: 100%;
-    height: 100%;
+    width: 110%;
+    height: 110%;
 }
 
 
@@ -94,13 +94,13 @@ html{
 #descripcionJ{     
     display: flex;   
     width: 80%;
-    color: burlywood;
+    color: #00CCCC;
     margin-top: 5%;
     text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
     background-image:url('../imagenes/empresa.png'); 
     background-position: center;
     background-size: cover;
-    font-size: 20px;
+    font-size: 25px;
     text-align-last: left;
     align-items: center;
     width: 100%;
@@ -164,6 +164,8 @@ html{
     display: flex; 
     flex-wrap: wrap;
     justify-content: space-evenly;
+    background-color:#339966;
+    
     
 }
 
@@ -178,6 +180,10 @@ html{
 .llenar{
     transition: 200ms;
     width: 100%;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
     background-color: white;
 }
 .llenar:hover{
@@ -195,6 +201,31 @@ html{
     background-color: cornsilk;
     border-radius: 20px;
     padding: 4% 8% 3% 8%
+}
+
+/* CREACION PRODUCTO VISTA */
+
+#vistaCrearP{
+    background-color: #0C6291 ;
+    display: flex;
+}
+
+/* EDITAR PRODUCTO VISTA */
+#editarProducto{
+    background-color: #0C6291;
+    display: flex;
+}
+
+#formularioP{
+    display: flex;
+    flex-direction: column;
+    margin: 150px 10% 5% 10%;
+    background-color: cornsilk;
+    border-radius: 20px;
+    padding: 6% 8% 5% 8%;
+    width: 70%;
+    justify-content: center;
+    margin-left: 15%;  
 }
 /* PROFILE */
 #formulario-3{
@@ -267,17 +298,7 @@ html{
     margin-left: 15%;  
 }
 
-#formularioP{
-    display: flex;
-    flex-direction: column;
-    margin: 150px 10% 5% 10%;
-    background-color: cornsilk;
-    border-radius: 20px;
-    padding: 6% 8% 5% 8%;
-    width: 50%;
-    justify-content: center;
-    margin-left: 17%;  
-}
+
 
 @media (max-width:600px){
     #regis{
@@ -293,6 +314,11 @@ html{
 #avatar{
     width: 179px;
 }
+
+#imageProd{
+    width: 179px;
+}
+
 
 #login{
     height: 500px;
@@ -353,8 +379,12 @@ html{
     border-color: black;
 }
 #cuerpoJ{
-    background-color: #0C6291;
+    background-color: #339966; 
+    
     padding-bottom: 10%;
+    
+  
+
 }
 
 
@@ -363,7 +393,7 @@ html{
     display: flex;
     justify-content: center;
     align-content: flex-end;
-    background-color: black;   
+    background-color: #99CC99;   
     width: 100%;
     
 }
@@ -372,7 +402,7 @@ html{
     width: 50%;
     height: 13%;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
 }
 
@@ -384,10 +414,11 @@ html{
 
 .textoCJ{
     width: 25%;
-    background-color: burlywood;
+    background-color: white;
     margin: 20px 20px 20px; 
     border-radius: 20px;
     display: inline-block;
+    
 }
 
 @media (max-width: 680px){
@@ -397,7 +428,7 @@ html{
     }
     #P1J{
         display: flex;
-        background-color: cornsilk;
+        background-color: #99CC99;
         width: 28%;
         margin-bottom: 5%;
         margin-left: 10px;
@@ -496,6 +527,86 @@ html{
 .icon{
     width: 1em
 }
+
+#et-secondary-nav li ul {
+    background-color: #28272c;
+}
+#et-info {
+    float: left;
+}
+a, abbr, acronym, address, applet, b, big, blockquote, body, center, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, kbd, label, legend, li, object, ol, p, pre, q, s, samp, small, span, strike, strong, sub, sup, tt, u, ul, var {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: 0 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#et-info-email, #et-info-phone, .et-cart-info span {
+    position: left;
+    color: white;
+}
+
+a, abbr, acronym, address, applet, b, big, blockquote, body, center, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, kbd, label, legend, li, object, ol, p, pre, q, s, samp, small, span, strike, strong, sub, sup, tt, u, ul, var {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: 0 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+
+#top-header {
+    z-index: 100000;
+    color: #fff;
+    font-size: 12px;
+    line-height: 13px;
+}
+body, input, textarea, select {
+    font-family: 'Noto Sans',Helvetica,Arial,Lucida,sans-serif;
+}
+body {
+    color: #444444;
+}
+body {
+    color: #666;
+    background-color: #fff;
+    font-family: "Open Sans",Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.7em;
+}
+body {
+    line-height: 1;
+}
+
+
+ 
+
+
+
 
 
 

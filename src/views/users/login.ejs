@@ -18,7 +18,7 @@
         <div>
           
           <label for="email"> Ingrese su Email: </label>
-          <input type="text" name="name" required id="email"  class="llenar"
+          <input type="text" name="Email" required id="email"  class="llenar"
             class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
             value= "<%= locals.oldData ? oldData.email : null%>">
             
@@ -34,7 +34,7 @@
         <div>
           <label for="password"> Ingrese su Contraseña: </label>
            
-          <input type="password" name="password" required value="" id="password" class="llenar"
+          <input type="password" name="password" required id="password" class="llenar"
             class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
             value= "<%= locals.oldData ? oldData.password : null%>">
             <i class="bi bi-eye-slash" id="togglePassword"></i>
@@ -50,11 +50,14 @@
         
 
         <br>
+        <!--      <label for="interes" name="interes"> Recordar mi cuenta 
+          <input type="checkbox" name="recordarUsuario">       
+        </label>--> 
  
         
         <div>
           <button type="button" class="btn btn-secondary"> <a href="/">Home</a>  </button>
-          <button type="submit" class="btn btn-success"> Ingresar </button>
+          <button type="submit" class="btn btn-primary"> Ingresar </button>
           
           
         </div> 

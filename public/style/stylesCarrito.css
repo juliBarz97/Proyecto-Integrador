@@ -143,17 +143,17 @@ footer{
 }
 
 .Seccion{
-    width: 90%;
-    background-color: cornsilk;
+    width: 60%;
+    background-color: #CCFFFF;
     margin: 20px 20px 20px; 
     border-radius: 20px;
-    margin-left: 5%;
+    margin-left: 10%;
 }
 
 .Seccion table{
     border: crimson ;
     text-align: center;
-    background-color: burlywood;
+    background-color: #CCFFFF;
     border-radius: 10px;
     width: 70%;
 }

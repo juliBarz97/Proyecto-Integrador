@@ -31,6 +31,10 @@ function usuarios(sequelize, DataTypes){
 			accesorios: {
 				type: DataTypes.STRING,
 			},
+			image : {
+				type: DataTypes.STRING(150),
+			}
+
 		}),
 		(config = {
 			camelCase: false,
