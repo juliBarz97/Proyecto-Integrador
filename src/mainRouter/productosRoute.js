@@ -4,6 +4,7 @@ const router = express.Router();
 
 // ************ Controller Require ************
 const productosCont = require('../mainController/productosCont');
+// const multP = require('../middlewares/multerProductos')
 
 /*** GET ALL PRODUCTS ***/ 
 router.get('/', productosCont.index); 
@@ -11,7 +12,7 @@ router.get('/listado', productosCont.listado);
 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/crear', productosCont.create); 
-router.post('/crear', productosCont.store); 
+router.post('/crear', /*multP.single('imageProd'),*/  productosCont.store); 
 
 
 /*** GET ONE PRODUCT ***/ 

@@ -6,8 +6,8 @@
 <body>
    
 <%- include ('../partials/header') %>
-
-	<form id="formularioP" action="/products/crear" method="POST">
+	<main id="vistaCrearP">
+	<form id="formularioP" action="/products/crear" method="POST" enctype="multipart/form-data">
 		<h2 id="tituloCreacion"> Formulario de creacion de productos </h2>
 		<div>
 		  <label for="nombre"> Nombre del producto: </label>
@@ -32,18 +32,26 @@
 						</select>
 		<br>
 		<div>
-			<label for="descripcion" class="llenar">Descipción:</label>
+			<label for="descripcion">Descipción:</label>
 			<br>
 			<textarea name="descripcion" id="descripcion" class="form-input"></textarea>
 		</div>
 		<br>
+		<div class="form-group">
+			<label for="imageProd">Ingrese la foto del producto</label>
+            <input type="file" name="imageProd" accept=".jpg" id="imageProd">
+           
+              
+        </div>
+		<br>
+		
 		<div>
 		  <button type="button" class="btn btn-secondary"> <a href="/">Home</a>  </button>
 		  <button type="submit" class="btn btn-success"> Guardar Producto </button>
 		</div>
 		
 	  </form> 
-	
+	</main>
 	<%- include('../partials/footer') %>
 
 </body>	

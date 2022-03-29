@@ -36,7 +36,7 @@ const controller = {
 
 			for ( unProducto of productos ){
 				let unProd = {
-					id:unProducto.id,
+					id: unProducto.id,
 					nombre: unProducto.nombre,
 					descripcion: unProducto.descripcion,
 					precio: unProducto.precio,
@@ -132,6 +132,7 @@ const controller = {
 			fecha_creacion: req.body.fecha_creacion,
 			usuario_id: req.session.userLogged.id,
 			categoria_id: req.body.categoria_id,
+			imageProd: req.file.filename
 		}).then((resultados) => {
 			res.redirect('/');
 		})

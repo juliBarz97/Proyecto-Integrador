@@ -8,17 +8,12 @@
     
 <%- include ('../partials/header') %>
 
-
-
     <main id="formCuerpo">
-
         <form class="formulario" action="/users/register" method="POST" enctype="multipart/form-data">
           <h2 id="tituloCreacion"> Registro de cuenta </h2>
           <div>
             <label for="nombre_completo"> Nombre completo: </label>
-            <input type="text" name="nombre_completo"  class="nombrecompleto llenar form-control <%= locals.errors && errors.nombre_completo ? 'is-invalid' : null %>"   
-            
-            
+            <input type="text" name="nombre_completo" class="nombrecompleto llenar form-control <%= locals.errors && errors.nombre_completo ? 'is-invalid' : null %>"           
             value= "<%= locals.oldData ? oldData.nombre_completo : null%>">
             <% if (locals.errors && errors.nombre_completo) { %>
               <div class="text-error"> 
@@ -26,13 +21,13 @@
               </div>
             <% } %>
             
-            
           </div>
           <br>
           <div>
             <label for="email"> Email: </label>
-            <input type="text" name="email"  class="email llenar" 
-            
+            <input type="text" 
+            name="email" 
+            class="email llenar"          
             class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
             value= "<%= locals.oldData ? oldData.email : null%>">
             <% if (locals.errors && errors.email) { %>
@@ -60,7 +55,10 @@
           <br>
           <div>
             <label for="domicilio"> Domicilio: </label>
-            <input type="text" name="domicilio" id="domicilio" class="llenar"
+            <input type="text" 
+            name="domicilio" 
+            id="domicilio" 
+            class="llenar"
             class="form-control <%= locals.errors && errors.domicilio ? 'is-invalid' : null %>"
             value= "<%= locals.oldData ? oldData.domicilio : null%>">
             <% if (locals.errors && errors.domicilio) { %>
@@ -89,7 +87,10 @@
           <br>
           <div>
             <label for="password"> Ingrese Contraseña: </label>
-            <input type="password" name="password" id="password" class="llenar" minlength="8"
+            <input type="password" 
+            name="password" 
+            id="password" 
+            class="llenar"
             class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
             value= "<%= locals.oldData ? oldData.password : null%>">
             <% if (locals.errors && errors.password) { %>
@@ -99,26 +100,25 @@
             <% } %>
           </div>
           <br>
-          <div >
+          <div class="form-group">
+            <label for="exampleFormControlFile1">Ingrese su foto de perfil</label>
             <input type="file" name="avatar" accept=".jpg" id="avatar">
             <% if (locals.errors && errors.avatar) { %>
               <div class="text-error"> 
                 <%= errors.avatar.msg %>
               </div>
             <% } %>
-          </div>
+          </div>           
           <br>
           <div id="limpieza">
             <button type="reset" class="btn btn-danger"> Limpiar datos </button>
             <button type="submit" class="btn btn-primary"> Registar </button>
-
           </div>
-           
-        </form>
-            
+       <script src="/public/js/script.js"> </script>   
+        </form>     
       </main>
-         
+    
   <%- include ('../partials/footer') %>
-  
+     
     </body>
   </html>

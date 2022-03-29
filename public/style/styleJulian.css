@@ -9,7 +9,7 @@ html{
     position:fixed;
     width: 103%;
     justify-content: flex-start;
-    background-color: 33FFF9;
+    background-color: black;
     top: 0%;
     
 }
@@ -44,7 +44,7 @@ html{
 
 
 #cabeceraJ{
-    background-color: white;
+    background-color: burlywood;
     color: black;
     font-size: 18px;
     display: flex;
@@ -178,6 +178,10 @@ html{
 .llenar{
     transition: 200ms;
     width: 100%;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
     background-color: white;
 }
 .llenar:hover{
@@ -195,6 +199,31 @@ html{
     background-color: cornsilk;
     border-radius: 20px;
     padding: 4% 8% 3% 8%
+}
+
+/* CREACION PRODUCTO VISTA */
+
+#vistaCrearP{
+    background-color: #0C6291 ;
+    display: flex;
+}
+
+/* EDITAR PRODUCTO VISTA */
+#editarProducto{
+    background-color: #0C6291;
+    display: flex;
+}
+
+#formularioP{
+    display: flex;
+    flex-direction: column;
+    margin: 150px 10% 5% 10%;
+    background-color: cornsilk;
+    border-radius: 20px;
+    padding: 6% 8% 5% 8%;
+    width: 70%;
+    justify-content: center;
+    margin-left: 15%;  
 }
 /* PROFILE */
 #formulario-3{
@@ -267,17 +296,6 @@ html{
     margin-left: 15%;  
 }
 
-#formularioP{
-    display: flex;
-    flex-direction: column;
-    margin: 150px 10% 5% 10%;
-    background-color: cornsilk;
-    border-radius: 20px;
-    padding: 6% 8% 5% 8%;
-    width: 50%;
-    justify-content: center;
-    margin-left: 17%;  
-}
 
 @media (max-width:600px){
     #regis{
@@ -293,6 +311,11 @@ html{
 #avatar{
     width: 179px;
 }
+
+#imageProd{
+    width: 179px;
+}
+
 
 #login{
     height: 500px;
@@ -369,7 +392,7 @@ html{
 }
 
 .social2{
-    width: 50%;
+    width: 21%;
     height: 13%;
     display: flex;
     justify-content: center;
@@ -498,4 +521,23 @@ html{
 }
 
 
+
+.btn-wsp-wal{
+    position:fixed;
+    width: 55px;
+    height: 55px;
+    bottom:5%;
+    right:5%;
+    line-height: 55px;
+    background: #0df053;
+    color:#fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 0px 0px rgba(0,0,0,3);
+    z-index: 100;
+    -moz-border-radius:50px;
+   -webkit-border-radius:50px;  
+
+}
 

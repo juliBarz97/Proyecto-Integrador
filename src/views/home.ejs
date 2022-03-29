@@ -2,19 +2,14 @@
 
 <html>
   
+<%- include ('./partials/head') %>    
   
-<%- include ('./partials/head') %>  
 
-
-<body onLoad="alert('BIENVENIDO A PRODUCTOS Y SERVICIOS D3')">
-
-    
-    
+  <body >
+     
 <%- include ('./partials/header') %>
 
-
-    <main id="cuerpoJ" >
-      
+    <main id="cuerpoJ">
         <div id="descripcionJ">
         <p id="randomJ"><b> 
           D3 es una empresa que ofrece productos 3D y servicios de impresores 3D para que nuestros clientes puedan disponer de las mismas ante cualquier necesidad.
@@ -29,48 +24,23 @@
         </div>
         <br>
         <div id="productosJ">
-          <% for (let i=0 ; i<p.length ; i++) { %>
-          <div id="P1J" class="SPJ">
-          <section>
-            <a class="botonJ" href="/products/detail/<%=p[i].id%>" ><img src="../public/imagenes/<%=p[i].imagen%>" class="fotos"> <p class="textosPS">Ver más <%= p[i].nombre %> </p></a> 
-          </section>
+          <% for (let i=0 ; i<6 ; i++) { %>
+            <div id="P1J">
+            <section id="seccion">
+                <a class="botonJ" href="/products/detail/<%=p[i].id%>" ><img src="../public/imagenes/<%=p[i].imagen%>" class="fotos"> 
+                  <div id="textoProducto">
+                    <p class="textosPS"><%=p[i].nombre %> </p>
+                    <p class="textosPSP"><%=p[i].precio %>$</p>
+                  </div>
+                </a>            
+            </section>
           </div>
-          
-         <% } %>
-         
-         
-         
-          <div id="P2J" class="SPJ">
-            <a class="botonJ" href="/index" > <img src="../public/imagenes/producto2.png" class="fotos"> <p class="textosPS">Ver más - Producto 2</p></a>
-          </div> 
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> 
-          <div style="padding:0 4%;"></div>
-          <a href="https://api.whatsapp.com/send?phone=5521960574&text=Hola%21%20en que%20m%C3%A1s%20podemos%C3%B3n%20ayudarte?%20" class="floatWapp" target="_blank">
-            <i class="fa fa-whatsapp my-floatWapp"></i>
-            </a>
-            
-            
-                     
-            
-            <br>
-        <div id="serviciosJ">
-          <% for (let i=0 ; i<p.length ; i++) { %>
-            <div id="S1J" class="SPJ">
-              <a class="botonJ" href="/products/detail/<%=p[i].id%>"> <img src="../public/imagenes/<%=p[i].imagen%>" class="fotos"> <p class="textosPS">  Ver más - Servicio 1 </p></a> 
-            </div>
-           <% } %>  
-          </div>
-          
         
-          
+      <% } %>
     </main>
-    
-    
      
 <%- include ('./partials/footer') %>
-
-
+    
   </body>
 </html>
-
 

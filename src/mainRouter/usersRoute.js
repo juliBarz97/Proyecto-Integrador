@@ -11,7 +11,6 @@ const usersCont = require('../mainController/usersCont');
 
 const usersLogin = require('../mainController/loginCont');
 
-
 router.get('/register', usersCont.register); // form registro
 
 router.post('/register',  mult.single('avatar'), validations,  usersCont.processRegister); //procesar registro
@@ -19,10 +18,8 @@ router.post('/register',  mult.single('avatar'), validations,  usersCont.process
 router.get('/login', usersCont.login); // form login 
 router.post('/login', usersCont.validLogin); 
 
+router.get('/logout', usersCont.logout)
 
-
-//router.post('/login', usersLogin.validLogin ); // form login 
-
-//router.get('/profile/:userId', usersCont.profile) // perfil
+router.get('/profile/:userId', usersCont.profile)  //perfil
 
 module.exports = router;
