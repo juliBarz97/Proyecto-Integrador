@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html>
     
-<%- include ('./partials/head') %>    
+	<head> 
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="/public/style/detail.css"> 
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"/>
+		<link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>   
+	</head> 
   
 
 <body>
@@ -13,8 +21,11 @@
 	
 
 	<div class="container">
+		
 	<div class="row">
+		<h2><%=producto.nombre%></h2>
 		<div class="col-md-7 col-sm-12">
+			
 			<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
 				<div class="carousel-inner">
 					<div class="carousel-item active">						
@@ -37,15 +48,17 @@
 					</button>
 				</div>
 			</div>
+			
 		</div>
+		
 		<div class="col-md-5 col-sm-12 contenedor-titulos-wal" >
 			<div>
 				<p class="nuevo producto text-center">nuevo</p>
-				<h2><%=producto.nombre%></h2>
+				
 								<p class="codigo-producto-wal">codigo producto: <b>ISRC20</b>
 				<i class="far fa-heart"></i></p>
 				
-				<span class="precio-wal">$<%=producto.precio%><sup>68</sup></span><span class="cuotas-wal">en 6 x $ <%= (producto.precio)/6 %> sin interés</span>
+				<span class="precio-wal">$<%=producto.precio%><sup>68</sup></span><span class="cuotas-wal">en 6 x $ <%= (producto.precio)/6 %> <i>sin interés</i> </span>
 				
 				<p class="devolucion-wal"><i class="fas fa-reply" ></i><b>Devolucion gratis 30 dias</b></p>
 				<p class="disponibilidad-wal"><b>Disponibilidad: <h2><%=producto.categoria%></h2></b></p>
@@ -53,7 +66,7 @@
 				<input type="text" value="1"/></p>
 				<div class="descripcion-wal">
 					<ul>
-						<p><%=producto.descripcion%></p>
+						<p class="descripcion"><%=producto.descripcion%></p>
 					</ul>
 				</div>							
 				<div id="boton-Wal">
@@ -72,6 +85,7 @@
 				<a href="https://api.whatsapp.com/send?phone=9876654321"
 				class="btn-wsp-wal" target="_blank"><i class="fab fa-whatsapp"></i></a>
 			</div>
+		
 		</div>
 	</div>
 </div>

@@ -4,9 +4,8 @@ const producto = require('../database/models/productos');
 const controller = {
 	// Root - Show all products
 	index: (req, res) => {
-
-		db.producto.findOne({where: {id: req.body.id}}).then( (unProducto) => {
-			let lista=[];
+		db.producto.findOne({ where: { id: req.body.id } }).then((unProducto) => {
+			let lista = [];
 
 			let unProd = {
 				id: unProducto.id,
@@ -20,21 +19,20 @@ const controller = {
 				usuario_id: unProducto.usuario_id,
 				categoria_id: unProducto.categoria_id,
 				imagen: unProducto.imageProd,
-			}
+			};
 
 			lista.push(unProd);
 
 			console.log(lista);
 
-			res.render('/index', {producto: lista});
-		} )
-		
+			res.render('/index', { producto: lista });
+		});
 	},
 	listado: (req, res) => {
-		db.producto.findAll().then( (productos) => {
-			let lista=[];
+		db.producto.findAll().then((productos) => {
+			let lista = [];
 
-			for ( unProducto of productos ){
+			for (unProducto of productos) {
 				let unProd = {
 					id: unProducto.id,
 					nombre: unProducto.nombre,
@@ -47,43 +45,38 @@ const controller = {
 					usuario_id: unProducto.usuario_id,
 					categoria_id: unProducto.categoria_id,
 					imagen: unProducto.imageProd,
-				}
+				};
 
 				lista.push(unProd);
-
 			}
-			res.render('products/listado',{p: lista});
+			res.render('products/listado', { p: lista });
 		});
-		
 	},
-
 
 	// Detail - Detail from one product
 	detail: (req, res) => {
-
 		let idProductoSeleccionado = req.params.id;
 		let productoSeleccionado;
 
-		db.producto.findOne( {where: {id: idProductoSeleccionado}}).then( (unProducto) =>{
-			let unProd = {
-				id: unProducto.id,
-				nombre: unProducto.nombre,
-				descripcion: unProducto.descripcion,
-				precio: unProducto.precio,
-				descuento: unProducto.descuento,
-				stock: unProducto.stock,
-				fecha_eliminacion: unProducto.fecha_eliminacion,
-				fecha_creacion: unProducto.fecha_creacion,
-				usuario_id: unProducto.usuario_id,
-				categoria_id: unProducto.categoria_id,
-				imagen: unProducto.imageProd,
-			}
+		db.producto
+			.findOne({ where: { id: idProductoSeleccionado } })
+			.then((unProducto) => {
+				let unProd = {
+					id: unProducto.id,
+					nombre: unProducto.nombre,
+					descripcion: unProducto.descripcion,
+					precio: unProducto.precio,
+					descuento: unProducto.descuento,
+					stock: unProducto.stock,
+					fecha_eliminacion: unProducto.fecha_eliminacion,
+					fecha_creacion: unProducto.fecha_creacion,
+					usuario_id: unProducto.usuario_id,
+					categoria_id: unProducto.categoria_id,
+					imagen: unProducto.imageProd,
+				};
 
-			res.render('index',{producto: unProd});
-
-		}
-
-		)
+				res.render('index', { producto: unProd });
+			});
 
 		/*
 
@@ -95,18 +88,16 @@ const controller = {
 			}
 		}
 		*/
-
 	},
 
 	// Create - Form to create
 	create: (req, res) => {
 		res.render('products/crear');
 	},
-	
+
 	// Create -  Method to store
 	store: (req, res) => {
-		
-/*		let nuevoID=(lista[lista.length-1].id)+1 
+		/*		let nuevoID=(lista[lista.length-1].id)+1 
 		
 		let productoNuevo = {
 			id: nuevoID,
@@ -121,74 +112,72 @@ const controller = {
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(lista,null,' '));
 */
-		db.producto.create({
-			
-			nombre: req.body.nombre,
-			descripcion: req.body.descripcion,
-			precio: req.body.precio,
-			descuento: req.body.descuento,
-			stock: req.body.stock,
-			fecha_eliminacion: null,
-			fecha_creacion: req.body.fecha_creacion,
-			usuario_id: req.session.userLogged.id,
-			categoria_id: req.body.categoria_id,
-			imageProd: req.file.filename
-		}).then((resultados) => {
-			res.redirect('/');
-		})
-
-		
-
+		db.producto
+			.create({
+				nombre: req.body.nombre,
+				descripcion: req.body.descripcion,
+				precio: req.body.precio,
+				descuento: req.body.descuento,
+				stock: req.body.stock,
+				fecha_eliminacion: null,
+				fecha_creacion: req.body.fecha_creacion,
+				usuario_id: req.session.userLogged.id,
+				categoria_id: req.body.categoria_id,
+				imageProd: req.file.filename,
+			})
+			.then((resultados) => {
+				res.redirect('/');
+			});
 	},
 
 	// Update - Form to edit
 	editar: (req, res) => {
 		let idProductoSeleccionado = req.params.id;
 		let productoSeleccionado;
-		
-		db.producto.findOne( {where: {id: idProductoSeleccionado}}).then( (unProducto) =>{
-			let unProd = {
-				id: unProducto.id,
-				nombre: unProducto.nombre,
-				descripcion: unProducto.descripcion,
-				precio: unProducto.precio,
-				descuento: unProducto.descuento,
-				stock: unProducto.stock,
-				fecha_eliminacion: unProducto.fecha_eliminacion,
-				fecha_creacion: unProducto.fecha_creacion,
-				usuario_id: unProducto.usuario_id,
-				categoria_id: unProducto.categoria_id,
-				imagen: unProducto.imageProd,
-			}
 
-			res.render('products/editar',{producto: unProd});
+		db.producto
+			.findOne({ where: { id: idProductoSeleccionado } })
+			.then((unProducto) => {
+				let unProd = {
+					id: unProducto.id,
+					nombre: unProducto.nombre,
+					descripcion: unProducto.descripcion,
+					precio: unProducto.precio,
+					descuento: unProducto.descuento,
+					stock: unProducto.stock,
+					fecha_eliminacion: unProducto.fecha_eliminacion,
+					fecha_creacion: unProducto.fecha_creacion,
+					usuario_id: unProducto.usuario_id,
+					categoria_id: unProducto.categoria_id,
+					imagen: unProducto.imageProd,
+				};
 
-		}
-
-		)
-		
+				res.render('products/editar', { producto: unProd });
+			});
 	},
 	// Update - Method to update
 	update: (req, res) => {
-
 		let idProductoSeleccionado = req.params.id;
 		let datos = req.body;
 
-		db.producto.update({
-			nombre: datos.nombre,
-			descripcion: datos.descripcion,
-			precio: datos.precio,
-			descuento: datos.descuento,
-			stock: datos.stock,
-			categoria_id: datos.categoria_id,
-			imagen: datos.imageProd,
-		},
-		{
-			where: {id: idProductoSeleccionado}
-		}
-		).then((resultados) => {
-			res.redirect('/');
-		})
+		db.producto
+			.update(
+				{
+					nombre: datos.nombre,
+					descripcion: datos.descripcion,
+					precio: datos.precio,
+					descuento: datos.descuento,
+					stock: datos.stock,
+					categoria_id: datos.categoria_id,
+					imagen: datos.imageProd,
+				},
+				{
+					where: { id: idProductoSeleccionado },
+				}
+			)
+			.then((resultados) => {
+				res.redirect('/');
+			});
 
 		/*
 
@@ -207,23 +196,21 @@ const controller = {
 		fs.writeFileSync(productsFilePath, JSON.stringify(lista,null,' '));
 		*/
 
-	    res.redirect('/');
-
+		res.redirect('/');
 	},
 
 	// Delete - Delete one product from DB
-	destroy : (req, res) => {
-
+	destroy: (req, res) => {
 		db.producto.destroy({
-			where : { 
-				id : req.params.id 
-			}
-		})
+			where: {
+				id: req.params.id,
+			},
+		});
 
 		res.redirect('/');
 
-		// ESTO ES CON JSON 
-/*
+		// ESTO ES CON JSON
+		/*
 		let idProductoSeleccionado = req.params.id;
 
 		let products2 = lista.filter(function(element){
@@ -235,7 +222,7 @@ const controller = {
 		lista = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 		*/
-	}
+	},
 };
 
 module.exports = controller;

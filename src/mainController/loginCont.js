@@ -28,7 +28,7 @@ const controlador = {
  
 			return res.redirect("/home");
 		}
-    }
+    }//loremksdkasd
 }
 
 //un rutador y un controlador para c/u
