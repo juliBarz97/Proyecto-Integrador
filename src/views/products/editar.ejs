@@ -7,21 +7,26 @@
    
 <%- include ('../partials/header') %>
 	<main id="editarProducto">
-	<form id="formularioP" action="/products/editar/<%=producto.id%>?_method=PUT" method="POST">
+	 
+	<form id="formularioP" class="formEditar" action="/products/editar/<%=producto.id%>?_method=PUT" method="POST">
 		<h2 id="tituloCreacion"> Edicion de productos </h2>
+		<div class="erroresED">
+		<ul>
+		</ul>
+		</div> 
 		<div>
 		  <label for="nombre"> Nombre del producto: </label>
-		  <input type="text" id="nombre" name="nombre" placeholder="<%= producto.nombre %>" class="nombreEd llenar">
+		  <input type="text" class="nombreEd llenar" id="nombre" name="nombre" placeholder="<%= producto.nombre %>" >
 		</div>
 		<br>
 		<div>
 		  <label for="precio"> Precio del producto: </label>
-		  <input type="text" id="precio" name="precio" placeholder="<%= producto.precio %>" class="precioEd llenar">
+		  <input type="number" class="precioEd llenar" id="precio" name="precio" placeholder="<%= producto.precio %>" >
 		</div>
 		<br>
 		<div>
 			<label for="descuento"> Descuento del producto: </label>
-			<input type="text" name="descuento" id="descuento" placeholder="<%= producto.descuento %>" class="llenar">
+			<input type="number" name="descuento" id="descuento" placeholder="<%= producto.descuento %>" class="llenar">
 		</div>
 		<br>
 		<label for="categoria" class="form-label">Categoría:</label>

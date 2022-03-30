@@ -1,31 +1,33 @@
 window.addEventListener("load", function(){
-    let formulario = document.querySelector("form.formulario");
+    let formulario = document.querySelector("form.formEditar");
 
     formulario.addEventListener("submit", function(e){
-        let errores = [];
+        //e.preventDefault(); //cuando termino tengo que sacarlo
+        let erroresE = [];
 
         let campoNombreEd = document.querySelector("input.nombreEd");
 
         if(campoNombreEd.value == "") {
-            errores.push("El campo de nombre tiene que estar completo");
+            erroresE.push("El campo de nombre tiene que estar completo");
 
         }else if (campoNombreEd.value.length < 3) {
-            errores.push("El campo de nombre debe tener al menos 3 caracteres");
+            erroresE.push("El campo de nombre debe tener al menos 3 caracteres");
         }
         let campoPrecioEd = document.querySelector("input.precioEd");
 
         if(campoPrecioEd.value == "") {
-            errores.push("El campo de email tiene que estar completo");
+            erroresE.push("Ingrese el precio del producto");
     }
+        
+        if (erroresE.length > 0) {
+            e.preventDefault();
+            let urlEd = document.querySelector("div.erroresED ul")
 
-    if (errores.length > 0) {
-        e.preventDefault();
-        let texto = "";
-        for (let i = 0; i <errores.length; i++) {
-            texto  += errores[i] + "\n";
-
-    } 
-    alert(texto);
-}
+            for (let i = 0; i < erroresE.length ; i ++){
+                urlEd.innerHTML += "<li>" + erroresE[i] + "</li>"
+            }
+            
+        alert("Por favor, ingrese bien la informacion")
+    }
 });
 })

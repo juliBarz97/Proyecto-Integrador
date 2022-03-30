@@ -28,7 +28,7 @@ const controlador = {
                 oldData : req.body })
         }
 		
-		console.log("asdasd: " ,req.body)
+		console.log("Pasaste por processRegister: " ,req.body)
 		let images = req.file.filename
 		db.usuario.create({
 			

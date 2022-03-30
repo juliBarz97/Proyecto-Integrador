@@ -43,11 +43,6 @@ app.set('view engine', 'ejs');
 app.set('views', './src/views');
 
 app.listen(process.env.PORT || 3000, () => console.log('Hola'));
-app.set("view engine", "ejs")
-
-app.set('views','./src/views')
-
-app.listen(process.env.PORT || 3000, () => console.log("Hola"));
 
 
 

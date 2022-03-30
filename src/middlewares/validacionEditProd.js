@@ -9,6 +9,7 @@ const validations = [
         .isNumeric().withMessage('Ingrese un numero'),
     body('descuento').notEmpty().withMessage('Escriba el descuento del producto').bail()
         .isNumeric().withMessage('Ingrese un numero'),
+    body('descripcion').notEmpty().withMessage('Escriba una descripcion para el producto')
 ]
 
 module.exports = validations;
