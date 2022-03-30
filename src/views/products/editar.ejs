@@ -11,12 +11,12 @@
 		<h2 id="tituloCreacion"> Edicion de productos </h2>
 		<div>
 		  <label for="nombre"> Nombre del producto: </label>
-		  <input type="text" id="nombre" name="nombre" placeholder="<%= producto.nombre %>" class="llenar">
+		  <input type="text" id="nombre" name="nombre" placeholder="<%= producto.nombre %>" class="nombreEd llenar">
 		</div>
 		<br>
 		<div>
 		  <label for="precio"> Precio del producto: </label>
-		  <input type="text" id="precio" name="precio" placeholder="<%= producto.precio %>" class="llenar">
+		  <input type="text" id="precio" name="precio" placeholder="<%= producto.precio %>" class="precioEd llenar">
 		</div>
 		<br>
 		<div>
@@ -42,7 +42,7 @@
 		  <button type="button" class="btn btn-secondary"> <a href="/">Home</a>  </button>
 		  <button type="submit" class="btn btn-success">  Guardar Producto</button>
 		</div>
-		
+		<script src="/public/js/editarProd.js"></script>
 	  </form> 
 	</main>
 	<%- include('../partials/footer') %>

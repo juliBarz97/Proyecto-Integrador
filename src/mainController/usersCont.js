@@ -14,6 +14,8 @@ const controlador = {
     },
     
 	profile : (req, res) => {
+
+		//pasar id
 		res.render("users/profile/:userId");
 	},
 
