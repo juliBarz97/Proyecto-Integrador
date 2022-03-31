@@ -18,6 +18,11 @@ window.addEventListener("load", function(){
         if(campoPrecioEd.value == "") {
             erroresE.push("Ingrese el precio del producto");
     }
+        let campoDescuentoEd = document.querySelector("input.descuentoEd");
+
+        if(campoDescuentoEd.value == "") {
+            erroresE.push("Ingrese el descuento del producto");
+    }
         
         if (erroresE.length > 0) {
             e.preventDefault();

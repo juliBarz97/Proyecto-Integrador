@@ -11,6 +11,10 @@
     <main id="login">
       <form id="formulario-2" class="formLogin" action="/users/login" method="POST" >
         <h2 id="tituloCreacion"> Login: </h2>
+        <div class="erroresLG">
+          <ul>
+          </ul>
+        </div>
         <div>
           <label for="email"> Ingrese su Email: </label>
           <input type="text" 
@@ -34,7 +38,6 @@
             class="passL llenar"
             class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
             value= "<%= locals.oldData ? oldData.password : null%>">
-            <i class="bi bi-eye-slash" id="togglePassword"></i>
             <% if (locals.errors && errors.password) { %>
               <div class="text-error"> 
                 <%= errors.password.msg %>

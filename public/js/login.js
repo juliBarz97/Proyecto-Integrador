@@ -1,7 +1,5 @@
-window.addEventListener('load', () => {
+window.addEventListener("load", () => {
 
-	
-	
 	let formL = document.querySelector('formLogin')
 	formL.addEventListener('submit', function(e){
 		let erroresL = []
@@ -20,14 +18,16 @@ window.addEventListener('load', () => {
 
 	})
 	
-		if (erroresL.length > 0){
-			e.preventDefault();
-			let textoL = "";
-			for (let i = 0; i < erroresL.length; i++){
-				textoL  += erroresL[i] + "\n";
-			}
-			alert(textoL)
+	if (erroresL.length > 0) {
+		e.preventDefault();
+		let urlLG = document.querySelector("div.erroresLG ul")
+	
+		for (let i = 0; i < erroresL.length ; i ++){
+			urlLG.innerHTML += "<li>" + erroresL[i] + "</li>"
 		}
+		
+	alert("Por favor, ingrese bien la informacion")
+	}
 	
 });
 

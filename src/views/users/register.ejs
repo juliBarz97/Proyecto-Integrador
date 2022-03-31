@@ -35,7 +35,7 @@
             id="password" 
             class="password llenar form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
             value= "<%= locals.oldData ? oldData.password : null%>">
-            <i class="bi bi-eye-slash" id="togglePassword"></i>
+
             <% if (locals.errors && errors.password) { %>
               <div class="text-error"> 
                 <%= errors.password.msg %>

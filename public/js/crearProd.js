@@ -17,6 +17,12 @@ window.addEventListener("load", function(){
 
         if(campoPrecioCrear.value == "") {
             erroresC.push("El campo de email tiene que estar completo");
+        }
+
+        let campoDescuentoCrear = document.querySelector("input.descuentoCR");
+
+        if(campoDescuentoCrear.value == "") {
+            erroresC.push("El campo de descuento tiene que estar completo");
     } 
 
     if (erroresC.length > 0) {

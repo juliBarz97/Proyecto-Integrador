@@ -46,15 +46,6 @@ if (errores.length > 0) {
     }
     
 alert("Por favor, ingrese bien la informacion")
-/*
-    if (errores.length > 0) {
-        e.preventDefault();
-
-        let texto = "";
-        for (let i = 0; i <errores.length; i++) {
-            texto  += errores[i] + "\n";
-    } 
-    alert(texto);*/
 }
 });
 })

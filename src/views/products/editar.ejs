@@ -41,7 +41,7 @@
 		<br>
 		<div>
 			<label for="descuento"> Descuento del producto: </label>
-			<input type="number" name="descuento" id="descuento" placeholder="<%= producto.descuento %>" class="llenar"
+			<input type="number" name="descuento" id="descuento" placeholder="<%= producto.descuento %>" class="descuentoEd llenar"
 			class="form-control <%= locals.errors && errors.descuento ? 'is-invalid' : null %>"
             value= "<%= locals.oldData ? oldData.descuento : null%>">
 			<% if (locals.errors && errors.descuento) { %>
