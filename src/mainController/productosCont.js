@@ -1,6 +1,8 @@
 const db = require('../database/models');
 const producto = require('../database/models/productos');
 
+const {validationResult} = require('express-validator')
+
 const controller = {
 	// Root - Show all products
 	index: (req, res) => {
@@ -111,7 +113,16 @@ const controller = {
 		lista.push(productoNuevo)
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(lista,null,' '));
+		
 */
+		const resultValidation = validationResult(req);
+				
+		if (resultValidation.errors.length > 0 ){
+			return res.render('products/crear', {
+				errors: resultValidation.mapped(),
+				oldData : req.body })
+		}
+
 		db.producto
 			.create({
 				nombre: req.body.nombre,
@@ -157,6 +168,15 @@ const controller = {
 	},
 	// Update - Method to update
 	update: (req, res) => {
+		/*
+		const resultValidation = validationResult(req);
+				
+		if (resultValidation.errors.length > 0 ){
+			return res.render('products/editar/:id', { //tira error aca
+				errors: resultValidation.mapped(),
+				oldData : req.body })
+		}	*/
+
 		let idProductoSeleccionado = req.params.id;
 		let datos = req.body;
 

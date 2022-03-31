@@ -15,17 +15,38 @@
 		</div>
 		<div>
 		  <label for="nombre"> Nombre del producto: </label>
-		  <input type="text" class="nombreCrear llenar" id="nombre" name="nombre" placeholder="producto" >
+		  <input type="text" class="nombreCrear llenar" id="nombre" name="nombre" placeholder="producto"
+		  class="form-control <%= locals.errors && errors.nombre ? 'is-invalid' : null %>"
+		  value= "<%= locals.oldData ? oldData.nombre : null%>">
+		  <% if (locals.errors && errors.nombre) { %>
+			<div class="text-error"> 
+			  <%= errors.nombre.msg %>
+			</div>
+		  <% } %>
 		</div>
 		<br>
 		<div>
 		  <label for="precio"> Precio del producto: </label>
-		  <input type="number" class="precioCrear llenar" id="precio" name="precio" placeholder="precio" >
+		  <input type="number" class="precioCrear llenar" id="precio" name="precio" placeholder="precio"
+		  class="form-control <%= locals.errors && errors.precio ? 'is-invalid' : null %>"
+		  value= "<%= locals.oldData ? oldData.precio : null%>"> 
+		  <% if (locals.errors && errors.precio) { %>
+			<div class="text-error"> 
+			  <%= errors.precio.msg %>
+			</div>
+		  <% } %>
 		</div>
 		<br>
 		<div>
 			<label for="descuento"> Descuento del producto: </label>
-			<input type="number" name="descuento" id="descuento" placeholder="descuento" class="llenar">
+			<input type="number" name="descuento" id="descuento" placeholder="descuento" class="llenar"
+			class="form-control <%= locals.errors && errors.descuento ? 'is-invalid' : null %>"
+            value= "<%= locals.oldData ? oldData.descuento : null%>">
+			<% if (locals.errors && errors.descuento) { %>
+				<div class="text-error"> 
+				  <%= errors.descuento.msg %>
+				</div>
+			  <% } %>
 		</div>
 		<br>
 		<label for="categoria" class="form-label">Categoría:</label>
@@ -47,6 +68,11 @@
 			<label for="imageProd">Ingrese la foto del producto</label>
             <input type="file" name="imageProd" accept=".jpg" id="imageProd">    
         </div>
+		<% if (locals.errors && errors.imageProd) { %>
+			<div class="text-error"> 
+			  <%= errors.imageProd.msg %>
+			</div>
+		  <% } %>
 		
 		<br>
 		

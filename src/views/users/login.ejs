@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html>
+
   
 <%- include ('../partials/head') %>    
  
@@ -8,14 +9,14 @@
     
 <%- include ('../partials/header') %>
     <main id="login">
-      <form id="formulario-2" action="/users/login" method="POST" >
+      <form id="formulario-2" class="formLogin" action="/users/login" method="POST" >
         <h2 id="tituloCreacion"> Login: </h2>
         <div>
           <label for="email"> Ingrese su Email: </label>
           <input type="text" 
             name="email" 
             id="email" 
-            class="llenar"
+            class="emailL llenar"
             class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
             value= "<%= locals.oldData ? oldData.email : null%>">
             <% if (locals.errors && errors.email) { %>
@@ -30,9 +31,10 @@
           <input type="password" 
             name="password" 
             id="password" 
-            class="llenar"
+            class="passL llenar"
             class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
             value= "<%= locals.oldData ? oldData.password : null%>">
+            <i class="bi bi-eye-slash" id="togglePassword"></i>
             <% if (locals.errors && errors.password) { %>
               <div class="text-error"> 
                 <%= errors.password.msg %>
@@ -47,6 +49,9 @@
           <button type="button" class="btn btn-secondary"> <a href="/">Home</a>  </button>
           <button type="submit" class="btn btn-primary"> Ingresar </button>
         </div> 
+        <script src="/public/js/login.js"></script>
+        
+      </form>
     </main>
 
 <%- include ('../partials/footer') %>

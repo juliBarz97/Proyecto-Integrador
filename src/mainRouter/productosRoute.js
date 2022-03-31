@@ -6,7 +6,7 @@ const router = express.Router();
 const productosCont = require('../mainController/productosCont');
 
 // validaciones + Multer
-
+const { body } = require('express-validator');
 const multP = require('../middlewares/multerProductos')
 const validacionCrear = require('../middlewares/validacionCrearProd')
 const validacionEditar = require('../middlewares/validacionEditProd')

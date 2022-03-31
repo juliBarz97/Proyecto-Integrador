@@ -22,6 +22,22 @@
             <% } %>
             
           </div>
+          <br> 
+          <div>
+            <label for="password"> Ingrese Contraseña: </label>
+            <input type="password" 
+            name="password" 
+            id="password" 
+            class="llenar"
+            class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+            value= "<%= locals.oldData ? oldData.password : null%>">
+            <i class="bi bi-eye-slash" id="togglePassword"></i>
+            <% if (locals.errors && errors.password) { %>
+              <div class="text-error"> 
+                <%= errors.password.msg %>
+              </div>
+            <% } %>
+          </div>
           <br>
           <div>
             <label for="email"> Email: </label>
@@ -85,21 +101,7 @@
             </label>
           </div>
           <br>
-          <div>
-            <label for="password"> Ingrese Contraseña: </label>
-            <input type="password" 
-            name="password" 
-            id="password" 
-            class="llenar"
-            class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
-            value= "<%= locals.oldData ? oldData.password : null%>">
-            <% if (locals.errors && errors.password) { %>
-              <div class="text-error"> 
-                <%= errors.password.msg %>
-              </div>
-            <% } %>
-          </div>
-          <br>
+         
           <div class="form-group">
             <label for="exampleFormControlFile1">Ingrese su foto de perfil</label>
             <input type="file" name="avatar" accept=".jpg" id="avatar">
