@@ -11,6 +11,11 @@
     <main id="formCuerpo">
         <form class="formulario" action="/users/register" method="POST" enctype="multipart/form-data">
           <h2 id="tituloCreacion"> Registro de cuenta </h2>
+          <div class="erroresRG">
+            <ul>
+            </ul>
+          </div>
+          
           <div>
             <label for="nombre_completo"> Nombre completo: </label>
             <input type="text" name="nombre_completo" class="nombrecompleto llenar form-control <%= locals.errors && errors.nombre_completo ? 'is-invalid' : null %>"           
@@ -21,6 +26,21 @@
               </div>
             <% } %>
             
+          </div>
+          <br> 
+          <div>
+            <label for="password"> Ingrese Contraseña: </label>
+            <input type="password" 
+            name="password" 
+            id="password" 
+            class="password llenar form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+            value= "<%= locals.oldData ? oldData.password : null%>">
+
+            <% if (locals.errors && errors.password) { %>
+              <div class="text-error"> 
+                <%= errors.password.msg %>
+              </div>
+            <% } %>
           </div>
           <br>
           <div>
@@ -85,21 +105,7 @@
             </label>
           </div>
           <br>
-          <div>
-            <label for="password"> Ingrese Contraseña: </label>
-            <input type="password" 
-            name="password" 
-            id="password" 
-            class="llenar"
-            class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
-            value= "<%= locals.oldData ? oldData.password : null%>">
-            <% if (locals.errors && errors.password) { %>
-              <div class="text-error"> 
-                <%= errors.password.msg %>
-              </div>
-            <% } %>
-          </div>
-          <br>
+         
           <div class="form-group">
             <label for="exampleFormControlFile1">Ingrese su foto de perfil</label>
             <input type="file" name="avatar" accept=".jpg" id="avatar">

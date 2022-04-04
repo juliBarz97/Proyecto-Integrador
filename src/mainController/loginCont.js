@@ -29,7 +29,9 @@ const controlador = {
 			return res.redirect("/home");
 		}
     }
-}
+		
+    }
+
 
 //un rutador y un controlador para c/u
 

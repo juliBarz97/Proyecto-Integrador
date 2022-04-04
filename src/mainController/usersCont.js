@@ -14,6 +14,8 @@ const controlador = {
     },
     
 	profile : (req, res) => {
+
+		//pasar id
 		res.render("users/profile/:userId");
 	},
 
@@ -26,7 +28,7 @@ const controlador = {
                 oldData : req.body })
         }
 		
-		console.log("asdasd: " ,req.body)
+		console.log("Pasaste por processRegister: " ,req.body)
 		let images = req.file.filename
 		db.usuario.create({
 			

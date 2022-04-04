@@ -267,14 +267,13 @@ html{
     
 }
 
-
 .ingresar:hover{
     background-color:  #0022AA;
 }
 
 #formCuerpo{
     background-color: #0C6291;
-    height: 880px;
+    height: 1000px;
 }
 
 #listado{
@@ -295,7 +294,6 @@ html{
     justify-content: center;
     margin-left: 15%;  
 }
-
 
 
 @media (max-width:600px){
@@ -541,3 +539,4 @@ html{
    -webkit-border-radius:50px;  
 
 }
+

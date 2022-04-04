@@ -2,8 +2,7 @@ window.addEventListener("load", function(){
     let formulario = document.querySelector("form.formulario");
 
     formulario.addEventListener("submit", function(e){
-        //e.preventDefault();
-        //alert("hola")
+        
         let errores = [];
 
         let campoNombre = document.querySelector("input.nombrecompleto");
@@ -24,20 +23,29 @@ window.addEventListener("load", function(){
         if(campoFechaNacimiento.value == "") {
             errores.push("El campo fecha nacimiento tiene que estar completo");
     }
+  
+        let contraReg = document.querySelector("input.password");
+        if (contraReg.value == ""){
+                errores.push("Tiene que tener una contraseña")
+            }
+              /*  
+        let contadorPass = (contraReg).replace(/[^0-9]/g,"").length;// CONSULTAR
+        console.log(contadorPass)
+        
+            else if (contadorPass < 3){
+                errores.push("La contraseña tiene que tener 3 numeros como minimo")
+            }
+*/
+    
+if (errores.length > 0) {
+    e.preventDefault();
+    let urlRG = document.querySelector("div.erroresRG ul")
 
-    if (errores.length > 0) {
-        e.preventDefault();
-        //alert("hola2" + errores.length)
-        /*let ulErrores = document.querySelector("div.errores ul");
-        for (let i = 0; 1 <errores.lenght; i++) {
-            ulErrores.innerHTML += "<li"> + errores[i] + ["</li>"]
-        }*/
-        let texto = "";
-        for (let i = 0; i <errores.length; i++) {
-            texto  += errores[i] + "\n";
-
-    } 
-    alert(texto);
+    for (let i = 0; i < errores.length ; i ++){
+        urlRG.innerHTML += "<li>" + errores[i] + "</li>"
+    }
+    
+alert("Por favor, ingrese bien la informacion")
 }
 });
 })

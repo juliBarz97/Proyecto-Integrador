@@ -1,5 +1,6 @@
 const db = require('../database/models');
 
+
 const controlador = {	
     home: (req, res) => {
         
