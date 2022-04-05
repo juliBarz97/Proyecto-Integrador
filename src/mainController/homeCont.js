@@ -1,13 +1,11 @@
 const db = require('../database/models');
 
+const controlador = {
+	home: (req, res) => {
+		db.producto.findAll().then((productos) => {
+			let lista = [];
 
-const controlador = {	
-    home: (req, res) => {
-        
-		db.producto.findAll().then( (productos) => {
-			let lista=[];
-	
-			for ( unProducto of productos ){
+			for (unProducto of productos) {
 				let unProd = {
 					id: unProducto.id,
 					nombre: unProducto.nombre,
@@ -20,22 +18,19 @@ const controlador = {
 					usuario_id: unProducto.usuario_id,
 					categoria_id: unProducto.categoria_id,
 					imagen: unProducto.imageProd,
-				}
-	
+				};
+
 				lista.push(unProd);
-	
 			}
-	
-			res.render('home',{p: lista});
+
+			res.render('home', { p: lista });
 		});
-			
-		
-},
-    carrito:(req, res) => {		
-        res.render("Carrito");     
-},
-    index: (req, res) => {
-        /*
+	},
+	carrito: (req, res) => {
+		res.render('Carrito');
+	},
+	index: (req, res) => {
+		/*
 		db.producto.findOne({where: {id: req.body.id}}).then( (unProducto) => {
 			let lista=[];
 
@@ -59,9 +54,8 @@ const controlador = {
 			res.render('/index', {producto: lista});
 		} )
         */
-        res.render("index");
-}
-}
-
+		res.render('index');
+	},
+};
 
 module.exports = controlador;
