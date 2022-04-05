@@ -30,5 +30,3 @@ window.addEventListener("load", () => {
 	}
 	
 });
-
-

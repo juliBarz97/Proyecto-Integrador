@@ -11,11 +11,11 @@
 
     <main id="cuerpoArba">
         <section class="Seccion">
-            <table align="center">
-                <tr>
+              <table align="center">
+              <tr>
                     <td class="PrimeraColumna">
                         <img src="../public/imagenes/web4-e1578666864760.png" class="ImgProducto">
-                        <label>Producto 1</label>
+                        <label class="nombreCarrito"> </label>
                         <p class="DescripcionProducto">
                             acá va la descripción del primer producto
                         </p>
@@ -24,12 +24,14 @@
                         <button class="BotonA">Cambiar el producto</button>
                     </td>
                     <td>
-                        <label>$ 500.000</label>
+                        <label class="precioCarrito"></label>
                     </td>
                 </tr>
             </table>
+            
+            
         </section>
-    
+        <!--
         <section class="Seccion">
             <table align="center">
                 <tr>
@@ -66,13 +68,14 @@
                     </td>
                 </tr>
             </table>
-        </section>
-    
+        </section> 
+    -->
         <section class="Seccion2">
             <button type="submit" class="btn btn-dark">Comprar</button>
+            <button type="submit" id="limpiar" class="btn btn-dark">Eliminar productos</button>
         </section>    
     </main>
-     
+     <script src="/public/js/carritoCompra.js"></script>
     <%- include ('./partials/footer') %>
     
 

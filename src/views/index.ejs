@@ -23,7 +23,7 @@
 	<div class="container">
 		
 	<div class="row">
-		<h2><%=producto.nombre%></h2>
+		<h2 id="nombreProducto"><%=producto.nombre%></h2>
 		<div class="col-md-7 col-sm-12">
 			
 			<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -58,7 +58,7 @@
 								<p class="codigo-producto-wal">codigo producto: <b>ISRC20</b>
 				<i class="far fa-heart"></i></p>
 				
-				<span class="precio-wal">$<%=producto.precio%><sup>68</sup></span><span class="cuotas-wal">en 6 x $ <%= (producto.precio)/6 %> <i>sin interés</i> </span>
+				<span class="precio-wal" id="precioProducto">$<%=producto.precio%><sup>68</sup></span><span class="cuotas-wal">en 6 x $ <%= (producto.precio)/6 %> <i>sin interés</i> </span>
 				
 				<p class="devolucion-wal"><i class="fas fa-reply" ></i><b>Devolucion gratis 30 dias</b></p>
 				<p class="disponibilidad-wal"><b>Disponibilidad: <h2><%=producto.categoria%></h2></b></p>
@@ -71,7 +71,8 @@
 				</div>							
 				<div id="boton-Wal">
 				<% if (locals.isLogged) { %>
-					<button type="button" class="btn btn-dark carrito-wal">Agregar al carrito</button>
+					
+					<button type="button" id="agregarCarrito" class="btn btn-dark carrito-wal">Agregar al carrito</button>
 					<button type="button" class="btn btn-dark comprar-wal">Comprar ahora</button>
 					
 					<form action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
@@ -89,7 +90,7 @@
 		</div>
 	</div>
 </div>
-
+<script src="/public/js/carrito.js"> </script>
 
 
 <!--
