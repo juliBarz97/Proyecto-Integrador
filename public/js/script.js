@@ -29,7 +29,7 @@ window.addEventListener("load", function(){
         }
   
         let contraReg = document.querySelector("input.password");
-        let contadorPass = contraReg.value.replace(/[^0-9]/g,'').length;// CONSULTAR
+        let contadorPass = contraReg.value.replace(/[^0-9]/g,'').length;
         
         if (contadorPass < 3){
             errores.push("La contraseña tiene que tener 3 numeros como minimo")
