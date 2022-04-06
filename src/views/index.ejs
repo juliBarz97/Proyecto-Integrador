@@ -71,8 +71,9 @@
 				</div>							
 				<div id="boton-Wal">
 				<% if (locals.isLogged) { %>
-					
-					<button type="button" id="agregarCarrito" class="btn btn-dark carrito-wal">Agregar al carrito</button>
+					<form action="/products/guardarEnCarrito/<%= producto.id %>" method="POST">
+						<button type="submit" class="btn btn-dark carrito-wal">Agregar al carrito</button>
+					</form>
 					<button type="button" class="btn btn-dark comprar-wal">Comprar ahora</button>
 					
 					<form action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">

@@ -27,6 +27,7 @@ router.get('/detail/:id', productosCont.detail);
 router.get('/editar/:id', productosCont.editar); 
 router.put('/editar/:id', validacionEditar ,productosCont.update); 
 
+router.post('/guardarEnCarrito/:id', productosCont.guardarEnCarrito);  
 
 /*** DELETE ONE PRODUCT***/ 
 router.delete('/delete/:id', productosCont.destroy); 

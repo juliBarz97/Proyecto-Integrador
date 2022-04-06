@@ -92,6 +92,20 @@ const controller = {
 		*/
 	},
 
+	guardarEnCarrito : (req, res) => {
+		db.carrito
+			.create({
+				producto_id : req.params.id  ,			
+				usuario_id: req.session.userLogged.id,
+				fecha_pedido: Date.now(),
+				
+			})
+			.then((resultados) => {
+				res.redirect('/');
+			});
+	
+	},
+
 	// Create - Form to create
 	create: (req, res) => {
 		res.render('products/crear');
