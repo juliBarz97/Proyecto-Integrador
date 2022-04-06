@@ -27,7 +27,7 @@
 		<br>
 		<div>
 		  <label for="precio"> Precio del producto: </label>
-		  <input type="number" class="precioCrear llenar" id="precio" name="precio" placeholder="precio"
+		  <input type="number" class="precioCrear llenar" placeholder=100 id="precio" name="precio" placeholder="precio"
 		  class="form-control <%= locals.errors && errors.precio ? 'is-invalid' : null %>"
 		  value= "<%= locals.oldData ? oldData.precio : null%>"> 
 		  <% if (locals.errors && errors.precio) { %>
