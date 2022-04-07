@@ -11,13 +11,15 @@ const validations = [
         .isEmail().withMessage('Escriba un correo valido'),
     body('date').notEmpty().withMessage('Escriba una fecha'),
     body('domicilio').notEmpty().withMessage('Escriba un domicilio'),
-    body('avatar').custom((valur,{req }) => {
+    body('avatar').custom((value,{req }) => {
         let file = req.file;
+        console.log(req.file)
         let acceptedExtensions = ['.jpg' , '.png', '.jpeg' ];
-        let fileExtensions = path.extname(file.originalname);
+       
         if (!file) {
             throw new Error('Suba una imagen');
         } else { 
+             let fileExtensions = path.extname(file.originalname);
             if (acceptedExtensions.includes(fileExtensions)===false){
                 throw new Error('Los archivos permitidos son ' + acceptedExtensions.join(', '))
             }

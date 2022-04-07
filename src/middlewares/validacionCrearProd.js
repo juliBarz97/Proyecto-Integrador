@@ -9,13 +9,13 @@ const validations = [
         .isNumeric().withMessage('Ingrese un numero'),
     body('descuento').notEmpty().withMessage('Escriba el descuento del producto').bail()
         .isNumeric().withMessage('Ingrese un numero'),
-    body('imageProd').custom((valur,{req }) => {
+    body('imageProd').custom((value,{req }) => {
         let file = req.file;
         let acceptedExtensions = ['.jpg' , '.png', '.jpeg' ];
-        let fileExtensions = path.extname(file.originalname);
         if (!file) {
             throw new Error('Suba una imagen');
         } else { 
+        let fileExtensions = path.extname(file.originalname);
             if (acceptedExtensions.includes(fileExtensions)===false){
                 throw new Error('Los archivos permitidos son ' + acceptedExtensions.join(', '))
             }

@@ -43,7 +43,7 @@
             <% } %>
             <li><a href="/carrito" class="textoHead"> Carrito <i class="bi bi-bag" class="icon"></i></a> </li>
             <% if (locals.isLogged) { %>
-            <li><a href="/users/profile" class="textoHead"> Mi Perfil </a></li>
+            <li><a href="/users/profile/:userId" class="textoHead"> Mi Perfil </a></li>
             <li><a href="/users/logout" class="textoHead"> Logout </a></li>
             <% } else { %>  
             <li><a href="/users/login" class="textoHead" > Login <i class="bi bi-person-circle" class="icon"></i> </a> </li>

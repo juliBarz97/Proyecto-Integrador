@@ -2,8 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const bcrypt = require('bcryptjs');
 const db = require('../database/models');
-//const userDBPath = path.resolve(__dirname, "../mainData/usuarios.json");
-//const userDB = JSON.parse(fs.readFileSync(userDBPath, "utf8"));
+
 
 const {validationResult} = require('express-validator')
 
@@ -14,9 +13,24 @@ const controlador = {
     },
     
 	profile : (req, res) => {
+		db.usuario.findOne({ where: { id: req.session.userLogged } }).then((username) => {
+			let lista = [];
 
-		//pasar id
-		res.render("users/profile/:userId");
+			let usuario = {
+				id: username.id,
+				nombre: username.nombre,
+				descripcion: username.email,
+				precio: username.domicilio,
+			};
+
+			lista.push(usuario);
+
+			console.log(lista);
+
+			res.render('users/profile/', { user: lista });
+		});
+		
+	//	res.render("users/profile/:userId");
 	},
 
     processRegister: (req,res) => {
