@@ -74,6 +74,19 @@ const controlador = {
 		return res.redirect('/')
 	},
 
+	apiUsers : (req, res ) => {
+		db.usuario.findAll()
+		.then(unUsuario => {
+
+			console.log(unUsuario)
+			return res.status(200).json({
+				registro: unUsuario.length,
+				data: unUsuario,
+				codigo : 200,	
+			})
+	
+		});
+	},
     validLogin: (req, res) => {
 		
 		const resultValidationLogin = validationResult(req);

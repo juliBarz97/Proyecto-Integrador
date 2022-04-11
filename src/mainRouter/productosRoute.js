@@ -32,5 +32,8 @@ router.post('/guardarEnCarrito/:id', productosCont.guardarEnCarrito);
 /*** DELETE ONE PRODUCT***/ 
 router.delete('/delete/:id', productosCont.destroy); 
 
+/** API PRODUCT */
+router.get('/api', productosCont.apiProduct)
+router.get('/carritoApi', productosCont.apiCarrito)
 
 module.exports = router;

@@ -1,6 +1,6 @@
 const db = require('../database/models');
 const producto = require('../database/models/productos');
-
+const carrito = require('../database/models/carrito')
 const {validationResult} = require('express-validator')
 
 const controller = {
@@ -29,6 +29,51 @@ const controller = {
 
 			res.render('/index', { producto: lista });
 		});
+	},
+	apiProduct: (req, res) => {
+		db.producto.findAll()
+				.then(unProducto => {
+
+					console.log(unProducto)
+					return res.status(200).json({
+						registro: unProducto.length,
+						data: unProducto,
+						codigo : 200,	
+					})
+			
+			
+			
+			/*let lista = [];
+
+			let unProd = {
+				nombre: unProducto.nombre,
+				descripcion: unProducto.descripcion,
+				precio: unProducto.precio,
+				descuento: unProducto.descuento,
+				stock: unProducto.stock,
+			};
+
+			lista.push(unProd);
+
+			console.log(lista); 
+
+			res.json({
+				productos: "Productos",
+				codigo: 200,
+				data : lista
+			})*/
+			
+		});
+	},
+	apiCarrito : (req, res) => {
+		db.carrito.findAll()
+			.then(carritoP => {
+				return res.status(200).json({
+					registro: carritoP.length,
+					data: carritoP,
+					codigo : 200,	
+				})
+			})
 	},
 	listado: (req, res) => {
 		db.producto.findAll().then((productos) => {

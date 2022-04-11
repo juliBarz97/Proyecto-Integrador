@@ -18,8 +18,9 @@ router.post('/register',  mult.single('avatar'), validations,  usersCont.process
 router.get('/login', usersCont.login); // form login 
 router.post('/login', usersCont.validLogin); 
 
-router.get('/logout', usersCont.logout)
+router.get('/logout', usersCont.logout) ;
 
+router.get('/api',usersCont.apiUsers) ; //api
 router.get('/profile/:userId', usersCont.profile)  //perfil
 
 module.exports = router;
