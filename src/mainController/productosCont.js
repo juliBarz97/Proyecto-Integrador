@@ -32,36 +32,27 @@ const controller = {
 	},
 	apiProduct: (req, res) => {
 		db.producto.findAll()
-				.then(unProducto => {
+				.then(productos => {
+			let lista = [];
 
-					console.log(unProducto)
-					return res.status(200).json({
-						registro: unProducto.length,
-						data: unProducto,
-						codigo : 200,	
-					})
-			
-			
-			
-			/*let lista = [];
-
-			let unProd = {
-				nombre: unProducto.nombre,
-				descripcion: unProducto.descripcion,
-				precio: unProducto.precio,
-				descuento: unProducto.descuento,
-				stock: unProducto.stock,
-			};
-
+			for (unProducto of productos) {
+				let unProd = {
+					nombre: unProducto.nombre,
+					descripcion: unProducto.descripcion,
+					precio: unProducto.precio,
+					descuento: unProducto.descuento,
+					stock: unProducto.stock,
+				};
 			lista.push(unProd);
 
-			console.log(lista); 
+			}
 
-			res.json({
-				productos: "Productos",
-				codigo: 200,
-				data : lista
-			})*/
+					console.log(lista)
+					res.status(200).json({
+						registro: lista.length,
+						data: lista,
+						codigo : 200,	
+					})
 			
 		});
 	},

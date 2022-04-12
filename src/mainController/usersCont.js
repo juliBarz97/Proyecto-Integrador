@@ -78,10 +78,24 @@ const controlador = {
 		db.usuario.findAll()
 		.then(unUsuario => {
 
+			let lista = [];
+
+			for (userrs of unUsuario) {
+				let usuarios = {
+					nombre: userrs.nombre,
+					email: userrs.email,
+					domicilio: userrs.domicilio,
+	
+				};
+			lista.push(usuarios);
+
+			}
+
+
 			console.log(unUsuario)
 			return res.status(200).json({
-				registro: unUsuario.length,
-				data: unUsuario,
+				registro: lista.length,
+				data: lista,
 				codigo : 200,	
 			})
 	
