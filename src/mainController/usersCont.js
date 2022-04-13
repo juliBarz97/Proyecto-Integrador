@@ -14,22 +14,18 @@ const controlador = {
     
 	profile : (req, res) => {
 		db.usuario.findOne({ where: { id: req.session.userLogged } }).then((username) => {
-			let lista = [];
-
+			console.log(req.session.userLogged)
 			let usuario = {
-				id: username.id,
-				nombre: username.nombre,
-				descripcion: username.email,
-				precio: username.domicilio,
+				id: req.session.userLogged.id,
+				nombre: req.session.userLogged.nombre,
+				email: req.session.userLogged.email,
+				domicilio: req.session.userLogged.domicilio,
+				image: req.session.userLogged.image
 			};
 
-			lista.push(usuario);
-
-			console.log(lista);
-
-			res.render('users/profile/', { user: lista });
-		});
 		
+			res.render('./users/profile', { user: usuario });
+		});
 	//	res.render("users/profile/:userId");
 	},
 
@@ -123,9 +119,9 @@ const controlador = {
 				if (!isPasswordOk) {
 					return res.render( 'users/login' );
 				} else {			 
-				   delete userToLogin.password; //no borra, habria que reveerlo 
+				   delete userToLogin.password; 
 				   req.session.userLogged = userToLogin;
-	
+					
 				   return res.redirect('/')
 			   }
 			}
