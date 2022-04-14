@@ -66,6 +66,44 @@ const controller = {
 				})
 			})
 	},
+	categorias : (req,res) => {
+		db.categorias.findAll()
+			.then(category => {
+				return res.status(200).json({
+					registro: category.length,
+					data : category,
+					codigo: 200
+				})
+			})
+	},
+	lastProd : (req,res) => {
+		db.producto.findAll()
+				.then(productos => {
+			let lista = [];
+
+		
+				let unProd = productos.slice(-1)[0]; 
+				let ultimoProd = {
+					nombre: unProd.nombre,
+					descripcion: unProd.descripcion,
+					precio: unProd.precio,
+					descuento: unProd.descuento,
+					stock: unProd.stock,
+					imagen: unProd.imageProd,
+					id : unProd.id
+				}
+			lista.push(ultimoProd);
+
+			
+			//		console.log(lista)
+					res.status(200).json({
+						data: lista,
+						codigo : 200,
+						text: "Last Product"	
+					})
+			
+		});
+	},
 	listado: (req, res) => {
 		db.producto.findAll().then((productos) => {
 			let lista = [];
@@ -279,19 +317,6 @@ const controller = {
 
 		res.redirect('/');
 
-		// ESTO ES CON JSON
-		/*
-		let idProductoSeleccionado = req.params.id;
-
-		let products2 = lista.filter(function(element){
-			return element.id!=idProductoSeleccionado;
-		})
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(products2,null,' '));
-
-		lista = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-		*/
 	},
 };
 
