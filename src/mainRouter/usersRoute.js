@@ -21,6 +21,8 @@ router.post('/login', usersCont.validLogin);
 router.get('/logout', usersCont.logout) ;
 
 router.get('/api',usersCont.apiUsers) ; //api
+router.get('/lastUser',usersCont.lastUser) ; // ult usuario api
+
 router.get('/profile/:userId', usersCont.profile)  //perfil
 
 module.exports = router;

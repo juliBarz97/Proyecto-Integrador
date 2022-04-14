@@ -11,7 +11,7 @@ const controlador = {
 				
         res.render("users/register");
     },
-    
+   
 	profile : (req, res) => {
 		db.usuario.findOne({ where: { id: req.session.userLogged } }).then((username) => {
 			console.log(req.session.userLogged)
@@ -69,7 +69,36 @@ const controlador = {
 		req.session.destroy();
 		return res.redirect('/')
 	},
+	lastUser : (req,res) => {
+		db.usuario.findAll()
+		.then(unUsuario => {
 
+			let lista = [];
+			let userrs = unUsuario.slice(-1)[0]
+			console.log(userrs)
+			let usuarios = {
+				id: userrs.id, 
+				nombre: userrs.nombre,
+				email: userrs.email,
+				domicilio: userrs.domicilio,
+				perfil: userrs.perfil,
+				imagen: userrs.image,
+			}
+			lista.push(usuarios);
+
+			
+
+
+			console.log(unUsuario)
+			return res.status(200).json({
+				text : "Last User",
+				data: lista,
+				codigo : 200,	
+			})
+	
+		});
+
+	},
 	apiUsers : (req, res ) => {
 		db.usuario.findAll()
 		.then(unUsuario => {

@@ -35,5 +35,8 @@ router.delete('/delete/:id', productosCont.destroy);
 /** API PRODUCT */
 router.get('/api', productosCont.apiProduct)
 router.get('/carritoApi', productosCont.apiCarrito)
+router.get('/lastProd', productosCont.lastProd)
+router.get('/categorias', productosCont.categorias)
+
 
 module.exports = router;
