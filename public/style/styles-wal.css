@@ -15,14 +15,20 @@
      
 }
 
+#contTextoProd{
+    width: 50%;
+}
+
+
+
 #fotoDetalle{
-    height: 60%;
-    width: 75%;
+    height: 100%;
+    width: 100%;
 }
 .row{
     display: flex;
     z-index: 0;
-    flex-direction: row;
+    flex-wrap: wrap;
     background: cornsilk;
     border-radius: 20px;
 }
@@ -50,8 +56,24 @@
 .contenedor-titulos-wal{
     border:1px solid #ccc;
     border-radius: 10px;
+    width: 50%;
 
 } 
+
+#fotoProd{
+    width: 50%
+}
+#unProducto{
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width :600px) {
+    #unProducto{
+        display: flex;
+        flex-flow: column;
+    }
+}
 input{
     border:3px solid black;
     font-weight: bold;

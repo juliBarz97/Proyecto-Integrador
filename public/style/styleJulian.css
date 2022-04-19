@@ -53,7 +53,30 @@ html {
 }
 
 .textoHead {
+	list-style: none;
+	display: inline-block;
 	color: black;
+	text-decoration: none;
+
+	position: relative;
+	margin-block: 2px;
+}
+
+.textoHead::after{
+	content:'';
+	width: 100%;
+	height: 1px;
+	background-color: black;
+	border-radius: 4px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	transform:scaleX(0);
+	transform-origin: left;
+	transition: transform .4s ease;
+}
+.textoHead:hover::after{
+	transform: scaleX(1);
 }
 
 @media (max-width: 400px) {
@@ -124,6 +147,14 @@ div#ProductosJ{
 	font-size: 13px;
 	font-weight: bold;
 }
+.textosPSd {
+	display: flex;
+	justify-content: left;
+	color: black;
+	font-size: 13px;
+	font-weight: bold;
+}
+
 
 .textosPSP {
 	display: flex;
@@ -139,7 +170,14 @@ div#ProductosJ{
         width: 160px;
     }
 	.textosPS {
+		font-size: 11px;
+	}
+	.textosPSd {
 		display: none;
+	}
+	
+	.textosPSP{
+		font-size: 9px;
 	}
 	#fotoJ {
 		width: 12%;
@@ -175,7 +213,7 @@ div#ProductosJ{
     border-radius: 20px;
     width: 85% ;
 	padding-top: 15px;
-	margin-left: 7%;
+	margin-left: 0%;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
@@ -264,6 +302,27 @@ div#ProductosJ{
 	transition: 500ms;
 }
 
+#APIs{
+	display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#botonAPI{
+	display: flex;
+	background-color: black;
+	color:white
+}
+
+#botonAPI:hover{
+	background-color: white;
+	color:black;
+	transition: 500ms;
+}
+
+
 /* CREACION PRODUCTO VISTA */
 
 #vistaCrearP {
@@ -298,6 +357,66 @@ div#ProductosJ{
 	background-color: cornsilk;
 	border-radius: 20px;
 	padding: 3% 8% 5% 8%;
+}
+
+/* profile boceto */ 
+
+#cajaGrande{
+	display: flex;
+	flex-direction: row;
+	width: 60%;
+	background-color: cornsilk;
+	border-radius: 20px;
+	
+}
+#caja1{
+	height: 100%;
+    width: 50%;
+}
+
+#fotitoCaja{
+	width: 100%;
+    height: 315px;
+}
+
+#caja2{
+	height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+#boton-Wal{
+	display: flex;
+    flex-flow: wrap;
+}
+
+@media (max-width:600px) {
+	#cajaGrande{
+		display: flex;
+		flex-direction: column;
+		width: 75%;
+		background-color: cornsilk;
+		border-radius: 20px;
+		padding-bottom : 20px
+	}
+	#caja2{
+		height: 100%;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+	#caja1{
+		height: 70%;
+		width: 70%;
+		margin-top: 6%;
+		margin-left: 15%;
+		border-radius: 20px;
+	}
+	#fotitoCaja{
+		width: 100%;
+		height: 200px;
+	}
 }
 
 #tituloCreacion {
@@ -389,13 +508,23 @@ div#ProductosJ{
 
 }
 
+#fotoPro{
+	width: 200%;
+}
+#textoProducto{
+	display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 #P1J {
 	display: flex;
 	background-color: cornsilk;
 
 	margin-bottom: 5%;
 	margin-left: 10px;
-	height: 250px;
+	width: 31%;
+    height: 176px;
 	border-radius: 20px;
 	border-style: solid;
 	border-color: black;
@@ -550,12 +679,33 @@ div#ProductosJ{
 	#dropdown {
 		font-size: 17px;
 		display: flex;
+		position: relative;
+		left: 32px;
 		background-color: burlywood;
 	}
-	.cuenta {
+	#toggleNav{
+		display: flex;
+		width: 50px;
+		height: 50px;
+	}
+	#logo2J {
+		position: relative;
+  	 	right: 80px;
+		width: 29%;
+		height: 100%;
+		margin-bottom: 4%;
+		margin-top: 5%;
+		background-color: burlywood;
+		border-radius: 20px;
+		border-style: solid;
+		border-color: black;
+	}
+	#cuenta {
 		display: none;
 	}
-
+	#randomJ{
+		font-size: 15px ;
+	}
 	#P1J {
 		display: flex;
 		background-color: cornsilk;

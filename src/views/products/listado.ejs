@@ -16,17 +16,36 @@
 <main id="listado">
     <div id="productosJ">
       <% for (let i=0 ; i<p.length ; i++) { %>
+        
         <div id="P1J" class="SPJ">
-        <section>
-            <a class="botonJ" href="/products/detail/<%=p[i].id%>" ><img src="../public/imagenes/<%=p[i].imagen%>" class="fotos"> 
-              <div id="textoProducto">
-                <p class="textosPS"><%=p[i].nombre %> </p>
-                <p class="textosPSP"><%=p[i].precio %>$</p>
-              </div>
-        </section>
+          <section id="fotoPro">
+              <a class="botonJ" href="/products/detail/<%=p[i].id%>" ><img src="../public/imagenes/<%=p[i].imagen%>" class="fotos"> </a>              
+          </section>
+          <section id="textoProducto">
+                  <p class="textosPS"><%=p[i].nombre %> </p>
+                  <p class="textosPSP"><%=p[i].precio %>$</p>
+                  <p class="textosPSd">Descuento </p>
+                  <p class="textosPSP"><%=p[i].descuento %>%</p>
+          </section>
         </div>
        <% } %>  
       </div>
+      <!--
+        <div class="prueba">
+			<section class="foto">
+				<figure>
+					<img src="/images/products/<" class="foto">
+				</figure>
+			</section>
+			<section class="texto">
+				<article>
+					<h2>$</h2>
+					<span>5% OFF</span>
+					<p></p>
+				</article>
+			</section>
+		</div>
+      -->
       <br>
   </main>
 
