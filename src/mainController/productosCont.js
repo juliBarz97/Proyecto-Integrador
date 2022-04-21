@@ -187,22 +187,7 @@ const controller = {
 
 	// Create -  Method to store
 	store: (req, res) => {
-		/*		let nuevoID=(lista[lista.length-1].id)+1 
-		
-		let productoNuevo = {
-			id: nuevoID,
-			nombre: req.body.nombre,
-			descripcion: req.body.descripcion,
-			precio: req.body.precio,
-			descuento: req.body.descuento,
-			categoria:"en venta"
-		}
-		
-		lista.push(productoNuevo)
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(lista,null,' '));
-		
-*/
 		const resultValidation = validationResult(req);
 				
 		if (resultValidation.errors.length > 0 ){
@@ -210,7 +195,7 @@ const controller = {
 				errors: resultValidation.mapped(),
 				oldData : req.body })
 		}
-
+		
 		db.producto
 			.create({
 				nombre: req.body.nombre,
@@ -256,20 +241,11 @@ const controller = {
 	},
 	// Update - Method to update
 	update: (req, res) => {
-		/*
-		const resultValidation = validationResult(req);
-				
-		if (resultValidation.errors.length > 0 ){
-			return res.render('products/editar/:id', { //tira error aca
-				errors: resultValidation.mapped(),
-				oldData : req.body })
-		}	*/
+		
 
 		let idProductoSeleccionado = req.params.id;
 		let datos = req.body;
-
-		db.producto
-			.update(
+		db.producto.update(
 				{
 					nombre: datos.nombre,
 					descripcion: datos.descripcion,
@@ -282,29 +258,9 @@ const controller = {
 				{
 					where: { id: idProductoSeleccionado },
 				}
-			)
-			.then((resultados) => {
+			).then((resultados) => {
 				res.redirect('/');
 			});
-
-		/*
-
-		for (let p of lista){
-			if(p.id==idProductoSeleccionado){
-				p.nombre = datos.nombre;
-				p.descripcion = datos.descripcion;
-				p.precio = datos.precio;
-				p.descuento = datos.descuento;
-				p.categoria = datos.categoria;
-				p.imagen = datos.imagen;
-				break;
-			}
-		}
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(lista,null,' '));
-		*/
-
-		res.redirect('/');
 	},
 
 	// Delete - Delete one product from DB

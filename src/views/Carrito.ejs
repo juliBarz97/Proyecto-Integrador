@@ -10,7 +10,7 @@
 <main id="cuerpoArba">
     <section>
         <% if (p.length != 0) { %>
-            <% for (let i=0 ; i<p.length ; i++) { %>
+         <!--  <% for (let i=0 ; i<p.length ; i++) { %>
             <div id="prodCarrito">
                     
                         <img src="../public/imagenes/<%=p[i].imagen%>" class="fotosCarrito">
@@ -21,7 +21,23 @@
                         </div>
                     
                 </div>
-            <% } %>
+            <% } %>--> 
+            <div id="productosJ">
+                <% for (let i=0 ; i<p.length ; i++) { %>
+                  
+                  <div id="P1J" class="SPJ">
+                    <section id="fotoPro">
+                        <a class="botonJ" href="/products/detail/<%=p[i].id%>" ><img src="../public/imagenes/<%=p[i].imagen%>" class="fotos"> </a>              
+                    </section>
+                    <section id="textoProducto">
+                            <p class="textosPS"><%=p[i].nombre %> </p>
+                            <p class="textosPSP"><%=p[i].precio - (p[i].descuento * p[i].precio)/100   %>$</p>
+                            <p class="textosPSd">Descuento </p>
+                            <p class="textosPSP"><%=p[i].descuento %>%</p>
+                    </section>
+                  </div>
+                 <% } %>  
+                </div>
             
             <button type="submit" id="botonCarrito" class="btn btn-dark"> Comprar</button>
         <% } else { %>

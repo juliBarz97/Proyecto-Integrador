@@ -12,6 +12,7 @@ function producto(sequelize, Datatypes){
     usuarioId : {type: Datatypes.INTEGER},
     imageProd: {type: Datatypes.STRING(150)},
     stock: { type: Datatypes.INTEGER},
+    categoria_id : {type: Datatypes.STRING(2)},
     fecha_eliminacion: {type: Datatypes.DATE},
     fecha_creacion: {type: Datatypes.DATE}
   };
@@ -26,11 +27,11 @@ function producto(sequelize, Datatypes){
       foreignKey: "usuario_id" //REL PRO-USU 
     });
 
-    producto.belongsToMany(models.categorias, {
+    producto.belongsTo(models.categorias, {
           as: "productos",
-          through: "Producto-categoria",   // tabla intermedia
-          foreignKey: "producto_id",  // es el FK del modelo en el que estas (en la tabla intermedia de la bd)
-          otherKey: "categoria_id",    // es el FK del otro modelo (en la tabla intermedia de la bd)
+         // through: "Producto-categoria",   // tabla intermedia
+         // foreignKey: "producto_id",  // es el FK del modelo en el que estas (en la tabla intermedia de la bd)
+          foreignKey: "categoria_id",    // es el FK del otro modelo (en la tabla intermedia de la bd)
           timestamps: false // REL PRO-CAT
     });
    producto.belongsToMany(models.usuario, { //ESTE DA ERROR
