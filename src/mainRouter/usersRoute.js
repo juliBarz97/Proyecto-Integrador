@@ -21,5 +21,6 @@ router.post('/login', usersCont.validLogin);
 router.get('/logout', usersCont.logout)
 
 router.get('/profile/:userId', usersCont.profile)  //perfil
+router.get('*', usersCont.noFound)
 
 module.exports = router;

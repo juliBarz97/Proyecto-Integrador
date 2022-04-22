@@ -10,7 +10,6 @@ html {
 	background-color: black;
 	top: 0%;
 }
-
 #logoJ {
 	display: flex;
 	background-color: #0c6291;
@@ -21,7 +20,7 @@ html {
 	width: 15%;
 	height: 87%;
 	margin-bottom: 4%;
-	margin-top: 5%; 
+	margin-top: 5%;
 	background-color: burlywood;
 	border-radius: 20px;
 	border-style: solid;
@@ -67,7 +66,6 @@ html {
 }
 
 @media (max-width: 970px) {
-    
 	#cabeceraJ {
 		width: 97%;
 		margin-left: 0%;
@@ -94,7 +92,6 @@ html {
 	align-items: center;
 	width: 100%;
 	height: 530px;
-	text-decoration: underline wavy;
 }
 
 #descripcionJ p {
@@ -103,10 +100,13 @@ html {
 	margin-left: 10%;
 	margin-right: 10%;
 }
-div#ProductosJ{
-    width:70%
+div#ProductosJ {
+	margin-bottom: 15px;
+	width: 70%;
 }
 #textoProducto {
+	padding-top: 8px;
+
 	display: flex;
 	justify-content: space-evenly;
 	width: 100%;
@@ -129,10 +129,10 @@ div#ProductosJ{
 }
 
 @media (max-width: 600px) {
-    #P1J{
-        height:140px;
-        width: 160px;
-    }
+	#P1J {
+		height: 140px;
+		width: 160px;
+	}
 	.textosPS {
 		display: none;
 	}
@@ -147,17 +147,18 @@ div#ProductosJ{
 	}
 }
 #productosJ {
-    padding:5px;
-    border: 1px solid black;
-    box-shadow: 0px 0px 20px 5px black;
-    border-radius: 20px;
-    width: 85% ;
-	padding-top: 15px;
+	margin-bottom: 15px;
+	padding: 5px;
+	border: 1px solid black;
+	box-shadow: 0px 0px 20px 5px black;
+	border-radius: 20px;
+	width: 85%;
+	padding-top: 10px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
-	background-color: #fefefe;
-	background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H20v-1.5zM0 20h2v20H0V20zm4 0h2v20H4V20zm4 0h2v20H8V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zm4 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2z' fill='%230315e0' fill-opacity='0.15' fill-rule='evenodd'/%3E%3C/svg%3E");
+	background-color: burlywood;
+	background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H20v-1.5zM0 20h2v20H0V20zm4 0h2v20H4V20zm4 0h2v20H8V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zm4 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2z' fill='%230315e0' fill-opacity='0.080' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 
 #serviciosJ {
@@ -262,6 +263,8 @@ div#ProductosJ{
 }
 
 #listado {
+	display: flex;
+	justify-content: center;
 	margin-top: 130px;
 	background-color: #0c6291;
 }
@@ -283,10 +286,10 @@ div#ProductosJ{
 	#regis {
 		width: 70%;
 	}
-    #P1J{
-        height:140px;
-        width: 160px;
-    }
+	#P1J {
+		height: 140px;
+		width: 160px;
+	}
 }
 
 #limpieza {
@@ -362,11 +365,11 @@ div#ProductosJ{
 	border-color: black;
 }
 #cuerpoJ {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 	background-color: #0c6291;
-	background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23474748' fill-opacity='0.51'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+	/*background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23474748' fill-opacity='0.51'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");*/
 	padding-bottom: 10%;
 }
 
@@ -401,17 +404,17 @@ div#ProductosJ{
 }
 
 @media (max-width: 680px) {
-    #descripcionJ{
-        font-size:18px;
-    }
+	#descripcionJ {
+		font-size: 18px;
+	}
 	.textoCJ {
 		width: 20%;
 		font-size: 15px;
 	}
-	#P1J{
-        height:140px;
-        width: 160px;
-    }
+	#P1J {
+		height: 140px;
+		width: 160px;
+	}
 	.socialMedia {
 		width: 10%;
 	}
@@ -449,11 +452,10 @@ div#ProductosJ{
 }
 
 @media (max-width: 500px) {
-    
-    #P1J{
-        height:140px;
-        width: 160px;
-    }
+	#P1J {
+		height: 140px;
+		width: 160px;
+	}
 
 	#pieJ {
 		display: flex;
@@ -523,4 +525,22 @@ div#ProductosJ{
 	z-index: 100;
 	-moz-border-radius: 50px;
 	-webkit-border-radius: 50px;
+}
+
+@media (min-width: 680px) and (max-width: 2000px) {
+	#P1J {
+		display: flex;
+		width: 46%;
+		justify-content: center;
+		justify-items: center;
+	}
+	.fotos {
+		width: 100%;
+		margin: 0px;
+		padding: 0px;
+	}
+	.productosJ {
+		padding: 0px;
+		margin: 0px;
+	}
 }

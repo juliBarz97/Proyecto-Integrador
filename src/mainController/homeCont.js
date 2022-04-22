@@ -26,13 +26,6 @@ const controlador = {
 			res.render('home', { p: lista });
 		});
 	},
-<<<<<<< HEAD
-	carrito: (req, res) => {
-		res.render('Carrito');
-	},
-	index: (req, res) => {
-		/*
-=======
     carrito:(req, res) => {
 		db.carrito.findAll( 
             {include: [{association: "usuario"}, {association: "producto"}],
@@ -64,7 +57,6 @@ const controlador = {
 	},
     index: (req, res) => {
         /*
->>>>>>> d7a30f6bb02025985c7082fa0caaf20208c629c1
 		db.producto.findOne({where: {id: req.body.id}}).then( (unProducto) => {
 			let lista=[];
 
@@ -88,15 +80,9 @@ const controlador = {
 			res.render('/index', {producto: lista});
 		} )
         */
-<<<<<<< HEAD
-		res.render('index');
-	},
-};
-=======
         res.render("index");
 	}
 }
 
->>>>>>> d7a30f6bb02025985c7082fa0caaf20208c629c1
 
 module.exports = controlador;
