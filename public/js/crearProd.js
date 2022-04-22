@@ -16,14 +16,20 @@ window.addEventListener("load", function(){
         let campoPrecioCrear = document.querySelector("input.precioCrear");
 
         if(campoPrecioCrear.value == "") {
-            erroresC.push("El campo de email tiene que estar completo");
+            erroresC.push("El campo de precio tiene que estar completo");
+        } else if(isNaN(campoPrecioCrear.value)) {
+            erroresC.push("El campo precio tiene que ser un numero")
+        }   else if (campoPrecioCrear.value.length < 3) {
+            errores.push("El precio del producto debe ser mayor a 100$");
         }
 
         let campoDescuentoCrear = document.querySelector("input.descuentoCR");
 
         if(campoDescuentoCrear.value == "") {
-            erroresC.push("El campo de descuento tiene que estar completo");
-    } 
+            erroresC.push("El producto tiene que tener algun descuento");
+    }  else if (isNaN(campoDescuentoCrear.value)){
+        erroresC.push("No es dato valido");
+    }
 
     if (erroresC.length > 0) {
         e.preventDefault();

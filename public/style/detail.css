@@ -12,6 +12,7 @@ main {
 	font-size: 18px;
 	height: inherit;
 }
+
 img {
 	height: 20%;
 	width: 40%;
@@ -21,6 +22,8 @@ img:hover {
 	border-radius: 2px;
 }
 div .row {
+	display: flex;
+    flex-direction: row;
 	background-color: #fefefe;
 	background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H20v-1.5zM0 20h2v20H0V20zm4 0h2v20H4V20zm4 0h2v20H8V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zm4 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2z' fill='%230315e0' fill-opacity='0.15' fill-rule='evenodd'/%3E%3C/svg%3E");
 	box-shadow: 0px 0px 10px 3px black;
@@ -50,6 +53,11 @@ input {
 	border: 1px solid black;
 }
 
+#fotoDetalle{
+	width: 80%;
+    height: 100%;
+    margin-left: 10%;
+}
 input:focus {
 	background-color: #dfdfde;
 }
@@ -76,6 +84,7 @@ span.precio-wal {
 @media (min-width: 0px) and (max-width: 480px) {
 	div.row {
 		display: flex;
+		align-items: center;
 		flex-direction: column;
 		padding-top: 50px;
 		margin-top: 50px;
@@ -96,18 +105,27 @@ span.precio-wal {
 	input{
 		width: 80%;
 	}
+	#fotoDetalle{
+		width: 100%;
+		height: 100%;
+	}
 }
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 600px) {
 	header#cabezaJ {
 		position: relative;
 	}
 	div.row {
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 		padding-top: 50px;
 		margin-top: 50px;
 		margin-left: 10px;
 		margin-right: 10px;
+	}
+	#fotoDetalle{
+		width: 101%;
+    	height: 100%;
 	}
 }
 @media(min-width:769px) and (max-width:1100px){
@@ -116,7 +134,7 @@ span.precio-wal {
 	}
 	div.row {
 		display: flex;
-		flex-direction: column;
+		flex-direction: wrap;
 		padding-top: 50px;
 		margin-top: 50px;
 		margin-left: 10px;

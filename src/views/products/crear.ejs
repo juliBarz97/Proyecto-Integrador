@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <a href="https://api.whatsapp.com/send?
+         phone=7310747066
+         &text=Hola, en que podemos ayudarte?."
+   		 class="float" target="_blank">
+<i class="fa fa-whatsapp my-float"></i>
+</a>
      
 <%- include ('../partials/head') %>    
 
@@ -27,7 +34,7 @@
 		<br>
 		<div>
 		  <label for="precio"> Precio del producto: </label>
-		  <input type="number" class="precioCrear llenar" id="precio" name="precio" placeholder="precio"
+		  <input type="number" class="precioCrear llenar" placeholder=100 id="precio" name="precio" placeholder="precio"
 		  class="form-control <%= locals.errors && errors.precio ? 'is-invalid' : null %>"
 		  value= "<%= locals.oldData ? oldData.precio : null%>"> 
 		  <% if (locals.errors && errors.precio) { %>
@@ -52,8 +59,12 @@
 		<label for="categoria" class="form-label">Categoría:</label>
 						<select name="categoria" id="categoria" class="form-input">
 							<option value="">Elegí</option>
-							<option value="in-sale">En oferta</option>
-							<option value="visited">Últimos agregados</option>
+							<option value="5">En oferta</option>
+							<option value="4">Últimos Agregados </option>
+							<option value="2">Accesorios</option>
+							<option value="3">Entretenimiento</option>
+							<option value="1">Soporte</option>
+							<option value="6">Otros</option>
 						</select>
 		<br>
 		<div>

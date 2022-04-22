@@ -20,22 +20,24 @@
       
      
       <a href="/" id="logo2J" ><img src="/public/imagenes/D3.png" id="logo3J" ></a> 
-      <a href="/products/listado" class="textoHead">Productos <i class="bi bi-badge-3d" class="icon"></i> </a> 
+      <a href="/products/listado" class="textoHead" id="cuenta">Productos <i class="bi bi-badge-3d" class="icon"></i> </a> 
       <% if (locals.isLogged) { %>
-        <a href="/products/crear" class="textoHead"> Crear Producto  <i class="bi bi-list" class="icon"></i></a>
-        <a href="/carrito" class="textoHead"> Carrito <i class="bi bi-bag" class="icon"></i></a>
+        <a href="/products/crear" class="textoHead" id="cuenta"> Crear Producto  <i class="bi bi-list" class="icon"></i></a>
+        <a href="/carrito" class="textoHead" id="cuenta"> Carrito <i class="bi bi-bag" class="icon"></i></a>
       <% } %>
       <% if (locals.isLogged) { %>
-      <a href="/users/profile" class="textoHead" class="cuenta"> Mi Perfil </a>
-      <a href="/users/logout" class="textoHead" class="cuenta"> Logout </a>
+      
+      <a href="/users/profile/<%= userLogged.id %>" class="textoHead" id="cuenta"> Mi Perfil </a>
+      <a href="/users/logout" class="textoHead" id="cuenta"> Logout </a>
       <% } else { %>  
-      <a href="/users/login" class="textoHead" class="cuenta"> Login <i class="bi bi-person-circle" class="icon"></i> </a> 
-      <a href="/users/register" class="textoHead" class="cuenta"> Registro  <i class="bi bi-person-plus-fill" class="icon"></i></a>
+      <a href="/users/login" class="textoHead" id="cuenta"> Login <i class="bi bi-person-circle" class="icon"></i> </a> 
+      <a href="/users/register" class="textoHead" id="cuenta"> Registro  <i class="bi bi-person-plus-fill" class="icon"></i></a>
       <% } %>
       
       
       <ul class="nav nav-tabs" id="dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Opciones</a>
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+             <h1> <i class="bi bi-list"></i></h1></a>
           <ul class="dropdown-menu">
             <li><a href="/products/listado" class="textoHead">Productos <i class="bi bi-badge-3d" class="icon"></i> </a></li> 
             <% if (locals.isLogged) { %>
@@ -43,7 +45,7 @@
             <% } %>
             <li><a href="/carrito" class="textoHead"> Carrito <i class="bi bi-bag" class="icon"></i></a> </li>
             <% if (locals.isLogged) { %>
-            <li><a href="/users/profile" class="textoHead"> Mi Perfil </a></li>
+            <li><a href="/users/profile/:userId" class="textoHead"> Mi Perfil </a></li>
             <li><a href="/users/logout" class="textoHead"> Logout </a></li>
             <% } else { %>  
             <li><a href="/users/login" class="textoHead" > Login <i class="bi bi-person-circle" class="icon"></i> </a> </li>
@@ -53,7 +55,5 @@
       </ul>
 
     </nav>
-    <div> 
-      <a href="https://api.whatsapp.com/send?phone=9876654321" class="btn-wsp-wal" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    </div> 
+    
   </header>

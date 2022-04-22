@@ -1,6 +1,6 @@
 const db = require('../database/models');
 const producto = require('../database/models/productos');
-
+const carrito = require('../database/models/carrito')
 const {validationResult} = require('express-validator')
 
 const controller = {
@@ -28,6 +28,80 @@ const controller = {
 			console.log(lista);
 
 			res.render('/index', { producto: lista });
+		});
+	},
+	apiProduct: (req, res) => {
+		db.producto.findAll()
+				.then(productos => {
+			let lista = [];
+
+			for (unProducto of productos) {
+				let unProd = {
+					nombre: unProducto.nombre,
+					descripcion: unProducto.descripcion,
+					precio: unProducto.precio,
+					descuento: unProducto.descuento,
+					stock: unProducto.stock,
+				};
+			lista.push(unProd);
+
+			}
+
+					console.log(lista)
+					res.status(200).json({
+						registro: lista.length,
+						data: lista,
+						codigo : 200,	
+					})
+			
+		});
+	},
+	apiCarrito : (req, res) => {
+		db.carrito.findAll()
+			.then(carritoP => {
+				return res.status(200).json({
+					registro: carritoP.length,
+					data: carritoP,
+					codigo : 200,	
+				})
+			})
+	},
+	categorias : (req,res) => {
+		db.categorias.findAll()
+			.then(category => {
+				return res.status(200).json({
+					registro: category.length,
+					data : category,
+					codigo: 200
+				})
+			})
+	},
+	lastProd : (req,res) => {
+		db.producto.findAll()
+				.then(productos => {
+			let lista = [];
+
+		
+				let unProd = productos.slice(-1)[0]; 
+				let ultimoProd = {
+					nombre: unProd.nombre,
+					descripcion: unProd.descripcion,
+					precio: unProd.precio,
+					descuento: unProd.descuento,
+					stock: unProd.stock,
+					imagen: unProd.imageProd,
+					id : unProd.id
+				}
+			lista.push(ultimoProd);
+
+			
+			//		console.log(lista)
+					res.status(200).json({
+						data: lista,
+						codigo : 200,
+						text: "Last Product"	
+					})
+			
 		});
 	},
 	listado: (req, res) => {
@@ -92,6 +166,20 @@ const controller = {
 		*/
 	},
 
+	guardarEnCarrito : (req, res) => {
+		db.carrito
+			.create({
+				producto_id : req.params.id  ,			
+				usuario_id: req.session.userLogged.id,
+				fecha_pedido: Date.now(),
+				
+			})
+			.then((resultados) => {
+				res.redirect('/');
+			});
+	
+	},
+
 	// Create - Form to create
 	create: (req, res) => {
 		res.render('products/crear');
@@ -99,22 +187,7 @@ const controller = {
 
 	// Create -  Method to store
 	store: (req, res) => {
-		/*		let nuevoID=(lista[lista.length-1].id)+1 
-		
-		let productoNuevo = {
-			id: nuevoID,
-			nombre: req.body.nombre,
-			descripcion: req.body.descripcion,
-			precio: req.body.precio,
-			descuento: req.body.descuento,
-			categoria:"en venta"
-		}
-		
-		lista.push(productoNuevo)
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(lista,null,' '));
-		
-*/
 		const resultValidation = validationResult(req);
 				
 		if (resultValidation.errors.length > 0 ){
@@ -122,7 +195,7 @@ const controller = {
 				errors: resultValidation.mapped(),
 				oldData : req.body })
 		}
-
+		
 		db.producto
 			.create({
 				nombre: req.body.nombre,
@@ -168,20 +241,11 @@ const controller = {
 	},
 	// Update - Method to update
 	update: (req, res) => {
-		/*
-		const resultValidation = validationResult(req);
-				
-		if (resultValidation.errors.length > 0 ){
-			return res.render('products/editar/:id', { //tira error aca
-				errors: resultValidation.mapped(),
-				oldData : req.body })
-		}	*/
+		
 
 		let idProductoSeleccionado = req.params.id;
 		let datos = req.body;
-
-		db.producto
-			.update(
+		db.producto.update(
 				{
 					nombre: datos.nombre,
 					descripcion: datos.descripcion,
@@ -194,29 +258,9 @@ const controller = {
 				{
 					where: { id: idProductoSeleccionado },
 				}
-			)
-			.then((resultados) => {
+			).then((resultados) => {
 				res.redirect('/');
 			});
-
-		/*
-
-		for (let p of lista){
-			if(p.id==idProductoSeleccionado){
-				p.nombre = datos.nombre;
-				p.descripcion = datos.descripcion;
-				p.precio = datos.precio;
-				p.descuento = datos.descuento;
-				p.categoria = datos.categoria;
-				p.imagen = datos.imagen;
-				break;
-			}
-		}
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(lista,null,' '));
-		*/
-
-		res.redirect('/');
 	},
 
 	// Delete - Delete one product from DB
@@ -229,19 +273,6 @@ const controller = {
 
 		res.redirect('/');
 
-		// ESTO ES CON JSON
-		/*
-		let idProductoSeleccionado = req.params.id;
-
-		let products2 = lista.filter(function(element){
-			return element.id!=idProductoSeleccionado;
-		})
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(products2,null,' '));
-
-		lista = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-		*/
 	},
 };
 

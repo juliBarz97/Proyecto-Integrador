@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <a href="https://api.whatsapp.com/send?
+         phone=7310747066
+         &text=Hola, en que podemos ayudarte?."
+   		 class="float" target="_blank">
+<i class="fa fa-whatsapp my-float"></i>
+</a>
      
 <%- include ('../partials/head') %>    
 
@@ -9,14 +16,17 @@
 <main id="listado">
     <div id="productosJ">
       <% for (let i=0 ; i<p.length ; i++) { %>
+        
         <div id="P1J" class="SPJ">
-        <section>
-            <a class="botonJ" href="/products/detail/<%=p[i].id%>" ><img src="../public/imagenes/<%=p[i].imagen%>" class="fotos"> 
-              <div id="textoProducto">
-                <p class="textosPS"><%=p[i].nombre %> </p>
-                <p class="textosPSP"><%=p[i].precio %>$</p>
-              </div>
-        </section>
+          <section id="fotoPro">
+              <a class="botonJ" href="/products/detail/<%=p[i].id%>" ><img src="../public/imagenes/<%=p[i].imagen%>" class="fotos"> </a>              
+          </section>
+          <section id="textoProducto">
+                  <p class="textosPS"><%=p[i].nombre %> </p>
+                  <p class="textosPSP"><%=p[i].precio - (p[i].descuento * p[i].precio)/100   %>$</p>
+                  <p class="textosPSd">Descuento </p>
+                  <p class="textosPSP"><%=p[i].descuento %>%</p>
+          </section>
         </div>
        <% } %>  
       </div>

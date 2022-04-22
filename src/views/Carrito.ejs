@@ -8,19 +8,44 @@
 <%- include ('./partials/header') %>
 
 <main id="cuerpoArba">
-    <div id="productosJ">
-        <% for (let i=0 ; i<p.length ; i++) { %>
-            <div id="P1J" class="SPJ">
-                <section>
-                    <a class="botonJ" href="/products/detail/<%=p[i].id%>" ><img src="../public/imagenes/<%=p[i].imagen%>" class="fotos">
-                    <div id="textoProducto">
-                        <p class="textosPS"><%=p[i].nombre %> </p>
-                        <p class="textosPSP"><%=p[i].precio %>$</p>
-                    </div>
-                </section>
+    <section>
+        <% if (p.length != 0) { %>
+         <!--  <% for (let i=0 ; i<p.length ; i++) { %>
+            <div id="prodCarrito">
+                    
+                        <img src="../public/imagenes/<%=p[i].imagen%>" class="fotosCarrito">
+                        <div id="textoProducto">
+                            <p class="textosPS"><%=p[i].nombre %> </p>
+                            <br>
+                            <p class="textosPSP"><%=p[i].precio %>$</p>
+                        </div>
+                    
+                </div>
+            <% } %>--> 
+            <div id="productosJ">
+                <% for (let i=0 ; i<p.length ; i++) { %>
+                  
+                  <div id="P1J" class="SPJ">
+                    <section id="fotoPro">
+                        <a class="botonJ" href="/products/detail/<%=p[i].id%>" ><img src="../public/imagenes/<%=p[i].imagen%>" class="fotos"> </a>              
+                    </section>
+                    <section id="textoProducto">
+                            <p class="textosPS"><%=p[i].nombre %> </p>
+                            <p class="textosPSP"><%=p[i].precio - (p[i].descuento * p[i].precio)/100   %>$</p>
+                            <p class="textosPSd">Descuento </p>
+                            <p class="textosPSP"><%=p[i].descuento %>%</p>
+                    </section>
+                  </div>
+                 <% } %>  
+                </div>
+            
+            <button type="submit" id="botonCarrito" class="btn btn-dark"> Comprar</button>
+        <% } else { %>
+            <div id="sinProdDiv">
+                <p id="sinProd"> No ha seleccionado ningun producto! Agregue uno al carrito para poder comprarlo. </p>
             </div>
-        <% } %>
-    </div>
+        <% } %> 
+    </section>
     <br>
 </main>
     

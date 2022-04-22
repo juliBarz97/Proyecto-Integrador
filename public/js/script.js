@@ -18,24 +18,31 @@ window.addEventListener("load", function(){
         if(campoEmail.value == "") {
             errores.push("El campo de email tiene que estar completo");
     }
-    let campoFechaNacimiento = document.querySelector("input.fechanacimiento");
 
-        if(campoFechaNacimiento.value == "") {
-            errores.push("El campo fecha nacimiento tiene que estar completo");
-    }
+        
+
+
+        let campoFechaNacimiento = document.querySelector("input.fechanacimiento");
+
+            if(campoFechaNacimiento.value == "") {
+                errores.push("El campo fecha nacimiento tiene que estar completo");
+        }
   
         let contraReg = document.querySelector("input.password");
+        let contadorPass = contraReg.value.replace(/[^0-9]/g,'').length;
+        
+        if (contadorPass < 3){
+            errores.push("La contraseña tiene que tener 3 numeros como minimo")
+    } 
+         
+      
         if (contraReg.value == ""){
                 errores.push("Tiene que tener una contraseña")
-            }
-              /*  
-        let contadorPass = (contraReg).replace(/[^0-9]/g,"").length;// CONSULTAR
-        console.log(contadorPass)
+        }
         
-            else if (contadorPass < 3){
-                errores.push("La contraseña tiene que tener 3 numeros como minimo")
-            }
-*/
+      
+   
+
     
 if (errores.length > 0) {
     e.preventDefault();

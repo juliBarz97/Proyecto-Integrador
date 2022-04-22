@@ -14,11 +14,11 @@ function data(sequelize, Datatypes){
     
     categoria.associate = function (modelos){    
     
-       categoria.belongsToMany(modelos.producto, {
+       categoria.hasMany(modelos.producto, {
             as: "productos",
-            through: "Producto-Categoria",   // tabla intermedia
+            //through: "Producto-Categoria",   // tabla intermedia
             foreignKey: "Categoria_id",  // es el FK del modelo en el que estas (en la tabla intermedia de la bd)
-            otherKey: "Producto_id",    // es el FK del otro modelo (en la tabla intermedia de la bd)
+            //otherKey: "Producto_id",    // es el FK del otro modelo (en la tabla intermedia de la bd)
             timestamps: false
       });
     

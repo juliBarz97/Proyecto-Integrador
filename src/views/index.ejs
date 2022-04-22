@@ -23,42 +23,16 @@
 	<div class="container">
 		
 	<div class="row">
-		<h2><%=producto.nombre%></h2>
-		<div class="col-md-7 col-sm-12">
-			
-			<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-				<div class="carousel-inner">
-					<div class="carousel-item active">						
-					<img src="/public/imagenes/<%=producto.imagen%>" id="fotoDetalle" class="d-block w-75" alt="primer Slide">	
-					</div>
-					
-					<div class="carousel-item">
-						<img src="../public/imagenes/Soporte2.jpg" class="d-block w-75" alt="segundo slide">
-					</div>
-					<div class="carousel-item">
-						<img src="../public/imagenes/soporte3.jpg" class="d-block w-75" alt="tercer slide">
-					</div>
-					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Previous</span>
-					</button>
-					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Next</span>
-					</button>
-				</div>
-			</div>
-			
+		
+		<div class="col-md-7 col-sm-12">												
+			<img src="/public/imagenes/<%=producto.imagen%>" id="fotoDetalle" class="d-block w-75">					
 		</div>
 		
-		<div class="col-md-5 col-sm-12 contenedor-titulos-wal" >
+		<div class="col-md-5 col-sm-12 contenedor-titulos-wal" id="contTextoProd" >
 			<div>
-				<p class="nuevo producto text-center">nuevo</p>
 				
-								<p class="codigo-producto-wal">codigo producto: <b>ISRC20</b>
-				<i class="far fa-heart"></i></p>
-				
-				<span class="precio-wal">$<%=producto.precio%><sup>68</sup></span><span class="cuotas-wal">en 6 x $ <%= (producto.precio)/6 %> <i>sin interés</i> </span>
+				<h2 id="nombreProducto"><%=producto.nombre%></h2>
+				<span class="precio-wal" id="precioProducto">$<%=producto.precio%><sup>68</sup></span><span class="cuotas-wal">en 6 x $ <%= (producto.precio)/6 %> <i>sin interés</i> </span>
 				
 				<p class="devolucion-wal"><i class="fas fa-reply" ></i><b>Devolucion gratis 30 dias</b></p>
 				<p class="disponibilidad-wal"><b>Disponibilidad: <h2><%=producto.categoria%></h2></b></p>
@@ -71,7 +45,9 @@
 				</div>							
 				<div id="boton-Wal">
 				<% if (locals.isLogged) { %>
-					<button type="button" class="btn btn-dark carrito-wal">Agregar al carrito</button>
+					<form action="/products/guardarEnCarrito/<%= producto.id %>" method="POST">
+						<button type="submit" class="btn btn-dark carrito-wal">Agregar al carrito</button>
+					</form>
 					<button type="button" class="btn btn-dark comprar-wal">Comprar ahora</button>
 					
 					<form action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
@@ -82,17 +58,16 @@
 					<button type="submit" class="btn btn-dark"> <a href="../crear">Crear nuevo producto</a></button>
 				<% } %>
 				</div>
-				<a href="https://api.whatsapp.com/send?phone=9876654321"
-				class="btn-wsp-wal" target="_blank"><i class="fab fa-whatsapp"></i></a>
+				
 			</div>
 		
 		</div>
 	</div>
 </div>
+<!--<script src="/public/js/carrito.js"> </script>
 
 
 
-<!--
 <div >
 	<div id="cuerpoW">
 		<div >				

@@ -17,11 +17,16 @@ window.addEventListener("load", function(){
 
         if(campoPrecioEd.value == "") {
             erroresE.push("Ingrese el precio del producto");
+        } else if (isNaN(campoPrecioEd.value)){
+            erroresE.push("El precio tiene que ser un numero");
+            
     }
         let campoDescuentoEd = document.querySelector("input.descuentoEd");
 
         if(campoDescuentoEd.value == "") {
             erroresE.push("Ingrese el descuento del producto");
+    } else if (isNaN(campoDescuentoEd.value)){
+            erroresE.push("El descuento tiene que ser un numero")
     }
         
         if (erroresE.length > 0) {
