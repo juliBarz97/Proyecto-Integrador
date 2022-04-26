@@ -67,15 +67,17 @@ const controller = {
 			})
 	},
 	categorias : (req,res) => {
-		db.categorias.findAll()
+		db.categoria.findAll()
 			.then(category => {
 				return res.status(200).json({
 					registro: category.length,
 					data : category,
 					codigo: 200
 				})
-			})
-	},
+			}).catch(excepcion => {
+                console.log(excepcion);
+            })
+    },
 	lastProd : (req,res) => {
 		db.producto.findAll()
 				.then(productos => {

@@ -26,7 +26,7 @@ function producto(sequelize, Datatypes){
       foreignKey: "usuario_id" //REL PRO-USU 
     });
 
-    producto.belongsToMany(models.categorias, {
+    producto.belongsToMany(models.categoria, {
           as: "productos",
           through: "Producto-categoria",   // tabla intermedia
           foreignKey: "producto_id",  // es el FK del modelo en el que estas (en la tabla intermedia de la bd)
