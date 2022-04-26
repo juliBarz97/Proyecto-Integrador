@@ -209,7 +209,7 @@ const controller = {
 				fecha_eliminacion: null,
 				fecha_creacion: req.body.fecha_creacion,
 				usuario_id: req.session.userLogged.id,
-				categoria_id: req.body.categoria_id,
+				categoria_id: req.body.categoria,
 				imageProd: req.file.filename,
 			})
 			.then((resultados) => {
@@ -235,7 +235,7 @@ const controller = {
 					fecha_eliminacion: unProducto.fecha_eliminacion,
 					fecha_creacion: unProducto.fecha_creacion,
 					usuario_id: unProducto.usuario_id,
-					categoria_id: unProducto.categoria_id,
+					categoria_id: unProducto.categoria,
 					imagen: unProducto.imageProd,
 				};
 
