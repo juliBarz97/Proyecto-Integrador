@@ -16,19 +16,30 @@
 <main id="listado">
     <div id="productosJ">
       <% for (let i=0 ; i<p.length ; i++) { %>
+        
         <div id="P1J" class="SPJ">
-        <section>
-            <a class="botonJ" href="/products/detail/<%=p[i].id%>" ><img src="../public/imagenes/<%=p[i].imagen%>" class="fotos"> 
-              <div id="textoProducto">
-                <p class="textosPS"><%=p[i].nombre %> </p>
-                <p class="textosPSP"><%=p[i].precio %>$</p>
-              </div>
-        </section>
+          <section id="fotoPro">
+              <a class="botonJ" href="/products/detail/<%=p[i].id%>" ><img src="../public/imagenes/<%=p[i].imagen%>" class="fotos"> </a>              
+          </section>
+          <section id="textoProducto">
+                  <p class="textosPS"><%=p[i].nombre %> </p>
+                  <p class="textosPSP"><%=p[i].precio - (p[i].descuento * p[i].precio)/100   %>$</p>
+                  <p class="textosPSd">Descuento </p>
+                  <p class="textosPSP"><%=p[i].descuento %>%</p>
+          </section>
         </div>
        <% } %>  
       </div>
       <br>
-  </main>
+    <!-- <div id="serviciosJ">
+        <div id="S1J" class="SPJ">
+          <a class="botonJ" href="../index"> <img src="../public/imagenes/impresora1.png" class="fotos"> <p class="textosPS">  Ver más - Servicio 1 </p></a> 
+        </div>
+        <div id="S2J" class="SPJ">
+          <a class="botonJ" href="../index"> <img src="../public/imagenes/impresora2.png" class="fotos"> <p class="textosPS"> Ver más - Servicio 2 </p></a> 
+        </div>--> 
+      </div>
+</main>
 
  
   <%- include('../partials/footer') %>

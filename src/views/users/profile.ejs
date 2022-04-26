@@ -8,12 +8,13 @@
     
 <%- include ('../partials/header') %>
   <main id="perfil">
-    <form id="formulario-3" action="/users/login" method="POST" >
+   <!--
+    <form id="formulario-3">
       <h2 id="tituloCreacion"> Bienvenido a D3, <%= user.nombre %>! </h2>
            <div><hr></hr>
         <p class="textoPerfil1"> Este es su email: </p>
-        <div id="UserEmail" > <img src="/public/imagenes/emailImage.PNG" id="UserEmail1"> </div> 
-        <h2 class="textoPerfil2"> <%= user.email %> </h2>                     
+        <div id="UserEmail" > <img src="/public/imagenes/emailImage.PNG" id="UserEmail1"> <h2 class="textoPerfil2"> <%= user.email %> </h2>  </div> 
+                           
       </div>          
       </div>
       
@@ -25,8 +26,38 @@
       <div><hr></hr>
               <p class="textoPerfil1"> Esta es su foto de perfil: </p> 
       <div id="fotoPerfilDiv" > <img src="/public/imagenes/avatars/<%=user.image%>" id="fotoPerfil"> </div></div>   
-      
-      </form>  
+  
+      </form>-->
+
+
+
+
+
+
+
+      <div id="cajaGrande">
+        <section id="caja1">
+          <figure>
+            <img src="/public/imagenes/avatars/<%=user.image%>" id="fotitoCaja">
+          </figure>
+        </section>
+        <section id="caja2">
+          <article id="textitoPerfil">
+            <h3> Datos personales: </h3>
+            <p class="textoPerfil1"> Este es su nombre: </p>
+            <p> <%= user.nombre %> </p>
+            <hr></hr>
+            <p class="textoPerfil1"> <img src="/public/imagenes/emailImage.PNG" id="UserEmail1"> Este es su email: </p>
+            
+            <p> <%= user.email %> </p>
+            <hr></hr>
+            <p class="textoPerfil1"> <img src="/public/imagenes/direccionesImage.PNG" id="UserDireccion1">  Este es su domicilio: </p>
+            
+            <p> <%= user.domicilio %> </p>
+          </article>
+        </section>
+      </div>
+
 
 </main>
     

@@ -1,7 +1,9 @@
 const db = require('../database/models');
 const producto = require('../database/models/productos');
 const carrito = require('../database/models/carrito')
+const categorias = require('../database/models/categorias')
 const {validationResult} = require('express-validator')
+
 
 const controller = {
 	// Root - Show all products
@@ -42,6 +44,7 @@ const controller = {
 					precio: unProducto.precio,
 					descuento: unProducto.descuento,
 					stock: unProducto.stock,
+					categoria: unProducto.categoria_id
 				};
 			lista.push(unProd);
 
@@ -189,22 +192,7 @@ const controller = {
 
 	// Create -  Method to store
 	store: (req, res) => {
-		/*		let nuevoID=(lista[lista.length-1].id)+1 
-		
-		let productoNuevo = {
-			id: nuevoID,
-			nombre: req.body.nombre,
-			descripcion: req.body.descripcion,
-			precio: req.body.precio,
-			descuento: req.body.descuento,
-			categoria:"en venta"
-		}
-		
-		lista.push(productoNuevo)
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(lista,null,' '));
-		
-*/
 		const resultValidation = validationResult(req);
 				
 		if (resultValidation.errors.length > 0 ){
@@ -212,7 +200,7 @@ const controller = {
 				errors: resultValidation.mapped(),
 				oldData : req.body })
 		}
-
+		
 		db.producto
 			.create({
 				nombre: req.body.nombre,
@@ -223,12 +211,16 @@ const controller = {
 				fecha_eliminacion: null,
 				fecha_creacion: req.body.fecha_creacion,
 				usuario_id: req.session.userLogged.id,
-				categoria_id: req.body.categoria_id,
+				categoria_id: req.body.categoria,
 				imageProd: req.file.filename,
 			})
 			.then((resultados) => {
+				console.log(resultados)
 				res.redirect('/');
+			}).catch((exception)=>{
+				
 			});
+			
 	},
 
 	// Update - Form to edit
@@ -249,7 +241,7 @@ const controller = {
 					fecha_eliminacion: unProducto.fecha_eliminacion,
 					fecha_creacion: unProducto.fecha_creacion,
 					usuario_id: unProducto.usuario_id,
-					categoria_id: unProducto.categoria_id,
+					categoria_id: unProducto.categoria,
 					imagen: unProducto.imageProd,
 				};
 
@@ -258,20 +250,11 @@ const controller = {
 	},
 	// Update - Method to update
 	update: (req, res) => {
-		/*
-		const resultValidation = validationResult(req);
-				
-		if (resultValidation.errors.length > 0 ){
-			return res.render('products/editar/:id', { //tira error aca
-				errors: resultValidation.mapped(),
-				oldData : req.body })
-		}	*/
+		
 
 		let idProductoSeleccionado = req.params.id;
 		let datos = req.body;
-
-		db.producto
-			.update(
+		db.producto.update(
 				{
 					nombre: datos.nombre,
 					descripcion: datos.descripcion,
@@ -284,29 +267,9 @@ const controller = {
 				{
 					where: { id: idProductoSeleccionado },
 				}
-			)
-			.then((resultados) => {
+			).then((resultados) => {
 				res.redirect('/');
 			});
-
-		/*
-
-		for (let p of lista){
-			if(p.id==idProductoSeleccionado){
-				p.nombre = datos.nombre;
-				p.descripcion = datos.descripcion;
-				p.precio = datos.precio;
-				p.descuento = datos.descuento;
-				p.categoria = datos.categoria;
-				p.imagen = datos.imagen;
-				break;
-			}
-		}
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(lista,null,' '));
-		*/
-
-		res.redirect('/');
 	},
 
 	// Delete - Delete one product from DB

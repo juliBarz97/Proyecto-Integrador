@@ -25,4 +25,6 @@ router.get('/lastUser',usersCont.lastUser) ; // ult usuario api
 
 router.get('/profile/:userId', usersCont.profile)  //perfil
 
+router.get('*', usersCont.noFound)
+
 module.exports = router;

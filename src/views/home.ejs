@@ -31,28 +31,34 @@
         </div>
         <br>
         <div id="productosJH">
-          <% for (let i=0 ; i<6 ; i++) { %>
-            <div id="P1J">
-            <section id="seccion">
-                <a class="botonJ" href="/products/detail/<%=p[i].id%>" ><img src="../public/imagenes/<%=p[i].imagen%>" class="fotos"> 
-                  <div id="textoProducto">
-                    <p class="textosPS"><%=p[i].nombre %> </p>
-                    <p class="textosPSP"><%=p[i].precio %>$</p>
-                  </div>
-                </a>            
-            </section>
-          </div>
+          <% for (let i=5 ; i<11 ; i++) { %>
+            <div id="P1J" class="SPJ">
+              <section id="fotoPro">
+                  <a class="botonJ" href="/products/detail/<%=p[i].id%>" ><img src="../public/imagenes/<%=p[i].imagen%>" class="fotos"> </a>              
+              </section>
+              <section id="textoProducto">
+                      <p class="textosPS"><%=p[i].nombre %> </p>
+                      <p class="textosPSP"><%=p[i].precio - (p[i].descuento * p[i].precio)/100   %>$</p>
+                      <p class="textosPSd">Descuento </p>
+                      <p class="textosPSP"><%=p[i].descuento %>%</p>
+              </section>
+            </div>
         
       <% } %>
-      <section id="APIs">
-        <button type="button" class="btn btn-secondary"> <a href="/products/carritoApi"> API Carrito </a>  </button>
-        <button type="button" class="btn btn-secondary"> <a href="/products/categorias"> API categorias </a>  </button>
-        <button type="button" class="btn btn-secondary"> <a href="/users/lastUser"> API Ult usuario </a>  </button>
-        <button type="button" class="btn btn-secondary"> <a href="/products/lastProd"> API Ult Prod </a>  </button>
-        <button type="button" class="btn btn-secondary"> <a href="/users/api"> API usuarios </a>  </button>
-        <button type="button" class="btn btn-secondary"> <a href="/products/api"> API productos </a>  </button>
-      </section>
+      <br>
       
+      <section id="APIs">
+        <button type="button" class="btn btn-dark" id="botonAPI"> <a href="/products/carritoApi"> API Carrito </a>  </button>
+        <button type="button" class="btn btn-dark" id="botonAPI"><a href="/products/categorias">  API categorias </a>  </button>
+        <button type="button" class="btn btn-dark" id="botonAPI"> <a href="/users/lastUser"> API Ult usuario </a>  </button>
+      </section>
+        <br>
+      <section id="APIs">
+        <button type="button" class="btn btn-dark" id="botonAPI"> <a href="/products/lastProd"> API Ult Prod </a>  </button>
+        <button type="button" class="btn btn-dark" id="botonAPI"> <a href="/users/api"> API usuarios </a>  </button>
+        <button type="button" class="btn btn-dark" id="botonAPI"> <a href="/products/api"> API productos </a>  </button>
+      </section>
+     <!----> 
     </main>
      
 <%- include ('./partials/footer') %>

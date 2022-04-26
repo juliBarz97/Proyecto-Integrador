@@ -12,6 +12,7 @@ function producto(sequelize, Datatypes){
     usuarioId : {type: Datatypes.INTEGER},
     imageProd: {type: Datatypes.STRING(150)},
     stock: { type: Datatypes.INTEGER},
+    categoria_id : {type: Datatypes.STRING(2)},
     fecha_eliminacion: {type: Datatypes.DATE},
     fecha_creacion: {type: Datatypes.DATE}
   };

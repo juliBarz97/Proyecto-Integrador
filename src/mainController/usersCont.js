@@ -157,6 +157,9 @@ const controlador = {
 		});
 		
 
+	},
+	noFound: (req,res) =>{
+		res.render('nofound')
 	}
 }
 
