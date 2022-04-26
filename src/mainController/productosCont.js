@@ -1,7 +1,9 @@
 const db = require('../database/models');
 const producto = require('../database/models/productos');
 const carrito = require('../database/models/carrito')
+const categorias = require('../database/models/categorias')
 const {validationResult} = require('express-validator')
+
 
 const controller = {
 	// Root - Show all products
@@ -42,6 +44,7 @@ const controller = {
 					precio: unProducto.precio,
 					descuento: unProducto.descuento,
 					stock: unProducto.stock,
+					categoria: unProducto.categoria_id
 				};
 			lista.push(unProd);
 

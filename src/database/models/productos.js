@@ -28,7 +28,7 @@ function producto(sequelize, Datatypes){
     });
 
     producto.belongsTo(models.categorias, {
-          as: "productos",
+          as: "categorias",
          // through: "Producto-categoria",   // tabla intermedia
          // foreignKey: "producto_id",  // es el FK del modelo en el que estas (en la tabla intermedia de la bd)
           foreignKey: "categoria_id",    // es el FK del otro modelo (en la tabla intermedia de la bd)

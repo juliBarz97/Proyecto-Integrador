@@ -1,5 +1,5 @@
 
-function data(sequelize, Datatypes){
+function categoria(sequelize, Datatypes){
 
     alias = 'categorias';
     
@@ -8,7 +8,7 @@ function data(sequelize, Datatypes){
       descripcion: {type: Datatypes.TEXT},
     }
     
-    config = {camelCase: false, timestamps: false}; 
+    config = {camelCase: false,timestamps: false , tableName: "categoria"}; 
     
     const categoria = sequelize.define(alias,cols,config)
     
@@ -17,7 +17,7 @@ function data(sequelize, Datatypes){
        categoria.hasMany(modelos.producto, {
             as: "productos",
             //through: "Producto-Categoria",   // tabla intermedia
-            foreignKey: "Categoria_id",  // es el FK del modelo en el que estas (en la tabla intermedia de la bd)
+            foreignKey: "categoria_id",  // es el FK del modelo en el que estas (en la tabla intermedia de la bd)
             //otherKey: "Producto_id",    // es el FK del otro modelo (en la tabla intermedia de la bd)
             timestamps: false
       });
@@ -29,4 +29,4 @@ function data(sequelize, Datatypes){
     }
     
     
-    module.exports = data;
+    module.exports = categoria;
