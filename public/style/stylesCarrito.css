@@ -1,213 +1,212 @@
 #Logo {
-    height: 90%;
-    width: 90%;
+	height: 90%;
+	width: 90%;
 }
 
-
-html{
-    font-family: sans-serif, Arial, Helvetica;
-    background-color:#0C6291
+html {
+	font-family: sans-serif, Arial, Helvetica;
+	background-color: #0c6291;
 }
 
-
-#cabezaJ{
-    background-color: #0C6291 ;
+#cabezaJ {
+	background-color: #0c6291;
 }
 
-#logoJ{
-    display: flex;
-    background-color: #0C6291;
-    justify-content: center;
-    
+#logoJ {
+	display: flex;
+	background-color: #0c6291;
+	justify-content: center;
 }
 
-#logo2J{
-    width: 15%;
-    height: 15%;
-    margin-bottom: 4%;
-    margin-top: 5%;
-    background-color: burlywood;
-    border-radius: 20px;
-    border-style: solid;
-    border-color: black;
-    
+#logo2J {
+	width: 15%;
+	height: 15%;
+	margin-bottom: 4%;
+	margin-top: 5%;
+	background-color: burlywood;
+	border-radius: 20px;
+	border-style: solid;
+	border-color: black;
 }
 
-#cabeceraJ{
-    background-color: burlywood;
-    color: black;
-    display: flex;
-    font-size: 18px;
-    justify-content: space-evenly;
-    margin-left: 25%;
-    border-style:solid;
-    border-radius: 20px;
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    width: 50%;
+#cabeceraJ {
+	background-color: burlywood;
+	color: black;
+	display: flex;
+	font-size: 18px;
+	justify-content: space-evenly;
+	margin-left: 25%;
+	border-style: solid;
+	border-radius: 20px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	width: 50%;
+}
+#productosJ {
+	margin-left: 8%;
 }
 
-@media (max-width: 400px){ 
-    #cabeceraJ{
-        font-size: 12px;
-    }
+@media (max-width: 400px) {
+	#cabeceraJ {
+		font-size: 12px;
+	}
 }
 
-#cabeceraJ ::before{
-    color: black;
+#cabeceraJ ::before {
+	color: black;
 }
 
-
-#cabeceraJ ::after{
-    color: black;
+#cabeceraJ ::after {
+	color: black;
 }
 
-@media (max-width: 970px){
-    #cabeceraJ{
-        width: 100%;
-        border-radius: 0%;
-        margin-left: 0%;
-    }
+@media (max-width: 970px) {
+	#cabeceraJ {
+		width: 100%;
+		border-radius: 0%;
+		margin-left: 0%;
+	}
 }
 
-
-
-#fotoJ{
-    display: flex;
-    position: fixed;
-    width: 6%;
-    height: 6%;
-    background-color: burlywood;
-    border-style: solid;
-    border-color: black;
-    border-radius: 20px;
-    bottom: 4%;
-    right: 4%;
+#fotoJ {
+	display: flex;
+	position: fixed;
+	width: 6%;
+	height: 6%;
+	background-color: burlywood;
+	border-style: solid;
+	border-color: black;
+	border-radius: 20px;
+	bottom: 4%;
+	right: 4%;
 }
-@media (max-width: 600px){
-    #cabeceraJ{
-        font-size: 12px;
-    }
-    #fotoJ{
-        width: 12%;
-    }
+@media (max-width: 600px) {
+	#cabeceraJ {
+		font-size: 12px;
+	}
+	#fotoJ {
+		width: 12%;
+	}
 }
 
-body{
-    background-color: #0C6291;
+body {
+	background-color: #0c6291;
 }
-
-#cuerpoArba{
-    height: 500px;
-    margin-top: 141px;
-    background-color: #0C6291;
-    background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23474748' fill-opacity='0.51'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-
-
-}
-header .SeccionEncabezado{
-    display: flex;
-    background-color: rgb(241, 222, 145);
-    text-align: center;
-    margin: 20px 20px 20px 20px;
-    border-radius: 5px;
-    width: 90%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    justify-content: space-evenly;
-}
-
-footer{
-    background-color: black;
-}
-
-.BotonA{
-    background-color: cornsilk;
-    border: 0 cornsilk;
-    border-radius: 5px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-}
-
-.SeccionEncabezado button{
-    background-color: cornsilk;
-    border: 0 cornsilk;
-    border-radius: 5px;
-    width: 20%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-}
-
-.SeccionEncabezado button:hover{
-    background-color: darkgreen;
-    color: darkcyan;
-}
-
-.Seccion{
-    width: 90%;
-    background-color: cornsilk;
-    margin: 20px 20px 20px; 
-    border-radius: 20px;
-    margin-left: 5%;
-}
-
-.Seccion table{
-    border: crimson ;
-    text-align: center;
-    background-color: burlywood;
-    border-radius: 10px;
-    width: 70%;
-}
-
-.Seccion table .PrimeraColumna .ImgProducto{
-    width: 50%;
-}
-
-.Seccion table .PrimeraColumna .DescripcionProducto{
-    font-size: 12px;
-}
-
-.Seccion2{
-    text-align: right;
-    padding-right: 10%;
-}
-
-.PrimeraColumna{
-    width: 30%;
-}
-
-#pieAr{
-    display: flex;
-    justify-content: center;
-}
-
-.Seccion3{
-    width: 25%;
-    background-color: burlywood;
-    margin: 20px 20px 20px; 
-    border-radius: 20px;
-    display: inline-block;
-}
-
-
-
-.btn-wsp-wal{
-    position:fixed;
-    width: 55px;
-    height: 55px;
-    bottom:13%;
-    right:5%;
-    line-height: 55px;
-    background: #0df053;
-    color:#fff;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 0px 0px 0px rgba(0,0,0,3);
-    z-index: 100;
-    -moz-border-radius:50px;
-   -webkit-border-radius:50px;  
-
-}
+section {
+	display: flex;
+	justify-content: center;
+	width: 100%;
  
+}
+#cuerpoArba {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	width: 100%;
+	height: 500px;
+	margin-top: 141px;
+	background-color: #0c6291;
+	background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23474748' fill-opacity='0.51'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+header .SeccionEncabezado {
+	display: flex;
+	background-color: rgb(241, 222, 145);
+	text-align: center;
+	margin: 20px 20px 20px 20px;
+	border-radius: 5px;
+	width: 90%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	justify-content: space-evenly;
+}
+
+footer {
+	background-color: black;
+}
+
+.BotonA {
+	background-color: cornsilk;
+	border: 0 cornsilk;
+	border-radius: 5px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.SeccionEncabezado button {
+	background-color: cornsilk;
+	border: 0 cornsilk;
+	border-radius: 5px;
+	width: 20%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.SeccionEncabezado button:hover {
+	background-color: darkgreen;
+	color: darkcyan;
+}
+
+.Seccion {
+	width: 90%;
+	background-color: cornsilk;
+	margin: 20px 20px 20px;
+	border-radius: 20px;
+	margin-left: 5%;
+}
+
+.Seccion table {
+	border: crimson;
+	text-align: center;
+	background-color: burlywood;
+	border-radius: 10px;
+	width: 70%;
+}
+
+.Seccion table .PrimeraColumna .ImgProducto {
+	width: 50%;
+}
+
+.Seccion table .PrimeraColumna .DescripcionProducto {
+	font-size: 12px;
+}
+
+.Seccion2 {
+	text-align: right;
+	padding-right: 10%;
+}
+
+.PrimeraColumna {
+	width: 30%;
+}
+
+#pieAr {
+	display: flex;
+	justify-content: center;
+}
+
+.Seccion3 {
+	width: 25%;
+	background-color: burlywood;
+	margin: 20px 20px 20px;
+	border-radius: 20px;
+	display: inline-block;
+}
+
+.btn-wsp-wal {
+	position: fixed;
+	width: 55px;
+	height: 55px;
+	bottom: 13%;
+	right: 5%;
+	line-height: 55px;
+	background: #0df053;
+	color: #fff;
+	border-radius: 50px;
+	text-align: center;
+	font-size: 30px;
+	box-shadow: 0px 0px 0px rgba(0, 0, 0, 3);
+	z-index: 100;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+}
