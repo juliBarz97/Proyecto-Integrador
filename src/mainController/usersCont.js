@@ -38,7 +38,7 @@ const controlador = {
                 oldData : req.body })
         }
 		
-		console.log("Pasaste por processRegister: " ,req.body)
+		console.log("Pasaste por processRegister: " ,req.body)		
 		let images = req.file.filename
 		db.usuario.create({
 			
@@ -85,9 +85,6 @@ const controlador = {
 				imagen: userrs.image,
 			}
 			lista.push(usuarios);
-
-			
-
 
 			console.log(unUsuario)
 			return res.status(200).json({
@@ -146,6 +143,7 @@ const controlador = {
 				const isPasswordOk = bcrypt.compareSync(req.body.password, userToLogin.password);
 				
 				if (!isPasswordOk) {
+					
 					return res.render( 'users/login' );
 				} else {			 
 				   delete userToLogin.password; 

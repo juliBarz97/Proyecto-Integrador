@@ -24,7 +24,16 @@ app.use(usuarioLogeadoMW);
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    next();
 
+    app.options('*', (req, res) => {
+        res.header('Access-Control-Allow-Methods', 'GET, PATCH, PUT, POST, DELETE, OPTIONS');
+        res.send();
+    });
+});
 // Implementacion de rutas
 
 const rutasHome = require('./mainRouter/homeRoute');
@@ -44,3 +53,6 @@ app.set('views', './src/views');
 app.use('*', rutasUsers)
 
 app.listen(process.env.PORT || 3000, () => console.log('Hola'));
+
+
+

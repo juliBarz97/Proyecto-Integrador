@@ -36,6 +36,72 @@ const controller = {
 		db.producto.findAll()
 				.then(productos => {
 			let lista = [];
+					
+			let prodCategorias= [];
+			let cat1 = 0;
+			for (let i = 0; i < productos.length ; i++){
+				
+				if(productos[i].categoria_id == 1){
+					
+					cat1 = cat1 + 1
+				}
+				
+			}
+			let cat2 = 0;
+			for (let i = 0; i < productos.length ; i++){
+				
+				if(productos[i].categoria_id == 2){
+					cat2 = cat2 + 1
+				}
+				
+			}
+			let cat3 = 0;
+			for (let i = 0; i < productos.length ; i++){
+				
+				if(productos[i].categoria_id == 3){
+					cat3 = cat3 + 1
+				}
+				
+			}
+			let cat4 = 0;
+			for (let i = 0; i < productos.length ; i++){
+				
+				if(productos[i].categoria_id == 4){
+					cat4 = cat4 + 1
+				}
+				
+			}
+			let cat5 = 0;
+			for (let i = 0; i < productos.length ; i++){
+				
+				if(productos[i].categoria_id == 5){
+					cat5 = cat5 + 1
+				}
+				
+			}
+			let cat6 = 0;
+			for (let i = 0; i < productos.length ; i++){
+				
+				if(productos[i].categoria_id == 6){
+					cat6 = cat6 + 1
+				}
+				
+			}
+
+			prodCategorias.push(cat1)
+			prodCategorias.push(cat2)
+			prodCategorias.push(cat3)
+			prodCategorias.push(cat4)
+			prodCategorias.push(cat5)
+			prodCategorias.push(cat6)
+			let categos = {
+				Soporte: cat1,
+				Accesorios: cat2,
+				Entretenimiento: cat3,
+				UltimosAgregados: cat4 ,
+				EnOferta: cat5,
+				Otros: cat6
+			}
 
 			for (unProducto of productos) {
 				let unProd = {
@@ -50,10 +116,11 @@ const controller = {
 
 			}
 
-					console.log(lista)
+					//console.log(lista)
 					res.status(200).json({
 						registro: lista.length,
 						data: lista,
+						cantCategorias : categos,
 						codigo : 200,	
 					})
 			
