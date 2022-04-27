@@ -2,8 +2,6 @@ html {
 	font-family: sans-serif, Arial, Helvetica;
 	background-color: #0c6291;
 	background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23474748' fill-opacity='0.51'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-
-
 }
 
 #cabezaJ {
@@ -30,7 +28,14 @@ html {
 	border-style: solid;
 	border-color: black;
 }
-
+.btn-dark {
+	display: flex;
+	margin: 2px;
+	border: 1px solid black;
+}
+.btn-dark:hover{
+	background-color: #dfdfde; 
+}
 #logo3J {
 	width: 100%;
 	height: 100%;
@@ -61,8 +66,8 @@ html {
 	margin-block: 2px;
 }
 
-.textoHead::after{
-	content:'';
+.textoHead::after {
+	content: '';
 	width: 100%;
 	height: 1px;
 	background-color: black;
@@ -70,11 +75,11 @@ html {
 	position: absolute;
 	left: 0;
 	bottom: 0;
-	transform:scaleX(0);
+	transform: scaleX(0);
 	transform-origin: left;
-	transition: transform .4s ease;
+	transition: transform 0.4s ease;
 }
-.textoHead:hover::after{
+.textoHead:hover::after {
 	transform: scaleX(1);
 }
 
@@ -135,10 +140,10 @@ div#ProductosJ {
 	padding-top: 8px;
 
 	display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
+	width: 100%;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-end;
 }
 
 .textosPS {
@@ -155,7 +160,6 @@ div#ProductosJ {
 	font-size: 13px;
 	font-weight: bold;
 }
-
 
 .textosPSP {
 	display: flex;
@@ -176,8 +180,8 @@ div#ProductosJ {
 	.textosPSd {
 		display: none;
 	}
-	
-	.textosPSP{
+
+	.textosPSP {
 		font-size: 9px;
 	}
 	#fotoJ {
@@ -192,11 +196,11 @@ div#ProductosJ {
 }
 
 #productosJH {
-    padding:5px;
-    border: 1px solid black;
-    box-shadow: 0px 0px 20px 5px black;
-    border-radius: 20px;
-    width: 85% ;
+	padding: 5px;
+	border: 1px solid black;
+	box-shadow: 0px 0px 20px 5px black;
+	border-radius: 20px;
+	width: 85%;
 	padding-top: 15px;
 	margin-left: 0%;
 	display: flex;
@@ -250,77 +254,73 @@ div#ProductosJ {
 	padding: 4% 8% 3% 8%;
 }
 
-
 /* CARRITO VISTA */
 
 #prodCarrito {
 	background-color: cornsilk;
-    width: 70%;
-    margin-left: 15%;
-    border-radius: 20px;
+	width: 70%;
+	margin-left: 15%;
+	border-radius: 20px;
 	margin-bottom: 20px;
 	display: flex;
-    padding: 20px;
+	padding: 20px;
 }
 
-#sinProdDiv{
+#sinProdDiv {
 	background-color: cornsilk;
-    width: 70%;
-    margin-left: 15%;
-    margin-top: 0%;
-    border-radius: 20px;
-    margin-bottom: 0px;
-    display: flex;
-    bottom: 36%;
-    position: absolute;
-    z-index: 0;
-    padding: 20px;
-	
+	width: 70%;
+	margin-left: 15%;
+	margin-top: 0%;
+	border-radius: 20px;
+	margin-bottom: 0px;
+	display: flex;
+	bottom: 36%;
+	position: absolute;
+	z-index: 0;
+	padding: 20px;
 }
 
-#sinProd{
+#sinProd {
 	font-size: 18px;
 }
-.fotosCarrito{
+.fotosCarrito {
 	width: 100px;
-    height: 100px;
-    border-radius: 10px;
+	height: 100px;
+	border-radius: 10px;
 }
 
-
-#botonCarrito{
+#botonCarrito {
 	display: flex;
-    margin-left: 70%;
+	margin-left: 70%;
 	background-color: black;
-	color:white
+	color: white;
 }
 
-#botonCarrito:hover{
+#botonCarrito:hover {
 	background-color: white;
-	color:black;
+	color: black;
 	transition: 500ms;
 }
 
-#APIs{
+#APIs {
 	display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-    margin-top: 2%;
-    margin-bottom: 2%;
+	width: 100%;
+	justify-content: space-evenly;
+	margin-top: 2%;
+	margin-bottom: 2%;
 }
 
-#botonAPI{
+#botonAPI {
 	display: flex;
 	background-color: black;
-	color:white
+	color: white;
 }
 
-#botonAPI:hover{
+#botonAPI:hover {
 	background-color: white;
-	color:black;
+	color: black;
 	transition: 500ms;
 }
-
 
 /* CREACION PRODUCTO VISTA */
 
@@ -358,61 +358,64 @@ div#ProductosJ {
 	padding: 3% 8% 5% 8%;
 }
 
-/* profile boceto */ 
+/* profile boceto */
 
-#cajaGrande{
+#cajaGrande {
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
+	margin-top: 10%;
 	width: 60%;
 	background-color: cornsilk;
 	border-radius: 20px;
-	
+	background-color: white;
+	background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H20v-1.5zM0 20h2v20H0V20zm4 0h2v20H4V20zm4 0h2v20H8V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zm4 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2z' fill='%230315e0' fill-opacity='0.080' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
-#caja1{
+#caja1 {
 	height: 100%;
-    width: 50%;
+	width: 50%;
 }
 
-#fotitoCaja{
+#fotitoCaja {
 	width: 100%;
-    height: 315px;
+	height: 315px;
 }
 
-#caja2{
+#caja2 {
 	height: 100%;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-}
-
-#boton-Wal{
+	width: 50%;
 	display: flex;
-    flex-flow: wrap;
+	justify-content: center;
 }
 
-@media (max-width:600px) {
-	#cajaGrande{
+#boton-Wal {
+	display: flex;
+	flex-flow: wrap;
+}
+
+@media (max-width: 600px) {
+	#cajaGrande {
 		display: flex;
 		flex-direction: column;
 		width: 75%;
 		background-color: cornsilk;
 		border-radius: 20px;
-		padding-bottom : 20px
+		padding-bottom: 20px;
 	}
-	#caja2{
+	#caja2 {
 		height: 100%;
 		width: 100%;
 		display: flex;
 		justify-content: center;
 	}
-	#caja1{
+	#caja1 {
 		height: 70%;
 		width: 70%;
 		margin-top: 6%;
 		margin-left: 15%;
 		border-radius: 20px;
 	}
-	#fotitoCaja{
+	#fotitoCaja {
 		width: 100%;
 		height: 200px;
 	}
@@ -454,7 +457,6 @@ div#ProductosJ {
 	background-color: #0c6291;
 	height: 1000px;
 	background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23474748' fill-opacity='0.51'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-
 }
 
 #listado {
@@ -507,16 +509,15 @@ div#ProductosJ {
 	background-color: #0c6291;
 	padding-top: 10px;
 	background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23474748' fill-opacity='0.51'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-
 }
 
-#fotoPro{
+#fotoPro {
 	width: 200%;
 }
-#textoProducto{
+#textoProducto {
 	display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+	justify-content: space-evenly;
+	align-items: center;
 }
 
 #P1J {
@@ -526,7 +527,7 @@ div#ProductosJ {
 	margin-bottom: 5%;
 	margin-left: 10px;
 	width: 31%;
-    height: 176px;
+	height: 176px;
 	border-radius: 20px;
 	border-style: solid;
 	border-color: black;
@@ -684,14 +685,14 @@ div#ProductosJ {
 		left: 32px;
 		background-color: burlywood;
 	}
-	#toggleNav{
+	#toggleNav {
 		display: flex;
 		width: 50px;
 		height: 50px;
 	}
 	#logo2J {
 		position: relative;
-  	 	right: 80px;
+		right: 80px;
 		width: 29%;
 		height: 100%;
 		margin-bottom: 4%;
@@ -704,8 +705,8 @@ div#ProductosJ {
 	#cuenta {
 		display: none;
 	}
-	#randomJ{
-		font-size: 15px ;
+	#randomJ {
+		font-size: 15px;
 	}
 	#P1J {
 		display: flex;

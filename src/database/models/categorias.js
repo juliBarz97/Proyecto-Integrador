@@ -1,7 +1,7 @@
 
 function categoria(sequelize, Datatypes){
 
-    alias = 'categorias';
+    alias = 'categoria';
     
     cols = {
       id: {type: Datatypes.INTEGER, primaryKey: true, autoIncrement: true},

@@ -27,11 +27,11 @@ function producto(sequelize, Datatypes){
       foreignKey: "usuario_id" //REL PRO-USU 
     });
 
-    producto.belongsTo(models.categorias, {
-          as: "categorias",
-         // through: "Producto-categoria",   // tabla intermedia
-         // foreignKey: "producto_id",  // es el FK del modelo en el que estas (en la tabla intermedia de la bd)
-          foreignKey: "categoria_id",    // es el FK del otro modelo (en la tabla intermedia de la bd)
+    producto.belongsToMany(models.categoria, {
+          as: "productos",
+          through: "Producto-categoria",   // tabla intermedia
+          foreignKey: "producto_id",  // es el FK del modelo en el que estas (en la tabla intermedia de la bd)
+          otherKey: "categoria_id",    // es el FK del otro modelo (en la tabla intermedia de la bd)
           timestamps: false // REL PRO-CAT
     });
    producto.belongsToMany(models.usuario, { //ESTE DA ERROR
